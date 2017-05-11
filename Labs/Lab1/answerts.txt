@@ -1,0 +1,110 @@
+
+Conversation opened. 1 read message.
+
+Skip to content
+Using Gmail with screen readers
+ 
+ 
+More 
+4 of 27,559
+ 
+network report 1
+Inbox
+	x
+Joao Antonio Salgado Berardo <jsalgadoberard00@mylangara.bc.ca>
+	
+Attachments10:56 AM (13 hours ago)
+	
+to jsalgadoberard., tiffs_ng, me
+Attachments area
+	
+Click here to Reply, Reply to all, or Forward
+9 GB (60%) of 15 GB used
+Manage
+Terms - Privacy
+Last account activity: 1 hour ago
+Details
+	
+	
+People (3)
+	Joao Antonio Salgado Berardo
+Show details
+
+Lab1 Write-up
+
+Authors:
+Joao Antonio Salgado Berardo
+Tiffany Ng
+
+
+Computer Name
+CSIS-T215-D07
+
+Network
+Cable unplugger: Message "Not connected - No connections available"
+Cable plugged in again: "Network - Internet access"
+
+Windows
+Edition: Windows Server 2012
+Service Pack Number: R2
+
+Processor
+Brand: Intel
+Model: i5-i4570
+Speed: 3.20 GHz
+
+Memory
+Size: 1.64 GB
+Name: WSVBOX-D07
+
+Device Manager
+Warning: Multimedia Audio Controller
+Other devices: Multimedia Audio Controller
+
+Network Adapter
+Brand: Intel
+Model: PRO 1000
+
+Disk 0
+Capacity: 50.00 GB
+Partitions
+	System Reserved: 350 MB (25% Free)
+	C: 49.66 GB (64% Free)
+
+Users
+Administrator
+	Description: Built-in account for administering the computer/domain
+	Group: Administrators
+Guest
+	Description: Built-in account for guest access to the computer/domain
+	Group: Guests
+
+Standard
+	Group: Users
+
+
+Granting privileges to standard user
+Add the user to the 'Administrators' group
+We tested by logging on as the new user
+
+Sharing Folders
+Share name: test
+Default share permissions: Allow Everyone to Read
+
+Any user
+Able to open/read any files in the shared folder but couldn't write/save or create.
+
+Users in "Uppity Supervisors"
+Able to read and write files.
+Not able to write in files already created by another user.
+
+Users in the Administrator group or Uppity Supervisors group were able to read and write files because we set the permissions while sharing the folder.
+User not in the "Uppity Supervisors" group can't write files but are able to read them.
+
+Summary
+We learned how to find common server information, such as Computer name, OS version, Memory, Processor and so on.
+We also learned how to manage local Users and Groups, sharing folders and setting the appropriate folder permissions, so only allowed users can read/write files on the shared folder.
+We didn't have to make any decision that would affect the lab results.
+
+lab1.txt
+Displaying lab1.txt.
