@@ -1,1 +1,1 @@
-Lab files for CPSP1280 - Linux
+Lab files for CPSC1280 - Linux
