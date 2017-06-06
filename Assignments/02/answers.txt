@@ -1,0 +1,20 @@
+1.12) UNIX uses User IDs for files and processes. When a file is created, the User ID is used to determine the owner of the file. Like files, when some user runs a command/program, a process is created and it is associated with the User ID that executed the program.
+
+1.13) BSD and AT&T. Several major versions of UNIX existed, so IEEE and The Open Group joined together and developed the Single UNIX Specification. This was very important for compatibility between various UNIX systems.
+
+1.14) The command cd without any arguments changes the current logged user to his/her home directory
+
+2.1) Nothing happens, the command is not executed. The only thing I can think of is using it as a comment in shell scripts.
+
+2.2)
+1. In UNIX, files don't need an extension like Windows. To know what type a file is, run the command 'file file-name'.
+2. UNIX is case sensitive. If you run pwd, the command will execute, but if you try to run Pwd, it will fail. Windows is not case sensitive, so both commands would run.
+3. GUI vs CLI. While both can run GUI programs, UNIX is famous for its command line interpreter. You have more power and control over the OS running programs in console. Ex: UNIX commands can have many arguments and sometimes it is very hard or nearly impossible to do the same thing with a GUI. The find command is a good example of that.
+
+2.3) The program foo is not in the PATH variable. You can add foo's path in the PATH variable or execute it by typying ./foo in the current directory.
+
+2.4) You can execute by typing its full path or execute it by typying ./foo in the same directory as foo
+
+2.5) /sbin and /usr/sbin (/bin and /usr/bin are for utilities other than system programs).
+
+2.6) The cd command is a built-in command. This means that it's part of the shell, so when you type cd the shell executes the command.

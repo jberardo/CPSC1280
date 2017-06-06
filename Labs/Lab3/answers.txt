@@ -1,0 +1,31 @@
+1.
+a. echo $HOME
+b. /home/user/professional/societies/acm
+c. ../societies/acm
+d. cd, cd ~ and cd $HOME
+e. rm -r temp/ personal/ professional/
+
+2. They were called devfs and hotplug. They are all processes that do something when you connect new hardware or your computer. devfs use static devices (with the increasing number of devices this would be insane to maintain). udev uses dynamic devices, so only devices that were loaded into the kernel are created.
+
+3. 
+/dev directory holds files for all devices. For example /dev/sda1 is the first partition of the hard disk sda (other file in /dev).
+/proc Files in this directory have 0 bytes. It is actually a virtual file system that the kernel creates in memory and it is used to provide information about the system (processes, etc).
+/media This directory has a purpose for mouting removable media, like Blu-ray, CD-ROM, etc.
+
+4. Each of these directories corresponds to an actual process ID.
+
+5.
+In a character device, its driver communicates using single characters (example: bytes).
+In a block device,  this communication is sent/received in entire blocks of data.
+I used ls -l to see the first digit of the file attributes (b for block and c for character).
+
+Examples of block devices:
+SCSI hard disk (I could only find those block devices on my system)
+/dev/sda
+/dev/sdb
+/dev/sdc
+
+Examples of character devices:
+Mouse: /dev/input/mouse0
+Controlling Terminal: /dev/tty
+Serial Terminal Lines: /dev/ttyS

@@ -1,0 +1,40 @@
+1) With global configuration files the system administrator can maintain the system as a whole and can use policies that affect both, the system and user.
+Local configuration files are good for customizing the user environment, a thing that would be much harder using global configuration files.
+
+2) You need to change the PS1 environment variable.
+
+3)
+a. First, it lists the files in you home directory, then it deletes all files with ‘.doc’ at the end, in the user current directory (can be home directory or not in this case).
+b. Assigns the current working directory path to the variable PROMPT.
+c. Redirects the output of the man command to a file names pscoms.
+d. Lists all files starting with '.' (hidden files) and that have a character '.' in the middle of the filename.
+e. Sends all files starting with 0 through 9, ending with .eps to a printer called 'spr'.
+f. Runs bash shell in the background.
+g. Renames "file 1 .ps" to file1.ps
+h. Prints the command between ` ` and the string "files". First it lists the files in the current directory, then the output is redirected to wc -l command, that counts how many files are in the current directory. For example, the output could be: 42 files.
+i. Prints space `" "` on the screen. The difference here is the usage of '' instead of "". With "", text inside ` ` are evaluated and with ' ' they are printed.
+
+4) First line -> :0 or :1
+   Last line -> :$
+
+
+5) Edit .bashrc file or in command mode in vi, set the variable columns to 30 and variable lines to 15.
+
+6) .vimrc
+
+7) What do the following vi commands do?
+a. Delete 12 lines, starting from the current line.
+b. Delete 5 lines, starting from the current line.
+c. Insert 12 lines with the text that you type (after the current line).
+d. Insert 5 lines with the text that you type (before the current line).
+e. c5b Delete five words before the cursor.
+f. Move to the 12th line of the current buffer.
+g. Copy 5 lines below the current line (including).
+
+8) I think that the PATH environment variable doesn't have the path for the binary file of the program.
+
+9) .profile, located in your home directory.
+
+10) bash. I used the command "echo $SHELL" and it returned /bin/bash.
+
+11) You have to edit the .bashrc file. Change the variable PS1 to what you want the shell prompt to be.
