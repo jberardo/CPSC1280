@@ -1,0 +1,86 @@
+1. Most common directory with sticky bit is /tmp. When a directory has the sticky bit set, only the owner of the files, owner of the directory or the root user can rename or delete files inside that directory.
+Since /tmp directory can hold files for various ordinary users in the system, setting the sticky bit is a good practice so one user can't rename or delete files from other user.
+
+2. The original purpose of the sticky bit in binary files was to retain the program's 'code segment' (instructions of the program) in swap, even after the process terminated. It was a way to speed up future executions of the program. It was only used in UNIX and was never used in Linux.
+
+3.
+/usr/bin/passwd
+/etc/passwd
+/bin/su
+/bin/mount
+/bin/umount
+
+4. No. Usually, all users on the system have access to /tmp directory.
+For security, you should never store sensitive files in /tmp direcrory.
+
+5. /etc/group
+
+6.
+a. mkdir ~/temp/somedir/
+Owner:
+  d-wx------ 1 user group 0 Jan  0 12:00 ~/temp
+Not Owner:
+  d-wx------ 1 user group 0 Jan  0 12:00 ~/temp
+
+b. ls -l ~/temp/somedir/
+Owner:
+  d--------x 1 user group 0 Jan  0 12:00 ~/temp
+  dr-------- 1 user group 0 Jan  0 12:00 ~/temp/somedir
+Not Owner:
+  d--------x 1 user group 0 Jan  0 12:00 ~/temp
+  d------r-- 1 user group 0 Jan  0 12:00 ~/temp/somedir
+
+c. cp ~/professional/societies/acm ~/temp/somedir/
+Owner:
+  dr-------- 1 user group 0 Jan  0 12:00 ~/professional/societies/acm
+  d-w------- 1 user group 0 Jan  0 12:00 ~/temp/somedir/
+Not Owner:
+  d------r-- 1 user group 0 Jan  0 12:00 ~/professional/societies/acm
+  d--------w 1 user group 0 Jan  0 12:00 ~/temp/somedir
+
+d. mv ~/professional/societies/ieee ~/temp/somedir/
+Owner:
+  dr-------- 1 user group 0 Jan  0 12:00 ~/professional/societies/ieee
+  d--w------ 1 user group 0 Jan  0 12:00 ~/temp/somedir
+Not Owner:
+  d------r-- 1 user group 0 Jan  0 12:00 ~/professional/societies/ieee
+  d--------w 1 user group 0 Jan  0 12:00 ~/temp/somedir
+
+e. rm ~/professional/societies/acm
+Owner:
+  d--x------ 1 user group 0 Jan  0 12:00 ~/professional/societies/acm
+Not Owner:
+  d--------x 1 user group 0 Jan  0 12:00 ~/professional/societies/acm
+
+7. You can't really "hide" a file. The usage of a dot in the beginning of the file name can mean other things, such as configuration files, better visibility for GUI users and ls without -a option, so on.
+In other words, the dot in front of a file name is more convenient for ordinary users. The best way to protect your files is using file permissions. You can set a file or directory so only you can access them.
+
+8. You can’t revoke all you access to a file that you own. You can for example, use chmod a-rwx to remove all permissions on the file. In that case, you can’t use ls or cat commands for example. But since you own the file, just set the permissions back and you can do whatever you want with the file again.
+
+9. Reserved words in bash:
+!
+[[
+]]
+{
+}
+case
+do
+done
+elif
+else
+esac
+fi
+for
+function
+if
+in
+select
+then
+time
+until
+while
+Source: https://www.gnu.org/software/bash/manual/html_node/Reserved-Word-Index.html
+
+If I name a variable with a reserved word, it will work. It's not a good practice to do that,
+but nothing will happen in bash.
+

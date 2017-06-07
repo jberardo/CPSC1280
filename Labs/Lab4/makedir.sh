@@ -13,3 +13,5 @@ dirs="$dirs $DIR3/ieee $DIR3/acm"
 
 # create all directories in 'dirs' variable
 mkdir -p  $dirs
+
+exit 0
