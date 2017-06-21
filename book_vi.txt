@@ -1,0 +1,10 @@
+book_vi.txt
+
+:Author: jab
+:Email: jab@bang
+:Date: 2017-06-08 00:09
+
+
+
+
+.. vim: expandtab filetype=rst shiftwidth=4 tabstop=4
