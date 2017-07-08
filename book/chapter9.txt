@@ -1,0 +1,137 @@
+=====================
+  Ppaginating Files
+=====================
+pr
+Syntax: pr [options] <file>
+
+Option  Significance
+-l n    Sets length of page to n lines
+-w n    Sets width of page to n characters
+-h stg  Sets header for every page to string stg
+-n      Numbers lines in output
+-o n    Offsets output by n spaces
+-d      Double-spaces output
+-k      Produces output in k columns
++k      Starts printing from page k
+-t      Eliminates headers, footers, and margins totally
+
+Most useful
+ • -d Double-spaces input, reduces clutter
+ • -n Numbers lines, which helps in debugging code.
+ • -o n Offsets lines by n spaces, increases left margin of page.
+
+pr gorup1
+pr gorup1 | lp
+a.out | pr -t -5
+pr -t -n -d -o 10 group1
+pr +10 chap01
+pr -l 54 chap01
+
+===================
+  Comparing Files
+===================
+cmp: Byte-by-Byte Comparison
+cmp group1 group2
+cmp -l group[12]
+cmp -l group? | wc -l
+cp group1 group1.bak ; cmp group1 group1.bak
+
+comm: What Is Common?
+sort group1 > group1.sorted ; sort group2 > group2.sorted
+comm group[12].sorted
+comm -3 foo1 foo2   # Selects lines present only in second file
+comm -13 foo1 foo2  # Selects lines not common to both files
+
+diff: Converting One File to Another
+diff group[12]
+================
+  More Filters
+================
+head: Displaying the Beginning of a File
+head group1             # Shows first 10 lines
+head -n 3 group1        # Or head -3 group1 on some systems
+vi `ls -t | head -n 1`  # Opens last modified file for editing
+grep “IMG SRC.*GIF” quote.html | head -n 5
+
+tail: Displaying the End of a File
+tail -n 3 group1        # Or use tail -3 group1
+tail -f /var/log/syslog # Follow (monitor file growth)
+tail -c -512 foo        # Copies last 512 bytes from foo
+tail -c +512 foo        # Copies everything after skipping 511 bytes
+
+cut: Slitting a File Vertically
+cut -c1-4 group1        # -c or -f option always required
+cut -c -3,6-21,24,55- foo # Must be an ascending list
+cut -d: -f1,3 group1    # cut fields rather than columns
+who | cut -d” “ -f1     # Space is the delimiter
+
+paste: Pasting Files
+paste -s -d”::\n” addressbook
+
+sort: Ordering a File
+sort shortlist
+Option          Description
+-tchar          Uses delimiter char to identify fields
+-k n            Sorts on nth field
+-k m,n          Starts sort on mth field and ends sort on nth field
+-k m.n          Starts sort on nth column of mth field
+-u              Removes repeated lines
+-n              Sorts numerically
+-r              Reverses sort order
+-f              Folds lowercase to equivalent uppercase (case-insensitive sort)
+-m list         Merges sorted files in list
+-c              Checks if file is sorted
+-o flname       Places output in file flname
+
+sort -t: -k 2 shortlist                           # Sorting on Primary Key (-k)
+sort -t: -r -k 2 shortlist                        # Sort on primary key (reversed)
+sort -t: -k 2r shortlist                          # same as above (other way to do)
+sort -t: -k 3,3 -l 2,2 shortlist                  # Sorting on Secondary Key
+sort -t: -k 5.7,5.8 shortlist                     # Sorting on Columns
+sort -t: -k3,3 group1                             # Numeric Sort. sort by third field
+sort -t: -k3,3 -n group1                          # Correct numeric sorting (-n)
+cut -d: -f3 shortlist | sort -u | tee desigx.lst  # Removing Repeated Lines
+sort -m foo1 foo2 foo3                            # Merge-sort
+sort -o sortedlist -k 3 shortlist                 # Output stored in sortedlist
+sort -o shortlist shortlist                       # Output stored in same file
+
+uniq: Locate Repeated and Nonrepeated Lines
+uniq dept.lst
+sort dept.lst | uniq - uniqlist                   # uniq requires a sorted file as input. reads from standard input and writes to uniqlist
+uniq -u dept.lst                                  # Selecting the Nonrepeated Lines
+uniq -d dept.lst                                  # Selecting the Duplicate Lines
+uniq -c dept.lst                                  # Counting Frequency of Occurrence
+cut -d: -f3 shortlist | sort | uniq -c            # cut the third field, sort, and then produce a count
+
+tr: Translating Characters
+tr options expression1 expression2 standard input
+tr takes input only from standard input. it doesn’t take a filename as argument
+The first character in the first expression is replaced with the first character in the second expression,
+and similarly for the other characters
+tr ':/' '~-' < shortlist | head -n 3              # replace the : with a ~ (tilde) and the / with a -
+head -n 3 shortlist | tr '[a-z]' '[A-Z]'          # Changing Case of Text
+tr ':' '\012' < shortlist | head -n 6             # \012 = LF
+tr -d ':/' < shortlist | head -n 3                # Deleting Characters
+tr -s ' ' <shortlist | head -n 3                  # Compressing Multiple Consecutive Characters
+tr -cd ‘:/’ < shortlist                           # Complementing Values of Expression. delete all characters except the : and /, you can combine the -d and -c options
+
+Applying the Filters
+Listing the Five Largest Files in the Current Directory
+1. Reverse-sort output in numeric sequence on the fifth field
+    ls -l | sort -k 5 -nr
+2. Extract the first five lines from the sorted output
+    ls -l | sort -k 5 -nr | head -n 5
+3. Squeeze multiple spaces to a single space
+    ls -l | sort -k 5 -nr | head -n 5 | tr -s " "
+4. Cut the fifth and last fields
+    ls -l | sort -k 5 -nr | head -n 5 | tr -s " " | cut -d" " -f5,9
+Piping this output to the printf command will let us format the output, and, using awk,
+we can even have a total count of the size.
+
+Creating a Word-Usage List
+tr “ \011” “\012\012” < foo1 | tr -cd “[a-zA-Z\012]” | sort | uniq -c > sort -nr | pr -t -3
+
+Finding Out the Difference between Two Password Files
+cut -f1 -d: passwd1 | sort > temp or cut -d: -f1 passwd2 | sort > temp2
+cut -d: -f1 passwd2 | sort | comm -23 temp - ; rm temp
+

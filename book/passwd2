@@ -1,0 +1,9 @@
+henry:!:501:100:henry blofeld:/home/henry:/bin/ksh
+amadeus:x:506:100::/home/amadeus:/bin/ksh
+image:!:502:100:The PPP server account:/home/image:/usr/bin/ksh
+bill:!:503:100:Reader’s Queries:/home/bill:/bin/sh
+julie:x:508:100:julie andrews:/home/julie:/bin/csh
+jennifer:x:510:100:jennifer jones:/home/jennifer:/bin/bash
+charlie:x:520:100::/home/charlie:/usr/bin/ksh
+romeo:x:601:100::/home/romeo:/usr/bin/ksh
+harry:x:602:100:harry’s music house:/home/harry:/bin/csh

@@ -1,0 +1,8 @@
+joe:!:501:100:joe bloom:/home/henry:/bin/ksh
+amadeus:x:506:100::/home/amadeus:/bin/ksh
+image:!:502:100:The PPP server account:/home/image:/usr/bin/ksh
+bill:!:503:100:Reader’s Queries:/home/bill:/bin/sh
+juliet:x:508:100:juliet:/home/julie:/bin/csh
+charlie:x:520:100::/home/charlie:/usr/bin/ksh
+romeo:x:601:100::/home/romeo:/usr/bin/ksh
+ftp:x:602:50:anonymous ftp:/home/ftp:/bin/csh

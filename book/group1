@@ -1,0 +1,7 @@
+root:x:0:root
+bin:x:1:root,bin,daemon
+users:x:200:henry,image,enquiry
+adm:x:25:adm,daemon,listen
+dialout:x:18:root,henry
+lp:x:19:lp
+ftp:x:50:

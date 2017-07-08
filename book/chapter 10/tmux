@@ -1,0 +1,90 @@
+Getting In & Getting Out
+tmux new
+exit or detach (better)
+
+Using Prefix
+Commands require the prefix shortcut (default: ctrl+b)
+after pressing ^b, type : for tmux prompt
+
+^b+d -> Detach
+tmux ls -> list
+tmux attach-session -t 3 -> Attach
+tmux a # -> attach last created session
+
+Naming Sessions
+tmux new -s [name of session]
+tmux ls -> now we can see the session name
+tmux a -t [name of session] -> attach a session
+
+Managing Panes
+GUI have windows and tmux have panes
+To create a new pane you simply split the screen horizontally or vertically
+
+To split a pane horizontally
+^b "
+
+To split pane vertically
+^b %
+
+Moving between panes
+^b [arrow key]
+
+Resizing Panes
+move down a few lines
+  - ^b :, then type
+  - resize-pane
+    * -U up
+    * -D down
+    * -L left
+    * -R right
+
+Example: current position is top pane and to expand down by 2 lines:
+^b :
+resize-pane -D 2
+
+Getting Fancy with Custom Themes
+Customizization file: .tmux.conf
+
+https://github.com/jimeh/tmux-themepack
+Choose one and copy the config into ~/tmux.conf
+Then source it with tmux source-file ~/.tmux.conf
+
+Additional Resources
+https://gist.github.com/MohamedAlaa/2961058
+https://github.com/jimeh/tmux-themepack
+https://leanpub.com/the-tao-of-tmux/read
+https://github.com/gpakosz/.tmux
+
+==================================
+=  Summary of Primary Commands   =
+==================================
+
+Start new named session:
+tmux new -s [session name]
+
+Detach from session:
+ctrl+b d
+
+List sessions:
+tmux ls
+
+Attach to named session:
+tmux a -t [name of session]
+
+Kill named session:
+tmux kill-session -t [name of session]
+
+Split panes horizontally:
+ctrl+b "
+
+Split panes vertically:
+ctrl+b %
+
+Kill current pane:
+ctrl+b x
+
+Move to another pane:
+ctrl+b [arrow key]
+
+Kill tmux server, along with all sessions:
+tmux kill-server
