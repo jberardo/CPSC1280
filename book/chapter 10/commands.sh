@@ -180,4 +180,45 @@ $ grep -E 'wilco[cx]k*s*|wood(house|cock)' emp.lst
 
 
 The Stream Editor (sed)
+sed performs noninteractive operations on a data stream
+sed uses instructions to act on text
+An instruction combines an address for selecting lines, with an action to be taken on them
+Syntax: sed options 'address action' file(s)
+
+Addressing in sed is done in two ways
+ - By one or two line numbers (like 3,7)
+ - By specifying a /-enclosed pattern which occurs in a line (like /From:/)
+
+sed processes several instructions in a sequential manner
+Each instruction operates on the output of the previous instruction
+
+Common options
+-e option that lets you use multiple instructions
+-f option to take instructions from a file
+
+Internal Commands Used by sed
+Command           Description
+i,a,c             Inserts, appends, and changes text
+d                 Deletes line(s)
+p                 Prints line(s) on standard output
+q                 Quits after reading up to addressed line
+r flname          Places contents of file flname after line
+w flname          Writes addressed lines to file flname
+=                 Prints line number addressed
+s/s1/s2/          Replaces first occurrence of expression s1 in all lines with expression s2
+s/s1/s2/g         As above but replaces all occurrences
+
+Examples:
+1,4d              Deletes lines 1 to 4
+10q               Quits after reading the first 10 lines
+3,$p              Prints lines 3 to end (-n option required)
+$!p               Prints all lines except last line (-n option required)
+/begin/,/end/p    Prints line containing begin through line containing end (-n option required)
+10,20s/-/:/       Replaces first occurrence of - in lines 10 to 20 with a :
+s/echo/printf/g   Replaces all occurrences of echo in all lines with printf
+
+Components of a sed Instruction
+sed '1,$ s/^bold/BOLD/g' foo
+1,s -> address
+s/^bold/BOLD/g -> action
 
