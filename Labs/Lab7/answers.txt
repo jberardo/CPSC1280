@@ -1,0 +1,14 @@
+1. find ~/ -type f -name foobar 2> /dev/null
+2. find ~/ -type f -name foobar > foobar.path 2>> /dev/null
+3. /dev/null is a special file that "destroys" everything that is redirected to it. Since /dev/null acts like a black hole, it doesn't make sense to append to it, everything will be destroyed.
+4. cat smallFile | tee | banner > output.data 2> error.log
+5. cat >test.data
+    line 1
+    line 2
+    [Ctrl+D]
+6. cat smallFile test.data >> all.txt 2> error.txt
+7. sort -r smallFile | head -n 5
+8. sort -r smallFile | head -n 5 | tee TopFive.txt
+9. The first command (dmesg) will lock until the second command (cat) start running. When cat executes, dmesg redirects its output to myfifo file and other process (cat) will use it as its standard input.
+10. There are 95524 soft links on my system. The command that I used was: find /usr -type l -ls | wc -l
+11. ls -la | sed "s/^d/DIRECTORY/g"
