@@ -1,0 +1,17 @@
+Duplicate
+
+Given a directory, the program will search trought the directory to find duplicate files.
+The user will have an option to search only on the selected directory, or recursively.
+The output will be a list of duplicate files, along with its path name.
+
+directory
+duplicate
+files
+search / find
+options
+print list on console
+
+Root
+- path
+- name
+-
