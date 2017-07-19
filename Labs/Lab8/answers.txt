@@ -1,0 +1,128 @@
+1.
+ps aux | wc -l
+
+2.
+a. 
+    Process ID:
+    init 1
+    cron: 902
+    rsyslogd: 886
+
+    Command:
+    ps aux | grep "init"
+    ps aux | grep "cron"
+    ps aux | grep "rsyslogd"
+     
+b.
+    Parent Process ID:
+    init: 0
+    cron: 1
+    rsyslogd: 1
+
+    Command:
+    ps -fp 1
+    ps -fp 902
+    ps -fp 886
+    
+c.
+    Parent Process Name:
+    init: - (init doesn't have a parent process. The swapper process creates init at boot time, but it is not its parent).
+    cron: init
+    rsyslogd: init
+
+    Command:
+    ps -fp 1 (for cron and rsyslogd)
+    
+d.
+    Priority:
+    init: 19
+    cron: 19
+    rsyslogd: 19
+
+    Command:
+    ps -p 1 -o pid,ppid,pri,cmd
+    ps -p 902 -o pid,ppid,pri,cmd
+    ps -p 886 -o pid,ppid,pri,cmd
+
+e.
+    Command:
+    ps -p 1,886,902 -o pid,ppid,pri,cmd -k pri
+    
+3.
+find / -name passwd >find.out 2>/dev/null & sort -k4rn -k2 smallFile >sort.out 2>/dev/null &
+
+4.
+a. Its header contains summary information about the system running.
+   For example the CPU and memory usage, total processes and so on.
+   It also displays a real-time list of processes on the system along with its information, such as PID, User, Priority, CPU and MEM usage, command, etc.
+       
+b. Total 333 processes, 1 running and 332 sleeping
+    
+c. top -d 20
+    
+d. gedit. It's a Linux text editor.
+
+5.
+at now +1 hour
+After executing this command, a prompt will appear (at>), just type echo "Time for Lunch!".
+To exit this prompt, press <Ctrl-d>, then the job will be scheduled one hour from now.
+   
+6.
+kill 12345
+kill %2
+
+7.
+date & uname -a &
+who & ps &
+
+8.
+If you just executed the command, you should be able to see its job id. Just kill with kill %n, where n is the job number.
+If you don't know the job number, type jobs to see the job list, and then kill it.
+   
+9.
+ps -e | grep "d$" | awk '{print $4}'
+cupsd - Common UNIX printing system: daemon that manages print jobs, queues, etc.
+acpid - Advanced Configuration and Power Interface: daemon for delivering ACPI events (pressing power button, sleep, closing notebook and so on).
+rsyslogd - "The rocket-fast system for log processing": used to forward log messages in a network
+gvfsd - Gnome Input/Output Virtual File System: main daemon for gvfs. Main responsabillity is to monitor active mounted file systems.
+   
+10.
+The CPU can only execute one process at a time.
+The kernel manages the time each process has to use the CPU, switching processes and processes states, such as switching from running to waiting.
+That way, the kernel can switch between processes.
+This switch happens so fast, the users on the computer thinks it is running multiple processes at the same time.
+
+11. 
+Fork bomb is when a program calls the system call fork() to replicate itself infinitely.
+For example, an infinite loop with the fork() system call will launch copies of itself, depleting system resources.
+It will make the CPU slow, consuming its time and also consume the system memory and so on.
+All of this can cause resource starvation, eventually crashing the system.
+
+12.
+a.
+The + character means that this the default job that fg and bg commands will use.
+The - character means that this job will be the default job, if the current default job terminates.
+
+b. Two running and one stopped. 
+Process states:
+    [1] Running
+    [2]- Running
+    [3]+ Stopped
+
+c.
+It is stopped because the command watch will execute a program periodically displaying the output in the terminal.
+To run, bring it to the foreground with job %n (job number).
+
+d.
+The watch command didn't exit.
+The command to force a job termination is kill -9 (SIGKILL, can't use trap. 'Sure' kill).
+
+kill %1
+kill %2
+kill -9 %3
+
+
+
+
+
+

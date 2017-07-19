@@ -33,6 +33,8 @@ function main
 {
     getProcessIds
     
+    echo "Current Active Processes (pid, name and state):"
+    
     for id in $process_ids
     do
         getProcessInfo $id 2> /dev/null
@@ -40,30 +42,7 @@ function main
     done
 }
 
+# start
 main
 
-exit 0
-
-[[ -e $TMP_FILE ]] || touch $TMP_FILE
-
-#DIRS=`ls /proc | grep "^[0-9]" | sort -n`
-#DIRS=$(ls -v /proc | grep "^[0-9]")
-
-cd $PROC_DIR
-
-for d in $DIRS
-do
-  cat "$PROC_DIR/$d/status" > "$TMP_FILE"
-  NAME=$(grep "^Name" "$TMP_FILE" | cut -f2 > /tmp/proc_names 2> /tmp/error.log)
-  STATE=$(grep "^State" "$TMP_FILE" | cut -f2 > /tmp/proc_states 2> /tmp/error.log)
-  PID=$(grep "^Pid" "$TMP_FILE" | cut -f2 > /tmp/proc_pids 2> /tmp/error.log)
-
-  echo "Process Name: $NAME"
-  echo "Process ID: $PID"
-  echo "Process State: $STATE"
-done
-
-rm "$TMP_FILE"
-
-cd "$CUR_DIR"
 exit 0

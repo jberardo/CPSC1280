@@ -1,0 +1,18 @@
+Linux monitoring tools
+
+ - top
+ - uptime
+ - ps
+ - free -h
+ - iostat
+ - sar
+ - netstat
+ - ss
+ - cat /proc/cpuinfo
+ - cat /proc/meminfo
+ - cat /proc/zoneinfo
+ - cat /proc/mounts
+ - lsof
+ - ntop
+ - nmap
+ - 
