@@ -1,0 +1,20 @@
+§ =============================================================
+§  Personal Information
+§ =============================================================
+
+SetMacro( 'AUTHOR',       'Joao Berardo' )
+SetMacro( 'AUTHORREF',    '' )
+SetMacro( 'EMAIL',        'contact@joca.io' )
+SetMacro( 'ORGANIZATION', 'MAJA' )
+SetMacro( 'COMPANY',      'MAJA' )
+SetMacro( 'COPYRIGHT',    'Copyright (c) |YEAR|, |AUTHOR|' )
+SetMacro( 'LICENSE',      'GNU General Public License' )
+
+§ =============================================================
+§  Date and Time Format
+§ =============================================================
+
+§SetFormat( 'DATE', '%x' )
+§SetFormat( 'TIME', '%H:%M' )
+§SetFormat( 'YEAR', '%Y' )
+
