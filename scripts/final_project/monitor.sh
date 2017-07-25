@@ -1,23 +1,37 @@
-#!/bin/bash
-#### @description: Monitor system resources real-time
-#### @author: Joao Berardo
-#### @since: 1.0, July, 07 2017
+#!/bin/bash -
 
-# Use $(command) for command substitution
-#DATE=`date +%F`
-#DATE=$(date +%F)  <-- better
+#===============================================================================
+#
+#          FILE: monitor.sh
+#
+#         USAGE: ./monitor.sh
+#
+#   DESCRIPTION: Real-time system resource monitor
+#
+#       OPTIONS:
+#                  a
+#                  b
+#                  c
+#                  o
+#  REQUIREMENTS: ---
+#          BUGS: ---
+#         NOTES: ---
+#        AUTHOR: Joao Berardo
+#  ORGANIZATION: Langara
+#       CREATED: 2017-07-07 08:59:02 PM
+#      REVISION:  0.1
+#===============================================================================
 
 #--- DEBUG ---#
-# only uncomment for debugging
-# exits as soon as any line in the bash script fails
-set -e
-# prints each command that is going to be executed
-set -x
-
+set -o nounset                              # Treat unset variables as an error
+#set -e                                      # Exits as soon as any line in the bash script fails
+# prints each command that is going to be executed. only uncomment for debugging
+#set -x
+trap "cleanUp 1" INT TERM EXIT
 #--- Terminal Settings ---#
 #  Disable normal echoing in the terminal.
 #  This avoids key presses that might "contaminate" the screen
-#+ during the program execution
+# during the program execution
 stty -echo
 # make the cursor invisible
 tput civis
@@ -28,10 +42,10 @@ clear
 REFRESH=1
 # list of options to show/hide menu (1 - enabled / 0 - disabled)
 # opts=( menu mem disk ps )
-opts[0]=1 # menu
-opts[1]=0 # mem
-opts[2]=0 # disk
-opts[3]=0 # ps
+optsMenu=1 # menu
+optsMem=0 # mem
+optsDisk=0 # disk
+optsPs=0 # ps
 
 #--- current terminal dimensions ---#
 #N_COLS=$(tput cols)
@@ -54,42 +68,40 @@ main()
 {
   reset_screen
   show_all
-  #read_option
+  read_option
+}
+
+reset_screen()
+{
+  #tput cup 0 0
+  tput reset
 }
 
 show_all()
 {
   uptime
-  echo ""
-
-  if ((opts[0])); then
+  
+  if [[ optsMenu -eq 1 ]]
+  then
     show_menu
   fi
 
-  if (($opts[1])); then
+  if [[ optsMem -eq 1 ]]
+  then
     show_mem_info
   fi
 
-  if (($opts[2])); then
+  if [[ optsDisk -eq 1 ]]
+  then
     show_disk_info
   fi
 
-  if (($opts[3])); then
+  if [[ optsPs -eq 1 ]]
+  then
     show_process_info
   fi
 
-  read_option
-}
-
-#--- DISPLAY MENU ---#
-show_menu()
-{
-  show_header "Options"
-  echo "a) Show/Hide Memory Usage Information"
-  echo "b) Show/Hide Disk Space Informaton"
-  echo "c) Show/Hide Process Information"
-  echo "o) Show/Hide List of Options"
-  echo "q) Quit"
+  #read_option
 }
 
 #--- FRIENDLY MESSAGES ---#
@@ -109,6 +121,17 @@ show_header()
 }
 
 #--- MONITOR FUNCTIONS ---#
+
+show_menu()
+{
+  show_header "Options"
+  echo "a) Show/Hide Memory Usage Information"
+  echo "b) Show/Hide Disk Space Informaton"
+  echo "c) Show/Hide Process Information"
+  echo "o) Show/Hide List of Options"
+  echo "q) Quit"
+}
+
 show_mem_info()
 {
   show_header "Memory Usage Information"
@@ -124,7 +147,7 @@ show_disk_info()
 show_process_info()
 {
   show_header "Process Information"
-  ps u
+  ps -e -n10
 }
 
 #--- RUN OPTIONS ---#
@@ -151,37 +174,60 @@ read_option()
   read -t $REFRESH -n 1 REPLY
 
   case $REPLY in
-    a) choice ${opts[0]} ;;
-    b) choice ${opts[1]} ;;
-    c) choice ${opts[2]} ;;
-    o) choice ${opts[3]} ;;
+    a) toggle_ps ;;
+    b) toggle_mem ;;
+    c) toggle_disk ;;
+    o) toggle_menu ;;
     q) cleanUp 0 ;;
     *) show_all ;;
   esac
 
-#  case $REPLY in
-#    a) show_mem_info ;;
-#    b) show_disk_info ;;
-#    c) show_process_info ;;
-#    o) show_all ;;
-#    q) cleanUp 0 ;;
-#    *) ;;
-#  esac
-
-  if [ $? -ne 0 ]; then
+  if [ $? -ne 0 ]
+  then
     cleanUp 1
   fi
 }
 
-choice () {
-    local choice=$1
-    if [[ ${opts[choice]} ]] # toggle
+toggle_menu()
+{
+    if [[ $optsMenu -eq 0 ]]
     then
-        opts[choice]=
+        optsMenu=1
     else
-        opts[choice]=1
+        optsMenu=0
     fi
 }
+
+toggle_mem()
+{
+    if [[ $optsMem -eq 0 ]]
+    then
+        optsMem=1
+    else
+        optsMem=0
+    fi
+}
+
+toggle_disk()
+{
+    if [[ $optsDisk -eq 0 ]]
+    then
+        optsDisk=1
+    else
+        optsDisk=0
+    fi
+}
+
+toggle_ps()
+{
+    if [[ $optsPs -eq 0 ]]
+    then
+        optsPs=1
+    else
+        optsPs=0
+    fi
+}
+
 
 cleanUp()
 {
@@ -190,7 +236,7 @@ cleanUp()
   #clear
   # restore echoing
   stty echo
-  reset_screen
+  #reset_screen
   # restore cursor
   tput cnorm
 
@@ -232,16 +278,10 @@ getKey()
   #cleanUp 0
 }
 
-reset_screen()
-{
-  #tput cup 0 0
-  tput reset
-}
-
 #--- RUN PROGRAM ---#
 
 # restore terminal settings if we call exit
-trap cleanUp 2
+#trap cleanUp 2
 # Clean up the everythin, restore terminal cursor and colors
 # if script is interrupted by Ctrl+C
 trap cleanUp SIGHUP SIGINT SIGTERM

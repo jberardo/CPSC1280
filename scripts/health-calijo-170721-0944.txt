@@ -1,0 +1,187 @@
+
+#####################################################################
+    Health Check Report (CPU,Process,Disk Usage, Memory)
+#####################################################################
+
+
+Hostname         : calijo
+Kernel Version   : 4.10.0-28-generic
+Uptime           : 12:34
+Last Reboot Time : 2017-07-20 21:10
+
+*********************************************************************
+CPU Load - > Threshold < 1 Normal > 1 Caution , > 2 Unhealthy
+*********************************************************************
+
+
+CPU0 : 8.36
+CPU1 : 9.33
+CPU2 : 9.87
+CPU3 : 9.35
+CPU4 : 7.69
+CPU5 : 7.96
+CPU6 : 8.12
+CPU7 : 7.93
+
+Load Average   :  1.20
+
+Heath Status : Caution
+
+
+*********************************************************************
+                             Process
+*********************************************************************
+
+=> Top memory using processs/application
+
+PID %MEM RSS COMMAND
+3373 11.2 1837016 /usr/bin/java
+12579 9.8 1615272 /usr/lib/firefox/firefox
+18765 9.4 1534696 /usr/lib/jvm/java-8-oracle/bin/java
+1889 2.2 373140 /usr/bin/gnome-shell
+3506 2.0 334168 /opt/gitbook-editor/editor
+18725 1.1 193440 /usr/lib/jvm/java-8-oracle/bin/java
+14711 1.0 169572 evince
+1690 1.0 165004 /usr/lib/xorg/Xorg
+3421 1.0 164060 /opt/gitbook-editor/editor
+25686 0.9 153644 /opt/gitbook-editor/editor
+
+=> Top CPU using process/application
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+18765 joca      20   0 7070688 1.464g  16444 S 150.0  9.4 424:02.84 java
+12579 joca      20   0 4153764 1.540g 163636 S  18.8  9.9  59:54.97 firefox
+    1 root      20   0  205476   7736   5316 S   0.0  0.0   0:01.45 systemd
+    2 root      20   0       0      0      0 S   0.0  0.0   0:00.00 kthreadd
+    6 root      20   0       0      0      0 S   0.0  0.0   0:16.40 ksoftirqd/0
+    7 root      20   0       0      0      0 S   0.0  0.0   1:51.68 rcu_sched
+    8 root      20   0       0      0      0 S   0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S   0.0  0.0   0:00.00 migration/0
+   10 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 lru-add-drain
+   11 root      rt   0       0      0      0 S   0.0  0.0   0:00.10 watchdog/0
+
+*********************************************************************
+Disk Usage - > Threshold < 90 Normal > 90% Caution > 95 Unhealthy
+*********************************************************************
+
+udev /dev 0% used 7.8G free space
+
+tmpfs /run 2% used 1.6G free space
+
+/dev/sdb2 / 27% used 66G free space
+
+tmpfs /dev/shm 1% used 7.8G free space
+
+tmpfs /run/lock 1% used 5.0M free space
+
+tmpfs /sys/fs/cgroup 0% used 7.8G free space
+
+/dev/sdb1 /boot/efi 1% used 508M free space
+
+tmpfs /run/user/121 1% used 1.6G free space
+
+tmpfs /run/user/1000 1% used 1.6G free space
+
+/dev/sda1 /media/joca/Seagate 36% used 2.4T free space
+
+
+
+Heath Status
+
+udev /dev 		 Normal
+tmpfs /run 		 Normal
+/dev/sdb2 / 		 Normal
+tmpfs /dev/shm 		 Normal
+tmpfs /run/lock 		 Normal
+tmpfs /sys/fs/cgroup 		 Normal
+/dev/sdb1 /boot/efi 		 Normal
+tmpfs /run/user/121 		 Normal
+tmpfs /run/user/1000 		 Normal
+/dev/sda1 /media/joca/Seagate 		 Normal
+-------------------
+Block Device Info
+-------------------
+NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+sda      8:0    0   3.7T  0 disk 
+└─sda1   8:1    0   3.7T  0 part /media/joca/Seagate 4tb
+sdb      8:16   0 111.8G  0 disk 
+├─sdb1   8:17   0   512M  0 part /boot/efi
+├─sdb2   8:18   0  95.4G  0 part /
+└─sdb3   8:19   0  15.9G  0 part [SWAP]
+sdc      8:32   0 167.7G  0 disk 
+└─sdc1   8:33   0 167.7G  0 part 
+
+*********************************************************************
+		     Memory
+*********************************************************************
+
+=> Physical Memory
+
+Total	Used	Free	%Free
+
+15.56GB	7.01GB 	4.43GB	28%
+
+=> Swap Memory
+
+Total	Used	Free	%Free
+
+15.89GB	0GB	15.89GB	100%
+
+
+**************************************************************
+      Hardware info
+**************************************************************
+H/W path               Device     Class          Description
+============================================================
+                                  system         XPS 8900 (06B8)
+/0                                bus            0XJ8C4
+/0/0                              memory         64KiB BIOS
+/0/17                             processor      Intel(R) Core(TM) i7-6700 CPU @ 3.40GHz
+/0/17/14                          memory         256KiB L1 cache
+/0/17/15                          memory         1MiB L2 cache
+/0/17/16                          memory         8MiB L3 cache
+/0/18                             memory         16GiB System Memory
+/0/18/0                           memory         8GiB DIMM DDR4 Synchronous 2133 MHz (0.5 ns)
+/0/18/1                           memory         8GiB DIMM DDR4 Synchronous 2133 MHz (0.5 ns)
+/0/18/2                           memory         [empty]
+/0/18/3                           memory         [empty]
+/0/100                            bridge         Skylake Host Bridge/DRAM Registers
+/0/100/1                          bridge         Skylake PCIe Controller (x16)
+/0/100/1/0                        display        Curacao PRO [Radeon R7 370 / R9 270/370 OEM]
+/0/100/1/0.1                      multimedia     Cape Verde/Pitcairn HDMI Audio [Radeon HD 7700/7800 Series]
+/0/100/2                          display        HD Graphics 530
+/0/100/14                         bus            Sunrise Point-H USB 3.0 xHCI Controller
+/0/100/14/0            usb1       bus            xHCI Host Controller
+/0/100/14/0/3                     printer        DeskJet 3630 series
+/0/100/14/0/a                     input          USB Receiver
+/0/100/14/0/b                     communication  Bluetooth Radio
+/0/100/14/0/d                     storage        Flash Card Reader/Writer
+/0/100/14/1            usb2       bus            xHCI Host Controller
+/0/100/14/1/1          scsi6      storage        BUP Fast HDD
+/0/100/14/1/1/0.0.0    /dev/sda   disk           4TB BUP Fast HDD
+/0/100/14/1/1/0.0.0/1             volume         465GiB HPFS/NTFS partition
+/0/100/14.2                       generic        Sunrise Point-H Thermal subsystem
+/0/100/16                         communication  Sunrise Point-H CSME HECI #1
+/0/100/17                         storage        SATA Controller [RAID mode]
+/0/100/1f                         bridge         Sunrise Point-H LPC Controller
+/0/100/1f.2                       memory         Memory controller
+/0/100/1f.3                       multimedia     Sunrise Point-H HD Audio
+/0/100/1f.4                       bus            Sunrise Point-H SMBus
+/0/100/1f.6            enp0s31f6  network        Ethernet Connection (2) I219-V
+/0/1                   scsi0      storage        
+/0/1/0.0.0             /dev/sdb   disk           120GB INTEL SSDSC2CW12
+/0/1/0.0.0/1                      volume         511MiB Windows FAT volume
+/0/1/0.0.0/2           /dev/sdb2  volume         95GiB EXT4 volume
+/0/1/0.0.0/3           /dev/sdb3  volume         15GiB Linux swap volume
+/0/2                   scsi1      storage        
+/0/2/0.0.0             /dev/sdc   disk           180GB INTEL SSDSC2CW18
+/0/2/0.0.0/1           /dev/sdc1  volume         167GiB EXT4 volume
+/0/3                   scsi7      storage        
+/0/3/0.0.0             /dev/sdd   disk           Compact Flash
+/0/3/0.0.0/0           /dev/sdd   disk           
+/0/3/0.0.1             /dev/sde   disk           SD/MMC
+/0/3/0.0.1/0           /dev/sde   disk           
+/0/3/0.0.2             /dev/sdf   disk           MS/MS-PRO
+/0/3/0.0.2/0           /dev/sdf   disk           
+/0/3/0.0.3             /dev/sdg   disk           xD-Picture
+/0/3/0.0.3/0           /dev/sdg   disk           
+

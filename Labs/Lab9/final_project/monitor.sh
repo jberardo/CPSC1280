@@ -93,10 +93,6 @@ show_all ()
   uptime
   echo ""
 
-  if ((opts[0])); then
-    show_menu
-  fi
-
   if (($opts[1])); then
     show_mem_info
   fi
@@ -107,6 +103,10 @@ show_all ()
 
   if (($opts[3])); then
     show_process_info
+  fi
+
+  if ((opts[0])); then
+    show_menu
   fi
 
   read_option

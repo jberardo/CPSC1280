@@ -37,7 +37,7 @@ tput cup 3 15
 
 # Set a foreground colour using ANSI escape
 tput setaf 3
-echo "XYX Corp LTD."
+echo "Display hostname/%cpu/%mem"
 tput sgr0
 
 tput cup 5 17

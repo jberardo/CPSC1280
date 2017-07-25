@@ -1,0 +1,756 @@
+		Labs/Lab9/Session.vim	/^nmap 	 :bn$/;"	m
+	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent>  :call nerdtree#ui_glue#invokeKeyMap("<C-k>")$/;"	m
+	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> $/;"	m
+	Labs/Lab9/Session.vim	/^imap  :wqa$/;"	m
+	Labs/Lab9/Session.vim	/^nmap  :wqa$/;"	m
+	Labs/Lab9/Session.vim	/^imap  :w$/;"	m
+	Labs/Lab9/Session.vim	/^nmap  :w$/;"	m
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+""	Labs/Lab9/.vim/bash-support/rc/sh.vim	/^nnoremap    <buffer>   ""   ciW""<Esc>P$/;"	m
+""	Labs/Lab9/.vim/ftplugin/sh.vim	/^nnoremap    <buffer>   ""   ciW""<Esc>P$/;"	m
+""	Labs/Lab9/bash-support/rc/sh.vim	/^nnoremap    <buffer>   ""   ciW""<Esc>P$/;"	m
+""	Labs/Lab9/ftplugin/sh.vim	/^nnoremap    <buffer>   ""   ciW""<Esc>P$/;"	m
+''	Labs/Lab9/.vim/bash-support/rc/sh.vim	/^nnoremap    <buffer>   ''   ciW''<Esc>P$/;"	m
+''	Labs/Lab9/.vim/ftplugin/sh.vim	/^nnoremap    <buffer>   ''   ciW''<Esc>P$/;"	m
+''	Labs/Lab9/bash-support/rc/sh.vim	/^nnoremap    <buffer>   ''   ciW''<Esc>P$/;"	m
+''	Labs/Lab9/ftplugin/sh.vim	/^nnoremap    <buffer>   ''   ciW''<Esc>P$/;"	m
+,	Labs/Lab9/Session.vim	/^nnoremap ,  :nohlsearch$/;"	m
+,m	Labs/Lab9/Session.vim	/^map ,m :set mouse=a $/;"	m
+,mo	Labs/Lab9/Session.vim	/^map ,mo :set mouse= $/;"	m
+,nu	Labs/Lab9/Session.vim	/^map ,nu :set number $/;"	m
+,nuo	Labs/Lab9/Session.vim	/^map ,nuo :set nonumber $/;"	m
+,s	Labs/Lab9/Session.vim	/^nnoremap ,s :mksession$/;"	m
+,sd	Labs/Lab9/Session.vim	/^map ,sd :SessionOpen vim_auto_saved_session$/;"	m
+,so	Labs/Lab9/Session.vim	/^map ,so :SessionOpen user_auto_saved_session$/;"	m
+,ss	Labs/Lab9/Session.vim	/^map ,ss :SessionSaveAs user_auto_saved_session$/;"	m
+0	Labs/Lab9/Session.vim	/^normal! 0$/;"	m
+<2-LeftMouse>	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> <2-LeftMouse> :call nerdtree#ui_glue#invokeKeyMap("<2-LeftMouse>")$/;"	m
+<C-Down>	Labs/Lab9/Session.vim	/^nnoremap <C-Down> j$/;"	m
+<C-Left>	Labs/Lab9/Session.vim	/^nnoremap <C-Left> h$/;"	m
+<C-Right>	Labs/Lab9/Session.vim	/^nnoremap <C-Right> l$/;"	m
+<C-Up>	Labs/Lab9/Session.vim	/^nnoremap <C-Up> k$/;"	m
+<F2>	Labs/Lab9/Session.vim	/^map <F2> :NERDTreeToggle$/;"	m
+<F8>	Labs/Lab9/Session.vim	/^nmap <F8> :TagbarToggle$/;"	m
+<LeftRelease>	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> <LeftRelease> <LeftRelease>:call nerdtree#ui_glue#invokeKeyMap("<LeftRelease>")$/;"	m
+<LocalLeader>t1	Labs/Lab9/.vim/bash-support/rc/sh.vim	/^inoremap  <buffer>  <silent>  <LocalLeader>t1    [ -  ]<Left><Left><Left>$/;"	m
+<LocalLeader>t1	Labs/Lab9/.vim/bash-support/rc/sh.vim	/^nnoremap  <buffer>  <silent>  <LocalLeader>t1   a[ -  ]<Left><Left><Left>$/;"	m
+<LocalLeader>t1	Labs/Lab9/bash-support/rc/sh.vim	/^inoremap  <buffer>  <silent>  <LocalLeader>t1    [ -  ]<Left><Left><Left>$/;"	m
+<LocalLeader>t1	Labs/Lab9/bash-support/rc/sh.vim	/^nnoremap  <buffer>  <silent>  <LocalLeader>t1   a[ -  ]<Left><Left><Left>$/;"	m
+<LocalLeader>t2	Labs/Lab9/.vim/bash-support/rc/sh.vim	/^inoremap  <buffer>  <silent>  <LocalLeader>t2    [  -  ]<Left><Left><Left><Left><Left>$/;"	m
+<LocalLeader>t2	Labs/Lab9/.vim/bash-support/rc/sh.vim	/^nnoremap  <buffer>  <silent>  <LocalLeader>t2   a[  -  ]<Left><Left><Left><Left><Left>$/;"	m
+<LocalLeader>t2	Labs/Lab9/bash-support/rc/sh.vim	/^inoremap  <buffer>  <silent>  <LocalLeader>t2    [  -  ]<Left><Left><Left><Left><Left>$/;"	m
+<LocalLeader>t2	Labs/Lab9/bash-support/rc/sh.vim	/^nnoremap  <buffer>  <silent>  <LocalLeader>t2   a[  -  ]<Left><Left><Left><Left><Left>$/;"	m
+<MiddleMouse>	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> <MiddleMouse> :call nerdtree#ui_glue#invokeKeyMap("<MiddleMouse>")$/;"	m
+<NL>	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> <NL> :call nerdtree#ui_glue#invokeKeyMap("<C-j>")$/;"	m
+<Plug>NetrwBrowseX	Labs/Lab9/Session.vim	/^nnoremap <silent> <Plug>NetrwBrowseX :call netrw#BrowseX(expand((exists("g:netrw_gx")? g:netrw_gx : '<cfile>')),netrw#CheckIfRemote())$/;"	m
+<Plug>NetrwBrowseXVis	Labs/Lab9/Session.vim	/^vnoremap <silent> <Plug>NetrwBrowseXVis :call netrw#BrowseXVis()$/;"	m
+<S-Down>	Labs/Lab9/Session.vim	/^nnoremap <S-Down>  $/;"	m
+<S-Tab>	Labs/Lab9/Session.vim	/^nmap <S-Tab> :bp$/;"	m
+<S-Up>	Labs/Lab9/Session.vim	/^nnoremap <S-Up> $/;"	m
+?	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> ? :call nerdtree#ui_glue#invokeKeyMap("?")$/;"	m
+A	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> A :call nerdtree#ui_glue#invokeKeyMap("A")$/;"	m
+AddList	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:AddList ( type, name, settings, lines )$/;"	f
+AddList	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:AddList ( type, name, settings, lines )$/;"	f
+AddSeparator	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:AddSeparator ( type, name, settings )$/;"	f
+AddSeparator	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:AddSeparator ( type, name, settings )$/;"	f
+AddStyles	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:AddStyles ( styles )$/;"	f
+AddStyles	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:AddStyles ( styles )$/;"	f
+AddTemplate	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:AddTemplate ( type, name, settings, lines )$/;"	f
+AddTemplate	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:AddTemplate ( type, name, settings, lines )$/;"	f
+AddText	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:AddText ( type, name, settings, lines )$/;"	f
+AddText	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:AddText ( type, name, settings, lines )$/;"	f
+ApplyDefaultSetting	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:ApplyDefaultSetting ( varname, value )$/;"	f
+ApplyDefaultSetting	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:ApplyDefaultSetting ( varname, value )$/;"	f
+ApplyFlag	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:ApplyFlag ( text, flag, format, width )$/;"	f
+ApplyFlag	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:ApplyFlag ( text, flag, format, width )$/;"	f
+B	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> B :call nerdtree#ui_glue#invokeKeyMap("B")$/;"	m
+BASH_AdjustLineEndComm	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! BASH_AdjustLineEndComm ( ) range$/;"	f
+BASH_AdjustLineEndComm	Labs/Lab9/plugin/bash-support.vim	/^function! BASH_AdjustLineEndComm ( ) range$/;"	f
+BASH_BashCmdLineArguments	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! BASH_BashCmdLineArguments ( ... )$/;"	f
+BASH_BashCmdLineArguments	Labs/Lab9/plugin/bash-support.vim	/^function! BASH_BashCmdLineArguments ( ... )$/;"	f
+BASH_CodeSnippet	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! BASH_CodeSnippet(mode)$/;"	f
+BASH_CodeSnippet	Labs/Lab9/plugin/bash-support.vim	/^function! BASH_CodeSnippet(mode)$/;"	f
+BASH_CreateGuiMenus	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! BASH_CreateGuiMenus ()$/;"	f
+BASH_CreateGuiMenus	Labs/Lab9/plugin/bash-support.vim	/^function! BASH_CreateGuiMenus ()$/;"	f
+BASH_Debugger	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! BASH_Debugger ()$/;"	f
+BASH_Debugger	Labs/Lab9/plugin/bash-support.vim	/^function! BASH_Debugger ()$/;"	f
+BASH_EndOfLineComment	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! BASH_EndOfLineComment ( ) range$/;"	f
+BASH_EndOfLineComment	Labs/Lab9/plugin/bash-support.vim	/^function! BASH_EndOfLineComment ( ) range$/;"	f
+BASH_GetLineEndCommCol	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! BASH_GetLineEndCommCol ()$/;"	f
+BASH_GetLineEndCommCol	Labs/Lab9/plugin/bash-support.vim	/^function! BASH_GetLineEndCommCol ()$/;"	f
+BASH_Hardcopy	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! BASH_Hardcopy (mode)$/;"	f
+BASH_Hardcopy	Labs/Lab9/plugin/bash-support.vim	/^function! BASH_Hardcopy (mode)$/;"	f
+BASH_HelpBashSupport	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! BASH_HelpBashSupport ()$/;"	f
+BASH_HelpBashSupport	Labs/Lab9/plugin/bash-support.vim	/^function! BASH_HelpBashSupport ()$/;"	f
+BASH_Input	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! BASH_Input ( prompt, defaultreply, ... )$/;"	f
+BASH_Input	Labs/Lab9/plugin/bash-support.vim	/^function! BASH_Input ( prompt, defaultreply, ... )$/;"	f
+BASH_JumpForward	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! BASH_JumpForward ()$/;"	f
+BASH_JumpForward	Labs/Lab9/plugin/bash-support.vim	/^function! BASH_JumpForward ()$/;"	f
+BASH_MakeScriptExecutable	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! BASH_MakeScriptExecutable ()$/;"	f
+BASH_MakeScriptExecutable	Labs/Lab9/plugin/bash-support.vim	/^function! BASH_MakeScriptExecutable ()$/;"	f
+BASH_RemoveGuiMenus	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! BASH_RemoveGuiMenus ()$/;"	f
+BASH_RemoveGuiMenus	Labs/Lab9/plugin/bash-support.vim	/^function! BASH_RemoveGuiMenus ()$/;"	f
+BASH_RereadTemplates	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! BASH_RereadTemplates ()$/;"	f
+BASH_RereadTemplates	Labs/Lab9/plugin/bash-support.vim	/^function! BASH_RereadTemplates ()$/;"	f
+BASH_RestoreGlobalOption	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! s:BASH_RestoreGlobalOption ( option )$/;"	f
+BASH_RestoreGlobalOption	Labs/Lab9/plugin/bash-support.vim	/^function! s:BASH_RestoreGlobalOption ( option )$/;"	f
+BASH_RestoreOption	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! BASH_RestoreOption ( option )$/;"	f
+BASH_RestoreOption	Labs/Lab9/plugin/bash-support.vim	/^function! BASH_RestoreOption ( option )$/;"	f
+BASH_Run	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! BASH_Run ( mode ) range$/;"	f
+BASH_Run	Labs/Lab9/plugin/bash-support.vim	/^function! BASH_Run ( mode ) range$/;"	f
+BASH_SaveGlobalOption	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! s:BASH_SaveGlobalOption ( option, ... )$/;"	f
+BASH_SaveGlobalOption	Labs/Lab9/plugin/bash-support.vim	/^function! s:BASH_SaveGlobalOption ( option, ... )$/;"	f
+BASH_SaveOption	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! BASH_SaveOption ( option, ... )$/;"	f
+BASH_SaveOption	Labs/Lab9/plugin/bash-support.vim	/^function! BASH_SaveOption ( option, ... )$/;"	f
+BASH_ScriptCmdLineArguments	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! BASH_ScriptCmdLineArguments ( ... )$/;"	f
+BASH_ScriptCmdLineArguments	Labs/Lab9/plugin/bash-support.vim	/^function! BASH_ScriptCmdLineArguments ( ... )$/;"	f
+BASH_SetGlobalVariable	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! s:BASH_SetGlobalVariable ( name, default )$/;"	f
+BASH_SetGlobalVariable	Labs/Lab9/plugin/bash-support.vim	/^function! s:BASH_SetGlobalVariable ( name, default )$/;"	f
+BASH_Settings	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! BASH_Settings ( verbose )$/;"	f
+BASH_Settings	Labs/Lab9/plugin/bash-support.vim	/^function! BASH_Settings ( verbose )$/;"	f
+BASH_SyntaxCheck	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! BASH_SyntaxCheck ()$/;"	f
+BASH_SyntaxCheck	Labs/Lab9/plugin/bash-support.vim	/^function! BASH_SyntaxCheck ()$/;"	f
+BASH_SyntaxCheckOptions	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! BASH_SyntaxCheckOptions( options )$/;"	f
+BASH_SyntaxCheckOptions	Labs/Lab9/plugin/bash-support.vim	/^function! BASH_SyntaxCheckOptions( options )$/;"	f
+BASH_SyntaxCheckOptionsLocal	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! BASH_SyntaxCheckOptionsLocal ()$/;"	f
+BASH_SyntaxCheckOptionsLocal	Labs/Lab9/plugin/bash-support.vim	/^function! BASH_SyntaxCheckOptionsLocal ()$/;"	f
+BASH_Toggle_Gvim_Xterm	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! BASH_Toggle_Gvim_Xterm ()$/;"	f
+BASH_Toggle_Gvim_Xterm	Labs/Lab9/plugin/bash-support.vim	/^function! BASH_Toggle_Gvim_Xterm ()$/;"	f
+BASH_Toggle_Gvim_Xterm_MS	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! BASH_Toggle_Gvim_Xterm_MS ()$/;"	f
+BASH_Toggle_Gvim_Xterm_MS	Labs/Lab9/plugin/bash-support.vim	/^function! BASH_Toggle_Gvim_Xterm_MS ()$/;"	f
+BASH_ToolMenu	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! BASH_ToolMenu ()$/;"	f
+BASH_ToolMenu	Labs/Lab9/plugin/bash-support.vim	/^function! BASH_ToolMenu ()$/;"	f
+BASH_XtermSize	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! BASH_XtermSize ()$/;"	f
+BASH_XtermSize	Labs/Lab9/plugin/bash-support.vim	/^function! BASH_XtermSize ()$/;"	f
+BASH_echo_comment	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! BASH_echo_comment ()$/;"	f
+BASH_echo_comment	Labs/Lab9/plugin/bash-support.vim	/^function! BASH_echo_comment ()$/;"	f
+BASH_help	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! BASH_help( type )$/;"	f
+BASH_help	Labs/Lab9/plugin/bash-support.vim	/^function! BASH_help( type )$/;"	f
+BASH_remove_echo	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! BASH_remove_echo ()$/;"	f
+BASH_remove_echo	Labs/Lab9/plugin/bash-support.vim	/^function! BASH_remove_echo ()$/;"	f
+Bash_ResetMapLeader	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! Bash_ResetMapLeader ()$/;"	f
+Bash_ResetMapLeader	Labs/Lab9/plugin/bash-support.vim	/^function! Bash_ResetMapLeader ()$/;"	f
+Bash_SetMapLeader	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! Bash_SetMapLeader ()$/;"	f
+Bash_SetMapLeader	Labs/Lab9/plugin/bash-support.vim	/^function! Bash_SetMapLeader ()$/;"	f
+C	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> C :call nerdtree#ui_glue#invokeKeyMap("C")$/;"	m
+CD	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> CD :call nerdtree#ui_glue#invokeKeyMap("CD")$/;"	m
+CheckHelp	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:CheckHelp ( cmds, text, calls )$/;"	f
+CheckHelp	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:CheckHelp ( cmds, text, calls )$/;"	f
+CheckStdTempl	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:CheckStdTempl ( cmds, text, calls )$/;"	f
+CheckStdTempl	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:CheckStdTempl ( cmds, text, calls )$/;"	f
+CheckTemplate	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:CheckTemplate ( template, type )$/;"	f
+CheckTemplate	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:CheckTemplate ( template, type )$/;"	f
+CheckTemplatePersonalization	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! s:CheckTemplatePersonalization ()$/;"	f
+CheckTemplatePersonalization	Labs/Lab9/plugin/bash-support.vim	/^function! s:CheckTemplatePersonalization ()$/;"	f
+CodeComment	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! s:CodeComment() range$/;"	f
+CodeComment	Labs/Lab9/plugin/bash-support.vim	/^function! s:CodeComment() range$/;"	f
+CommentCode	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! s:CommentCode( toggle ) range$/;"	f
+CommentCode	Labs/Lab9/plugin/bash-support.vim	/^function! s:CommentCode( toggle ) range$/;"	f
+ConcatNormalizedFilename	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:ConcatNormalizedFilename ( ... )$/;"	f
+ConcatNormalizedFilename	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:ConcatNormalizedFilename ( ... )$/;"	f
+CreateAdditionalMaps	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! s:CreateAdditionalMaps ()$/;"	f
+CreateAdditionalMaps	Labs/Lab9/plugin/bash-support.vim	/^function! s:CreateAdditionalMaps ()$/;"	f
+CreateListMenus	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:CreateListMenus ( t_name, submenu, visual )$/;"	f
+CreateListMenus	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:CreateListMenus ( t_name, submenu, visual )$/;"	f
+CreateSpecialsMenus	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:CreateSpecialsMenus ( styles_only )$/;"	f
+CreateSpecialsMenus	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:CreateSpecialsMenus ( styles_only )$/;"	f
+CreateSubmenu	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:CreateSubmenu ( menu, priority )$/;"	f
+CreateSubmenu	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:CreateSubmenu ( menu, priority )$/;"	f
+CreateTemplateMenus	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:CreateTemplateMenus (  )$/;"	f
+CreateTemplateMenus	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:CreateTemplateMenus (  )$/;"	f
+D	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> D :call nerdtree#ui_glue#invokeKeyMap("D")$/;"	m
+DebugMsg	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:DebugMsg ( lvl, ... )$/;"	f
+DebugMsg	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:DebugMsg ( lvl, ... )$/;"	f
+DoCreateMap	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:DoCreateMap ( map, mode, report )$/;"	f
+DoCreateMap	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:DoCreateMap ( map, mode, report )$/;"	f
+ErrorMsg	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:ErrorMsg ( ... )$/;"	f
+ErrorMsg	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:ErrorMsg ( ... )$/;"	f
+F	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> F :call nerdtree#ui_glue#invokeKeyMap("F")$/;"	m
+FunctionCheck	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:FunctionCheck ( name, param, namespace )$/;"	f
+FunctionCheck	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:FunctionCheck ( name, param, namespace )$/;"	f
+GetFileFromBrowser	Labs/Lab9/.vim/autoload/mmtemplates/wizard.vim	/^function! s:GetFileFromBrowser ( save, title, dir, default, ... )$/;"	f
+GetFileFromBrowser	Labs/Lab9/autoload/mmtemplates/wizard.vim	/^function! s:GetFileFromBrowser ( save, title, dir, default, ... )$/;"	f
+GetGlobalSetting	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:GetGlobalSetting ( varname, ... )$/;"	f
+GetGlobalSetting	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! s:GetGlobalSetting ( varname )$/;"	f
+GetGlobalSetting	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:GetGlobalSetting ( varname, ... )$/;"	f
+GetGlobalSetting	Labs/Lab9/plugin/bash-support.vim	/^function! s:GetGlobalSetting ( varname )$/;"	f
+GetNormalizedPath	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:GetNormalizedPath ( filename )$/;"	f
+GetNormalizedPath	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:GetNormalizedPath ( filename )$/;"	f
+GetPickList	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:GetPickList ( name, ... )$/;"	f
+GetPickList	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:GetPickList ( name, ... )$/;"	f
+GetTemplate	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:GetTemplate ( name, style )$/;"	f
+GetTemplate	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:GetTemplate ( name, style )$/;"	f
+GetVisualArea	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:GetVisualArea ()$/;"	f
+GetVisualArea	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:GetVisualArea ()$/;"	f
+HandleMenuExpandOptions	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:HandleMenuExpandOptions ( option )$/;"	f
+HandleMenuExpandOptions	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:HandleMenuExpandOptions ( option )$/;"	f
+HighlightJumpTargets	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:HighlightJumpTargets ( regex )$/;"	f
+HighlightJumpTargets	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:HighlightJumpTargets ( regex )$/;"	f
+HitEnter	Labs/Lab9/.vim/autoload/mmtemplates/wizard.vim	/^function! s:HitEnter ()$/;"	f
+HitEnter	Labs/Lab9/autoload/mmtemplates/wizard.vim	/^function! s:HitEnter ()$/;"	f
+I	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> I :call nerdtree#ui_glue#invokeKeyMap("I")$/;"	m
+ImportantMsg	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:ImportantMsg ( ... )$/;"	f
+ImportantMsg	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:ImportantMsg ( ... )$/;"	f
+IncludeFile	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:IncludeFile ( templatefile, ... )$/;"	f
+IncludeFile	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:IncludeFile ( templatefile, ... )$/;"	f
+InitMenus	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! s:InitMenus()$/;"	f
+InitMenus	Labs/Lab9/plugin/bash-support.vim	/^function! s:InitMenus()$/;"	f
+InsertIntoBuffer	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:InsertIntoBuffer ( text, placement, indentation, flag_mode )$/;"	f
+InsertIntoBuffer	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:InsertIntoBuffer ( text, placement, indentation, flag_mode )$/;"	f
+InsertShortcut	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:InsertShortcut ( entry, shortcut, escaped )$/;"	f
+InsertShortcut	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:InsertShortcut ( entry, shortcut, escaped )$/;"	f
+InterfaceVersion	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:InterfaceVersion ( version_str )$/;"	f
+InterfaceVersion	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:InterfaceVersion ( version_str )$/;"	f
+InterfaceVersionRuntimeUpdates	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:InterfaceVersionRuntimeUpdates ()$/;"	f
+InterfaceVersionRuntimeUpdates	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:InterfaceVersionRuntimeUpdates ()$/;"	f
+J	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> J :call nerdtree#ui_glue#invokeKeyMap("J")$/;"	m
+K	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> K :call nerdtree#ui_glue#invokeKeyMap("K")$/;"	m
+LiteralReplacement	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:LiteralReplacement ( text, remove, insert, flag )$/;"	f
+LiteralReplacement	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:LiteralReplacement ( text, remove, insert, flag )$/;"	f
+MenuShortcut	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:MenuShortcut ( name, shortcut )$/;"	f
+MenuShortcut	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:MenuShortcut ( name, shortcut )$/;"	f
+O	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> O :call nerdtree#ui_glue#invokeKeyMap("O")$/;"	m
+OpenFold	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:OpenFold ( mode )$/;"	f
+OpenFold	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:OpenFold ( mode )$/;"	f
+P	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> P :call nerdtree#ui_glue#invokeKeyMap("P")$/;"	m
+ParameterTypes	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:ParameterTypes ( ... )$/;"	f
+ParameterTypes	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:ParameterTypes ( ... )$/;"	f
+PositionCursor	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:PositionCursor ( placement, flag_mode, pos1, pos2 )$/;"	f
+PositionCursor	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:PositionCursor ( placement, flag_mode, pos1, pos2 )$/;"	f
+PrepareHelp	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:PrepareHelp ( cmds, text )$/;"	f
+PrepareHelp	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:PrepareHelp ( cmds, text )$/;"	f
+PrepareStdTempl	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:PrepareStdTempl ( cmds, text, name )$/;"	f
+PrepareStdTempl	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:PrepareStdTempl ( cmds, text, name )$/;"	f
+PrepareTemplate	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:PrepareTemplate ( name, ... )$/;"	f
+PrepareTemplate	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:PrepareTemplate ( name, ... )$/;"	f
+Question	Labs/Lab9/.vim/autoload/mmtemplates/wizard.vim	/^function! s:Question ( text, ... )$/;"	f
+Question	Labs/Lab9/autoload/mmtemplates/wizard.vim	/^function! s:Question ( text, ... )$/;"	f
+R	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> R :call nerdtree#ui_glue#invokeKeyMap("R")$/;"	m
+RenewStdMacros	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:RenewStdMacros ( to_list, from_list )$/;"	f
+RenewStdMacros	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:RenewStdMacros ( to_list, from_list )$/;"	f
+ReplaceMacros	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:ReplaceMacros ( text, m_local )$/;"	f
+ReplaceMacros	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:ReplaceMacros ( text, m_local )$/;"	f
+RevertFiletypes	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:RevertFiletypes ( times )$/;"	f
+RevertFiletypes	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:RevertFiletypes ( times )$/;"	f
+RevertStyles	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:RevertStyles ( times )$/;"	f
+RevertStyles	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:RevertStyles ( times )$/;"	f
+SID	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:SID ()$/;"	f
+SID	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:SID ()$/;"	f
+SessionLoad	Labs/Lab9/Session.vim	/^let SessionLoad = 1$/;"	v
+SetExpansion	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:SetExpansion ( name, expand_left, ... )$/;"	f
+SetExpansion	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:SetExpansion ( name, expand_left, ... )$/;"	f
+SetFormat	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:SetFormat ( name, replacement )$/;"	f
+SetFormat	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:SetFormat ( name, replacement )$/;"	f
+SetMacro	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:SetMacro ( name, replacement )$/;"	f
+SetMacro	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:SetMacro ( name, replacement )$/;"	f
+SetMap	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:SetMap ( name, map )$/;"	f
+SetMap	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:SetMap ( name, map )$/;"	f
+SetMenuEntry	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:SetMenuEntry ( name, menu_entry )$/;"	f
+SetMenuEntry	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:SetMenuEntry ( name, menu_entry )$/;"	f
+SetPath	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:SetPath ( name, value )$/;"	f
+SetPath	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:SetPath ( name, value )$/;"	f
+SetProperty	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:SetProperty ( name, value )$/;"	f
+SetProperty	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:SetProperty ( name, value )$/;"	f
+SetShortcut	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:SetShortcut ( name, shortcut )$/;"	f
+SetShortcut	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:SetShortcut ( name, shortcut )$/;"	f
+SetStyle	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:SetStyle ( name )$/;"	f
+SetStyle	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:SetStyle ( name )$/;"	f
+SetupCustom	Labs/Lab9/.vim/autoload/mmtemplates/wizard.vim	/^function! s:SetupCustom ( library, mode )$/;"	f
+SetupCustom	Labs/Lab9/autoload/mmtemplates/wizard.vim	/^function! s:SetupCustom ( library, mode )$/;"	f
+SetupPersonal	Labs/Lab9/.vim/autoload/mmtemplates/wizard.vim	/^function! s:SetupPersonal ( library )$/;"	f
+SetupPersonal	Labs/Lab9/autoload/mmtemplates/wizard.vim	/^function! s:SetupPersonal ( library )$/;"	f
+T	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> T :call nerdtree#ui_glue#invokeKeyMap("T")$/;"	m
+U	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> U :call nerdtree#ui_glue#invokeKeyMap("U")$/;"	m
+UpdateFileReadRegex	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:UpdateFileReadRegex ( regex, settings, interface )$/;"	f
+UpdateFileReadRegex	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:UpdateFileReadRegex ( regex, settings, interface )$/;"	f
+UpdateTemplateRegex	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:UpdateTemplateRegex ( regex, settings, interface )$/;"	f
+UpdateTemplateRegex	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:UpdateTemplateRegex ( regex, settings, interface )$/;"	f
+UseFiletypes	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:UseFiletypes ( filetypes )$/;"	f
+UseFiletypes	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:UseFiletypes ( filetypes )$/;"	f
+UseStyles	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:UseStyles ( styles )$/;"	f
+UseStyles	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:UseStyles ( styles )$/;"	f
+UserInput	Labs/Lab9/.vim/autoload/mmtemplates/config.vim	/^function! s:UserInput ( prompt, text, ... )$/;"	f
+UserInput	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:UserInput ( prompt, text, ... )$/;"	f
+UserInput	Labs/Lab9/.vim/autoload/mmtemplates/wizard.vim	/^function! s:UserInput ( prompt, text, ... )$/;"	f
+UserInput	Labs/Lab9/autoload/mmtemplates/config.vim	/^function! s:UserInput ( prompt, text, ... )$/;"	f
+UserInput	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:UserInput ( prompt, text, ... )$/;"	f
+UserInput	Labs/Lab9/autoload/mmtemplates/wizard.vim	/^function! s:UserInput ( prompt, text, ... )$/;"	f
+UserInputEx	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:UserInputEx ( ArgLead, CmdLine, CursorPos )$/;"	f
+UserInputEx	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:UserInputEx ( ArgLead, CmdLine, CursorPos )$/;"	f
+VersionCode	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:VersionCode ( version )$/;"	f
+VersionCode	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:VersionCode ( version )$/;"	f
+VersionComp	Labs/Lab9/.vim/autoload/mmtemplates/config.vim	/^	function! s:VersionComp ( op1, op2 )$/;"	f
+VersionComp	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^	function! s:VersionComp ( op1, op2 )$/;"	f
+VersionComp	Labs/Lab9/.vim/autoload/mmtemplates/wizard.vim	/^	function! s:VersionComp ( op1, op2 )$/;"	f
+VersionComp	Labs/Lab9/autoload/mmtemplates/config.vim	/^	function! s:VersionComp ( op1, op2 )$/;"	f
+VersionComp	Labs/Lab9/autoload/mmtemplates/core.vim	/^	function! s:VersionComp ( op1, op2 )$/;"	f
+VersionComp	Labs/Lab9/autoload/mmtemplates/wizard.vim	/^	function! s:VersionComp ( op1, op2 )$/;"	f
+VimrcCodeSnippet	Labs/Lab9/.vim/autoload/mmtemplates/wizard.vim	/^function! s:VimrcCodeSnippet ( text )$/;"	f
+VimrcCodeSnippet	Labs/Lab9/autoload/mmtemplates/wizard.vim	/^function! s:VimrcCodeSnippet ( text )$/;"	f
+WarningMsg	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:WarningMsg ( ... )$/;"	f
+WarningMsg	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:WarningMsg ( ... )$/;"	f
+X	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> X :call nerdtree#ui_glue#invokeKeyMap("X")$/;"	m
+["	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> [" :call search('\\%(^\\s*".*\\n\\)\\%(^\\s*"\\)\\@!', "bW")$/;"	m
+["	Labs/Lab9/Session.vim	/^vnoremap <buffer> <silent> [" :exe "normal! gv"|call search('\\%(^\\s*".*\\n\\)\\%(^\\s*"\\)\\@!', "bW")$/;"	m
+[[	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> [[ m':call search('^\\s*fu\\%[nction]\\>', "bW")$/;"	m
+[[	Labs/Lab9/Session.vim	/^vnoremap <buffer> <silent> [[ m':exe "normal! gv"|call search('^\\s*fu\\%[nction]\\>', "bW")$/;"	m
+[]	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> [] m':call search('^\\s*endf*\\%[unction]\\>', "bW")$/;"	m
+[]	Labs/Lab9/Session.vim	/^vnoremap <buffer> <silent> [] m':exe "normal! gv"|call search('^\\s*endf*\\%[unction]\\>', "bW")$/;"	m
+]"	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> ]" :call search('^\\(\\s*".*\\n\\)\\@<!\\(\\s*"\\)', "W")$/;"	m
+]"	Labs/Lab9/Session.vim	/^vnoremap <buffer> <silent> ]" :exe "normal! gv"|call search('^\\(\\s*".*\\n\\)\\@<!\\(\\s*"\\)', "W")$/;"	m
+][	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> ][ m':call search('^\\s*endf*\\%[unction]\\>', "W")$/;"	m
+][	Labs/Lab9/Session.vim	/^vnoremap <buffer> <silent> ][ m':exe "normal! gv"|call search('^\\s*endf*\\%[unction]\\>', "W")$/;"	m
+]]	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> ]] m':call search('^\\s*fu\\%[nction]\\>', "W")$/;"	m
+]]	Labs/Lab9/Session.vim	/^vnoremap <buffer> <silent> ]] m':exe "normal! gv"|call search('^\\s*fu\\%[nction]\\>', "W")$/;"	m
+_key	Labs/Lab9/final_project/key.sh	/^_key()$/;"	f
+_key	scripts/final_project/key.sh	/^_key()$/;"	f
+answer_char	Labs/Lab9/final_project/answer.sh	/^answer_char ()$/;"	f
+answer_char	scripts/final_project/answer.sh	/^answer_char ()$/;"	f
+answer_end	Labs/Lab9/final_project/answer.sh	/^answer_end ()$/;"	f
+answer_end	scripts/final_project/answer.sh	/^answer_end ()$/;"	f
+answer_events	Labs/Lab9/final_project/answer.sh	/^answer_events ()$/;"	f
+answer_events	scripts/final_project/answer.sh	/^answer_events ()$/;"	f
+answer_key	Labs/Lab9/final_project/answer.sh	/^answer_key ()$/;"	f
+answer_key	scripts/final_project/answer.sh	/^answer_key ()$/;"	f
+answer_keypress	Labs/Lab9/final_project/answer.sh	/^answer_keypress ()$/;"	f
+answer_keypress	scripts/final_project/answer.sh	/^answer_keypress ()$/;"	f
+asdc	Labs/Lab8/asd.c	/^asdc$/;"	v
+b:BASH_BashCmdLineArgs	Labs/Lab9/.vim/plugin/bash-support.vim	/^let b:BASH_BashCmdLineArgs				= ''$/;"	v
+b:BASH_BashCmdLineArgs	Labs/Lab9/plugin/bash-support.vim	/^let b:BASH_BashCmdLineArgs				= ''$/;"	v
+b:current_syntax	Labs/Lab9/.vim/syntax/template.vim	/^let b:current_syntax = "template"$/;"	v
+b:current_syntax	Labs/Lab9/syntax/template.vim	/^let b:current_syntax = "template"$/;"	v
+b:did_BASH_ftplugin	Labs/Lab9/.vim/ftplugin/sh.vim	/^let b:did_BASH_ftplugin = 1$/;"	v
+b:did_BASH_ftplugin	Labs/Lab9/ftplugin/sh.vim	/^let b:did_BASH_ftplugin = 1$/;"	v
+b:did_Template_ftplugin	Labs/Lab9/.vim/ftplugin/template.vim	/^let b:did_Template_ftplugin = 1$/;"	v
+b:did_Template_ftplugin	Labs/Lab9/ftplugin/template.vim	/^let b:did_Template_ftplugin = 1$/;"	v
+b:is_bash	Labs/Lab9/.vim/ftplugin/sh.vim	/^let b:is_bash = 1$/;"	v
+b:is_bash	Labs/Lab9/ftplugin/sh.vim	/^let b:is_bash = 1$/;"	v
+bash_RemoveSpecialCharacters	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! s:bash_RemoveSpecialCharacters ( )$/;"	f
+bash_RemoveSpecialCharacters	Labs/Lab9/plugin/bash-support.vim	/^function! s:bash_RemoveSpecialCharacters ( )$/;"	f
+bash_find_option	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! s:bash_find_option ( list, option )$/;"	f
+bash_find_option	Labs/Lab9/plugin/bash-support.vim	/^function! s:bash_find_option ( list, option )$/;"	f
+cd	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> cd :call nerdtree#ui_glue#invokeKeyMap("cd")$/;"	m
+check_answer	Labs/Lab7/hangman.sh	/^check_answer()$/;"	f
+choice	Labs/Lab9/final_project/monitor.sh	/^choice () {$/;"	f
+choice	Labs/Lab9/final_project/testchoice.sh	/^choice () {$/;"	f
+choice	scripts/final_project/testchoice.sh	/^choice () {$/;"	f
+cleanUp	Labs/Lab9/final_project/monitor.sh	/^cleanUp()$/;"	f
+cleanUp	Labs/Lab9/monitor.sh	/^cleanUp()$/;"	f
+cleanUp	Labs/Lab9/skeleton.sh	/^cleanUp()$/;"	f
+cleanUp	scripts/final_project/monitor.sh	/^cleanUp()$/;"	f
+color	Labs/Lab9/colors.sh	/^color()$/;"	f
+contains	Labs/Lab7/hangman.sh	/^contains()$/;"	f
+d	Labs/Lab8/asd.c	/^d,$/;"	v
+draw	Labs/Lab9/final_project/ops.sh	/^function draw()$/;"	f
+draw	scripts/final_project/ops.sh	/^function draw()$/;"	f
+dslc	Labs/Lab8/asd.c	/^,dslc,$/;"	v
+e	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> e :call nerdtree#ui_glue#invokeKeyMap("e")$/;"	m
+f	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> f :call nerdtree#ui_glue#invokeKeyMap("f")$/;"	m
+format_header	Labs/Lab9/monitor.sh	/^format_header()$/;"	f
+g:BASH_Dictionary_File	Labs/Lab9/.vim/plugin/bash-support.vim	/^	let g:BASH_Dictionary_File     = s:BASH_PluginDir.'\/bash-support\/wordlists\/bash-keywords.list'$/;"	v
+g:BASH_Dictionary_File	Labs/Lab9/plugin/bash-support.vim	/^	let g:BASH_Dictionary_File     = s:BASH_PluginDir.'\/bash-support\/wordlists\/bash-keywords.list'$/;"	v
+g:BASH_Version	Labs/Lab9/.vim/plugin/bash-support.vim	/^let g:BASH_Version= "4.3"                  " version number of this script; do not change$/;"	v
+g:BASH_Version	Labs/Lab9/plugin/bash-support.vim	/^let g:BASH_Version= "4.3"                  " version number of this script; do not change$/;"	v
+g:CheckedFiletypes	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^let g:CheckedFiletypes = {}$/;"	v
+g:CheckedFiletypes	Labs/Lab9/autoload/mmtemplates/core.vim	/^let g:CheckedFiletypes = {}$/;"	v
+g:TemplatesConfig_Version	Labs/Lab9/.vim/autoload/mmtemplates/config.vim	/^		let g:TemplatesConfig_Version = 'searching'$/;"	v
+g:TemplatesConfig_Version	Labs/Lab9/.vim/autoload/mmtemplates/config.vim	/^let g:TemplatesConfig_Version = s:TemplatesConfig_Version     " version number of this script; do not change$/;"	v
+g:TemplatesConfig_Version	Labs/Lab9/autoload/mmtemplates/config.vim	/^		let g:TemplatesConfig_Version = 'searching'$/;"	v
+g:TemplatesConfig_Version	Labs/Lab9/autoload/mmtemplates/config.vim	/^let g:TemplatesConfig_Version = s:TemplatesConfig_Version     " version number of this script; do not change$/;"	v
+g:TemplatesConfig_VersionSearch	Labs/Lab9/.vim/autoload/mmtemplates/config.vim	/^		let g:TemplatesConfig_VersionSearch = []$/;"	v
+g:TemplatesConfig_VersionSearch	Labs/Lab9/autoload/mmtemplates/config.vim	/^		let g:TemplatesConfig_VersionSearch = []$/;"	v
+g:TemplatesConfig_VersionUse	Labs/Lab9/.vim/autoload/mmtemplates/config.vim	/^		let g:TemplatesConfig_VersionUse = g:TemplatesConfig_VersionSearch[ 0 ]$/;"	v
+g:TemplatesConfig_VersionUse	Labs/Lab9/autoload/mmtemplates/config.vim	/^		let g:TemplatesConfig_VersionUse = g:TemplatesConfig_VersionSearch[ 0 ]$/;"	v
+g:TemplatesWizard_Version	Labs/Lab9/.vim/autoload/mmtemplates/wizard.vim	/^		let g:TemplatesWizard_Version = 'searching'$/;"	v
+g:TemplatesWizard_Version	Labs/Lab9/.vim/autoload/mmtemplates/wizard.vim	/^let g:TemplatesWizard_Version = s:TemplatesWizard_Version     " version number of this script; do not change$/;"	v
+g:TemplatesWizard_Version	Labs/Lab9/autoload/mmtemplates/wizard.vim	/^		let g:TemplatesWizard_Version = 'searching'$/;"	v
+g:TemplatesWizard_Version	Labs/Lab9/autoload/mmtemplates/wizard.vim	/^let g:TemplatesWizard_Version = s:TemplatesWizard_Version     " version number of this script; do not change$/;"	v
+g:TemplatesWizard_VersionSearch	Labs/Lab9/.vim/autoload/mmtemplates/wizard.vim	/^		let g:TemplatesWizard_VersionSearch = []$/;"	v
+g:TemplatesWizard_VersionSearch	Labs/Lab9/autoload/mmtemplates/wizard.vim	/^		let g:TemplatesWizard_VersionSearch = []$/;"	v
+g:TemplatesWizard_VersionUse	Labs/Lab9/.vim/autoload/mmtemplates/wizard.vim	/^		let g:TemplatesWizard_VersionUse = g:TemplatesWizard_VersionSearch[ 0 ]$/;"	v
+g:TemplatesWizard_VersionUse	Labs/Lab9/autoload/mmtemplates/wizard.vim	/^		let g:TemplatesWizard_VersionUse = g:TemplatesWizard_VersionSearch[ 0 ]$/;"	v
+g:Templates_Version	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^		let g:Templates_Version = 'searching'$/;"	v
+g:Templates_Version	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^let g:Templates_Version = s:Templates_Version     " version number of this script; do not change$/;"	v
+g:Templates_Version	Labs/Lab9/autoload/mmtemplates/core.vim	/^		let g:Templates_Version = 'searching'$/;"	v
+g:Templates_Version	Labs/Lab9/autoload/mmtemplates/core.vim	/^let g:Templates_Version = s:Templates_Version     " version number of this script; do not change$/;"	v
+g:Templates_VersionSearch	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^		let g:Templates_VersionSearch = []$/;"	v
+g:Templates_VersionSearch	Labs/Lab9/autoload/mmtemplates/core.vim	/^		let g:Templates_VersionSearch = []$/;"	v
+g:Templates_VersionUse	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^		let g:Templates_VersionUse = g:Templates_VersionSearch[ 0 ]$/;"	v
+g:Templates_VersionUse	Labs/Lab9/autoload/mmtemplates/core.vim	/^		let g:Templates_VersionUse = g:Templates_VersionSearch[ 0 ]$/;"	v
+getKey	Labs/Lab9/final_project/monitor.sh	/^getKey()$/;"	f
+getKey	Labs/Lab9/monitor.sh	/^getKey()$/;"	f
+getKey	Labs/Lab9/skeleton.sh	/^getKey()$/;"	f
+getKey	scripts/final_project/monitor.sh	/^getKey()$/;"	f
+getProcessIds	Labs/Lab8/minips.sh	/^function getProcessIds$/;"	f
+getProcessInfo	Labs/Lab8/minips.sh	/^function getProcessInfo$/;"	f
+gi	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> gi :call nerdtree#ui_glue#invokeKeyMap("gi")$/;"	m
+go	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> go :call nerdtree#ui_glue#invokeKeyMap("go")$/;"	m
+gs	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> gs :call nerdtree#ui_glue#invokeKeyMap("gs")$/;"	m
+gx	Labs/Lab9/Session.vim	/^nmap gx <Plug>NetrwBrowseX$/;"	m
+gx	Labs/Lab9/Session.vim	/^vmap gx <Plug>NetrwBrowseXVis$/;"	m
+i	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> i :call nerdtree#ui_glue#invokeKeyMap("i")$/;"	m
+m	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> m :call nerdtree#ui_glue#invokeKeyMap("m")$/;"	m
+main	Labs/Lab5/menu.sh	/^function main {$/;"	f
+main	Labs/Lab6/awkmenu.sh	/^function main$/;"	f
+main	Labs/Lab7/hangman.sh	/^main()$/;"	f
+main	Labs/Lab8/minips.sh	/^function main$/;"	f
+main	Labs/Lab9/final_project/monitor.sh	/^main ()$/;"	f
+main	Labs/Lab9/monitor.sh	/^main()$/;"	f
+main	Labs/Lab9/monitor/main.sh	/^function main$/;"	f
+main	Labs/Lab9/skeleton.sh	/^main()$/;"	f
+main	scripts/final_project/monitor.sh	/^main()$/;"	f
+main	scripts/monitor/main.sh	/^function main$/;"	f
+mmtemplates#config#Add	Labs/Lab9/.vim/autoload/mmtemplates/config.vim	/^function! mmtemplates#config#Add ( ft, path, ... )$/;"	f
+mmtemplates#config#Add	Labs/Lab9/autoload/mmtemplates/config.vim	/^function! mmtemplates#config#Add ( ft, path, ... )$/;"	f
+mmtemplates#config#GetAll	Labs/Lab9/.vim/autoload/mmtemplates/config.vim	/^function! mmtemplates#config#GetAll ()$/;"	f
+mmtemplates#config#GetAll	Labs/Lab9/autoload/mmtemplates/config.vim	/^function! mmtemplates#config#GetAll ()$/;"	f
+mmtemplates#config#GetFt	Labs/Lab9/.vim/autoload/mmtemplates/config.vim	/^function! mmtemplates#config#GetFt ( ft )$/;"	f
+mmtemplates#config#GetFt	Labs/Lab9/autoload/mmtemplates/config.vim	/^function! mmtemplates#config#GetFt ( ft )$/;"	f
+mmtemplates#config#Print	Labs/Lab9/.vim/autoload/mmtemplates/config.vim	/^function! mmtemplates#config#Print ()$/;"	f
+mmtemplates#config#Print	Labs/Lab9/autoload/mmtemplates/config.vim	/^function! mmtemplates#config#Print ()$/;"	f
+mmtemplates#core#AddCustomTemplateFiles	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! mmtemplates#core#AddCustomTemplateFiles ( library, temp_list, list_name )$/;"	f
+mmtemplates#core#AddCustomTemplateFiles	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! mmtemplates#core#AddCustomTemplateFiles ( library, temp_list, list_name )$/;"	f
+mmtemplates#core#ChangeSyntax	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! mmtemplates#core#ChangeSyntax ( library, category, ... )$/;"	f
+mmtemplates#core#ChangeSyntax	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! mmtemplates#core#ChangeSyntax ( library, category, ... )$/;"	f
+mmtemplates#core#ChooseStyle	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! mmtemplates#core#ChooseStyle ( library, style )$/;"	f
+mmtemplates#core#ChooseStyle	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! mmtemplates#core#ChooseStyle ( library, style )$/;"	f
+mmtemplates#core#CreateMaps	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! mmtemplates#core#CreateMaps ( library, localleader, ... )$/;"	f
+mmtemplates#core#CreateMaps	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! mmtemplates#core#CreateMaps ( library, localleader, ... )$/;"	f
+mmtemplates#core#CreateMenus	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! mmtemplates#core#CreateMenus ( library, root_menu, ... )$/;"	f
+mmtemplates#core#CreateMenus	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! mmtemplates#core#CreateMenus ( library, root_menu, ... )$/;"	f
+mmtemplates#core#DeleteOptTag	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! mmtemplates#core#DeleteOptTag ( jmp_regex, sep_regex, mode )$/;"	f
+mmtemplates#core#DeleteOptTag	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! mmtemplates#core#DeleteOptTag ( jmp_regex, sep_regex, mode )$/;"	f
+mmtemplates#core#EditTemplateFiles	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! mmtemplates#core#EditTemplateFiles ( library, file )$/;"	f
+mmtemplates#core#EditTemplateFiles	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! mmtemplates#core#EditTemplateFiles ( library, file )$/;"	f
+mmtemplates#core#EnableTemplateFile	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! mmtemplates#core#EnableTemplateFile ( library, sym_name, ... )$/;"	f
+mmtemplates#core#EnableTemplateFile	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! mmtemplates#core#EnableTemplateFile ( library, sym_name, ... )$/;"	f
+mmtemplates#core#EscapeMenu	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! mmtemplates#core#EscapeMenu ( str, ... )$/;"	f
+mmtemplates#core#EscapeMenu	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! mmtemplates#core#EscapeMenu ( str, ... )$/;"	f
+mmtemplates#core#ExpandText	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! mmtemplates#core#ExpandText ( library, text )$/;"	f
+mmtemplates#core#ExpandText	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! mmtemplates#core#ExpandText ( library, text )$/;"	f
+mmtemplates#core#FindPersonalizationFile	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! mmtemplates#core#FindPersonalizationFile ( library )$/;"	f
+mmtemplates#core#FindPersonalizationFile	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! mmtemplates#core#FindPersonalizationFile ( library )$/;"	f
+mmtemplates#core#InsertTemplate	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! mmtemplates#core#InsertTemplate ( library, t_name, ... ) range$/;"	f
+mmtemplates#core#InsertTemplate	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! mmtemplates#core#InsertTemplate ( library, t_name, ... ) range$/;"	f
+mmtemplates#core#JumpToTag	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! mmtemplates#core#JumpToTag ( regex )$/;"	f
+mmtemplates#core#JumpToTag	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! mmtemplates#core#JumpToTag ( regex )$/;"	f
+mmtemplates#core#NewLibrary	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! mmtemplates#core#NewLibrary ( ... )$/;"	f
+mmtemplates#core#NewLibrary	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! mmtemplates#core#NewLibrary ( ... )$/;"	f
+mmtemplates#core#ReadTemplates	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! mmtemplates#core#ReadTemplates ( library, ... )$/;"	f
+mmtemplates#core#ReadTemplates	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! mmtemplates#core#ReadTemplates ( library, ... )$/;"	f
+mmtemplates#core#ResetMapleader	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! mmtemplates#core#ResetMapleader ()$/;"	f
+mmtemplates#core#ResetMapleader	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! mmtemplates#core#ResetMapleader ()$/;"	f
+mmtemplates#core#Resource	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! mmtemplates#core#Resource ( library, mode, ... )$/;"	f
+mmtemplates#core#Resource	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! mmtemplates#core#Resource ( library, mode, ... )$/;"	f
+mmtemplates#core#SetMapleader	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! mmtemplates#core#SetMapleader ( localleader )$/;"	f
+mmtemplates#core#SetMapleader	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! mmtemplates#core#SetMapleader ( localleader )$/;"	f
+mmtemplates#wizard#SetupWizard	Labs/Lab9/.vim/autoload/mmtemplates/wizard.vim	/^function! mmtemplates#wizard#SetupWizard ( library )$/;"	f
+mmtemplates#wizard#SetupWizard	Labs/Lab9/autoload/mmtemplates/wizard.vim	/^function! mmtemplates#wizard#SetupWizard ( library )$/;"	f
+move	Labs/Lab9/monitor.sh	/^move()$/;"	f
+o	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> o :call nerdtree#ui_glue#invokeKeyMap("o")$/;"	m
+p	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> p :call nerdtree#ui_glue#invokeKeyMap("p")$/;"	m
+q	Labs/Lab9/Session.vim	/^nmap q :qa$/;"	m
+q	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> q :call nerdtree#ui_glue#invokeKeyMap("q")$/;"	m
+question01	Labs/Lab6/awkmenu.sh	/^question01()$/;"	f
+question01	Labs/Lab9/monitor/main.sh	/^question01()$/;"	f
+question01	scripts/monitor/main.sh	/^question01()$/;"	f
+question02	Labs/Lab6/awkmenu.sh	/^question02()$/;"	f
+question02	Labs/Lab9/monitor/main.sh	/^question02()$/;"	f
+question02	scripts/monitor/main.sh	/^question02()$/;"	f
+question03	Labs/Lab6/awkmenu.sh	/^question03()$/;"	f
+question03	Labs/Lab9/monitor/main.sh	/^question03()$/;"	f
+question03	scripts/monitor/main.sh	/^question03()$/;"	f
+question04	Labs/Lab6/awkmenu.sh	/^question04()$/;"	f
+question04	Labs/Lab9/monitor/main.sh	/^question04()$/;"	f
+question04	scripts/monitor/main.sh	/^question04()$/;"	f
+quit	Labs/Lab5/menu.sh	/^function quit {$/;"	f
+r	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> r :call nerdtree#ui_glue#invokeKeyMap("r")$/;"	m
+read_letter	Labs/Lab7/hangman.sh	/^read_letter()$/;"	f
+read_option	Labs/Lab9/final_project/monitor.sh	/^read_option ()$/;"	f
+read_option	Labs/Lab9/monitor.sh	/^read_option()$/;"	f
+read_option	Labs/Lab9/skeleton.sh	/^read_option()$/;"	f
+read_option	scripts/final_project/monitor.sh	/^read_option()$/;"	f
+read_options	Labs/Lab5/menu.sh	/^	function read_options() {$/;"	f
+read_options	Labs/Lab6/awkmenu.sh	/^read_options()$/;"	f
+read_options	Labs/Lab9/monitor/main.sh	/^read_options()$/;"	f
+read_options	scripts/monitor/main.sh	/^read_options()$/;"	f
+reset_screen	Labs/Lab9/final_project/monitor.sh	/^reset_screen()$/;"	f
+reset_screen	Labs/Lab9/monitor.sh	/^reset_screen()$/;"	f
+reset_screen	Labs/Lab9/skeleton.sh	/^reset_screen()$/;"	f
+reset_screen	scripts/final_project/monitor.sh	/^reset_screen()$/;"	f
+s	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> s :call nerdtree#ui_glue#invokeKeyMap("s")$/;"	m
+s:AlignRegex	Labs/Lab9/.vim/plugin/bash-support.vim	/^let	s:AlignRegex	= [$/;"	v
+s:AlignRegex	Labs/Lab9/plugin/bash-support.vim	/^let	s:AlignRegex	= [$/;"	v
+s:BASH_AdditionalTemplates	Labs/Lab9/.vim/plugin/bash-support.vim	/^let s:BASH_AdditionalTemplates  = mmtemplates#config#GetFt ( 'bash' )$/;"	v
+s:BASH_AdditionalTemplates	Labs/Lab9/plugin/bash-support.vim	/^let s:BASH_AdditionalTemplates  = mmtemplates#config#GetFt ( 'bash' )$/;"	v
+s:BASH_CodeSnippets	Labs/Lab9/.vim/plugin/bash-support.vim	/^let s:BASH_CodeSnippets  				= s:BASH_PluginDir.'\/bash-support\/codesnippets\/'$/;"	v
+s:BASH_CodeSnippets	Labs/Lab9/plugin/bash-support.vim	/^let s:BASH_CodeSnippets  				= s:BASH_PluginDir.'\/bash-support\/codesnippets\/'$/;"	v
+s:BASH_CreateMenusDelayed	Labs/Lab9/.vim/plugin/bash-support.vim	/^let s:BASH_CreateMenusDelayed	= 'yes'$/;"	v
+s:BASH_CreateMenusDelayed	Labs/Lab9/plugin/bash-support.vim	/^let s:BASH_CreateMenusDelayed	= 'yes'$/;"	v
+s:BASH_CustomTemplateFile	Labs/Lab9/.vim/plugin/bash-support.vim	/^		let s:BASH_CustomTemplateFile = $HOME.'\/.vim\/templates\/bash.templates'$/;"	v
+s:BASH_CustomTemplateFile	Labs/Lab9/.vim/plugin/bash-support.vim	/^		let s:BASH_CustomTemplateFile = $HOME.'\/vimfiles\/templates\/bash.templates'$/;"	v
+s:BASH_CustomTemplateFile	Labs/Lab9/.vim/plugin/bash-support.vim	/^let s:BASH_CustomTemplateFile = ''                " the custom templates$/;"	v
+s:BASH_CustomTemplateFile	Labs/Lab9/plugin/bash-support.vim	/^		let s:BASH_CustomTemplateFile = $HOME.'\/.vim\/templates\/bash.templates'$/;"	v
+s:BASH_CustomTemplateFile	Labs/Lab9/plugin/bash-support.vim	/^		let s:BASH_CustomTemplateFile = $HOME.'\/vimfiles\/templates\/bash.templates'$/;"	v
+s:BASH_CustomTemplateFile	Labs/Lab9/plugin/bash-support.vim	/^let s:BASH_CustomTemplateFile = ''                " the custom templates$/;"	v
+s:BASH_Debugger	Labs/Lab9/.vim/plugin/bash-support.vim	/^let s:BASH_Debugger           = 'term'$/;"	v
+s:BASH_Debugger	Labs/Lab9/plugin/bash-support.vim	/^let s:BASH_Debugger           = 'term'$/;"	v
+s:BASH_Display	Labs/Lab9/.vim/plugin/bash-support.vim	/^	let s:BASH_Display						= $DISPLAY$/;"	v
+s:BASH_Display	Labs/Lab9/.vim/plugin/bash-support.vim	/^	let s:BASH_Display    				= ''$/;"	v
+s:BASH_Display	Labs/Lab9/plugin/bash-support.vim	/^	let s:BASH_Display						= $DISPLAY$/;"	v
+s:BASH_Display	Labs/Lab9/plugin/bash-support.vim	/^	let s:BASH_Display    				= ''$/;"	v
+s:BASH_DocBufferName	Labs/Lab9/.vim/plugin/bash-support.vim	/^let s:BASH_DocBufferName       = "BASH_HELP"$/;"	v
+s:BASH_DocBufferName	Labs/Lab9/plugin/bash-support.vim	/^let s:BASH_DocBufferName       = "BASH_HELP"$/;"	v
+s:BASH_DocHelpBufferNumber	Labs/Lab9/.vim/plugin/bash-support.vim	/^let s:BASH_DocHelpBufferNumber = -1$/;"	v
+s:BASH_DocHelpBufferNumber	Labs/Lab9/plugin/bash-support.vim	/^let s:BASH_DocHelpBufferNumber = -1$/;"	v
+s:BASH_Errorformat	Labs/Lab9/.vim/plugin/bash-support.vim	/^let s:BASH_Errorformat    				= '%f:\\ %[%^0-9]%#\\ %l:%m,%f:\\ %l:%m,%f:%l:%m,%f[%l]:%m'$/;"	v
+s:BASH_Errorformat	Labs/Lab9/plugin/bash-support.vim	/^let s:BASH_Errorformat    				= '%f:\\ %[%^0-9]%#\\ %l:%m,%f:\\ %l:%m,%f:%l:%m,%f[%l]:%m'$/;"	v
+s:BASH_Executable	Labs/Lab9/.vim/plugin/bash-support.vim	/^	let s:BASH_Executable					= $SHELL$/;"	v
+s:BASH_Executable	Labs/Lab9/.vim/plugin/bash-support.vim	/^	let s:BASH_Executable					= 'bash.exe'$/;"	v
+s:BASH_Executable	Labs/Lab9/plugin/bash-support.vim	/^	let s:BASH_Executable					= $SHELL$/;"	v
+s:BASH_Executable	Labs/Lab9/plugin/bash-support.vim	/^	let s:BASH_Executable					= 'bash.exe'$/;"	v
+s:BASH_FilenameEscChar	Labs/Lab9/.vim/plugin/bash-support.vim	/^  let s:BASH_FilenameEscChar 		= ' \\%#[]'$/;"	v
+s:BASH_FilenameEscChar	Labs/Lab9/.vim/plugin/bash-support.vim	/^  let s:BASH_FilenameEscChar 		= ''$/;"	v
+s:BASH_FilenameEscChar	Labs/Lab9/.vim/plugin/bash-support.vim	/^let s:BASH_FilenameEscChar    = ''$/;"	v
+s:BASH_FilenameEscChar	Labs/Lab9/plugin/bash-support.vim	/^  let s:BASH_FilenameEscChar 		= ' \\%#[]'$/;"	v
+s:BASH_FilenameEscChar	Labs/Lab9/plugin/bash-support.vim	/^  let s:BASH_FilenameEscChar 		= ''$/;"	v
+s:BASH_FilenameEscChar	Labs/Lab9/plugin/bash-support.vim	/^let s:BASH_FilenameEscChar    = ''$/;"	v
+s:BASH_GlobalTemplateFile	Labs/Lab9/.vim/plugin/bash-support.vim	/^		let s:BASH_GlobalTemplateFile = s:BASH_PluginDir.'\/bash-support\/templates\/Templates'$/;"	v
+s:BASH_GlobalTemplateFile	Labs/Lab9/.vim/plugin/bash-support.vim	/^let s:BASH_GlobalTemplateFile = ''$/;"	v
+s:BASH_GlobalTemplateFile	Labs/Lab9/plugin/bash-support.vim	/^		let s:BASH_GlobalTemplateFile = s:BASH_PluginDir.'\/bash-support\/templates\/Templates'$/;"	v
+s:BASH_GlobalTemplateFile	Labs/Lab9/plugin/bash-support.vim	/^let s:BASH_GlobalTemplateFile = ''$/;"	v
+s:BASH_GuiSnippetBrowser	Labs/Lab9/.vim/plugin/bash-support.vim	/^let s:BASH_GuiSnippetBrowser 	= 'gui'             " gui \/ commandline$/;"	v
+s:BASH_GuiSnippetBrowser	Labs/Lab9/plugin/bash-support.vim	/^let s:BASH_GuiSnippetBrowser 	= 'gui'             " gui \/ commandline$/;"	v
+s:BASH_InsertFileHeader	Labs/Lab9/.vim/plugin/bash-support.vim	/^let s:BASH_InsertFileHeader				= 'yes'$/;"	v
+s:BASH_InsertFileHeader	Labs/Lab9/plugin/bash-support.vim	/^let s:BASH_InsertFileHeader				= 'yes'$/;"	v
+s:BASH_LineEndCommColDefault	Labs/Lab9/.vim/plugin/bash-support.vim	/^let s:BASH_LineEndCommColDefault	= 49$/;"	v
+s:BASH_LineEndCommColDefault	Labs/Lab9/plugin/bash-support.vim	/^let s:BASH_LineEndCommColDefault	= 49$/;"	v
+s:BASH_LoadMenus	Labs/Lab9/.vim/plugin/bash-support.vim	/^let s:BASH_LoadMenus         	= 'yes'             " load the menus?$/;"	v
+s:BASH_LoadMenus	Labs/Lab9/plugin/bash-support.vim	/^let s:BASH_LoadMenus         	= 'yes'             " load the menus?$/;"	v
+s:BASH_LocalTemplateFile	Labs/Lab9/.vim/plugin/bash-support.vim	/^		let s:BASH_LocalTemplateFile  = $HOME.'\/.vim\/bash-support\/templates\/Templates'$/;"	v
+s:BASH_LocalTemplateFile	Labs/Lab9/.vim/plugin/bash-support.vim	/^		let s:BASH_LocalTemplateFile  = $HOME.'\/vimfiles\/bash-support\/templates\/Templates'$/;"	v
+s:BASH_LocalTemplateFile	Labs/Lab9/.vim/plugin/bash-support.vim	/^		let s:BASH_LocalTemplateFile  = s:BASH_PluginDir.'\/bash-support\/templates\/Templates'$/;"	v
+s:BASH_LocalTemplateFile	Labs/Lab9/.vim/plugin/bash-support.vim	/^let s:BASH_LocalTemplateFile  = ''$/;"	v
+s:BASH_LocalTemplateFile	Labs/Lab9/plugin/bash-support.vim	/^		let s:BASH_LocalTemplateFile  = $HOME.'\/.vim\/bash-support\/templates\/Templates'$/;"	v
+s:BASH_LocalTemplateFile	Labs/Lab9/plugin/bash-support.vim	/^		let s:BASH_LocalTemplateFile  = $HOME.'\/vimfiles\/bash-support\/templates\/Templates'$/;"	v
+s:BASH_LocalTemplateFile	Labs/Lab9/plugin/bash-support.vim	/^		let s:BASH_LocalTemplateFile  = s:BASH_PluginDir.'\/bash-support\/templates\/Templates'$/;"	v
+s:BASH_LocalTemplateFile	Labs/Lab9/plugin/bash-support.vim	/^let s:BASH_LocalTemplateFile  = ''$/;"	v
+s:BASH_ManualReader	Labs/Lab9/.vim/plugin/bash-support.vim	/^	let s:BASH_ManualReader				= '\/usr\/bin\/man'$/;"	v
+s:BASH_ManualReader	Labs/Lab9/.vim/plugin/bash-support.vim	/^	let s:BASH_ManualReader				= 'man.exe'$/;"	v
+s:BASH_ManualReader	Labs/Lab9/plugin/bash-support.vim	/^	let s:BASH_ManualReader				= '\/usr\/bin\/man'$/;"	v
+s:BASH_ManualReader	Labs/Lab9/plugin/bash-support.vim	/^	let s:BASH_ManualReader				= 'man.exe'$/;"	v
+s:BASH_MenuVisible	Labs/Lab9/.vim/plugin/bash-support.vim	/^let s:BASH_MenuVisible				= 'no'$/;"	v
+s:BASH_MenuVisible	Labs/Lab9/plugin/bash-support.vim	/^let s:BASH_MenuVisible				= 'no'$/;"	v
+s:BASH_OutputBufferName	Labs/Lab9/.vim/plugin/bash-support.vim	/^let s:BASH_OutputBufferName   = "Bash-Output"$/;"	v
+s:BASH_OutputBufferName	Labs/Lab9/plugin/bash-support.vim	/^let s:BASH_OutputBufferName   = "Bash-Output"$/;"	v
+s:BASH_OutputBufferNumber	Labs/Lab9/.vim/plugin/bash-support.vim	/^let s:BASH_OutputBufferNumber = -1$/;"	v
+s:BASH_OutputBufferNumber	Labs/Lab9/plugin/bash-support.vim	/^let s:BASH_OutputBufferNumber = -1$/;"	v
+s:BASH_OutputGvim	Labs/Lab9/.vim/plugin/bash-support.vim	/^	let s:BASH_OutputGvim					= 'vim'$/;"	v
+s:BASH_OutputGvim	Labs/Lab9/.vim/plugin/bash-support.vim	/^	let s:BASH_OutputGvim					= 'xterm'$/;"	v
+s:BASH_OutputGvim	Labs/Lab9/plugin/bash-support.vim	/^	let s:BASH_OutputGvim					= 'vim'$/;"	v
+s:BASH_OutputGvim	Labs/Lab9/plugin/bash-support.vim	/^	let s:BASH_OutputGvim					= 'xterm'$/;"	v
+s:BASH_PluginDir	Labs/Lab9/.vim/plugin/bash-support.vim	/^		let s:BASH_PluginDir          = $VIM.'\/vimfiles'$/;"	v
+s:BASH_PluginDir	Labs/Lab9/.vim/plugin/bash-support.vim	/^		let s:BASH_PluginDir          = expand('<sfile>:p:h:h')$/;"	v
+s:BASH_PluginDir	Labs/Lab9/.vim/plugin/bash-support.vim	/^		let s:BASH_PluginDir          = substitute( expand('<sfile>:p:h:h'), '\\', '\/', 'g' )$/;"	v
+s:BASH_PluginDir	Labs/Lab9/plugin/bash-support.vim	/^		let s:BASH_PluginDir          = $VIM.'\/vimfiles'$/;"	v
+s:BASH_PluginDir	Labs/Lab9/plugin/bash-support.vim	/^		let s:BASH_PluginDir          = expand('<sfile>:p:h:h')$/;"	v
+s:BASH_PluginDir	Labs/Lab9/plugin/bash-support.vim	/^		let s:BASH_PluginDir          = substitute( expand('<sfile>:p:h:h'), '\\', '\/', 'g' )$/;"	v
+s:BASH_Printheader	Labs/Lab9/.vim/plugin/bash-support.vim	/^let s:BASH_Printheader  					= escape( s:BASH_Printheader, ' %' )$/;"	v
+s:BASH_Printheader	Labs/Lab9/.vim/plugin/bash-support.vim	/^let s:BASH_Printheader   					= "%<%f%h%m%<  %=%{strftime('%x %X')}     Page %N"$/;"	v
+s:BASH_Printheader	Labs/Lab9/plugin/bash-support.vim	/^let s:BASH_Printheader  					= escape( s:BASH_Printheader, ' %' )$/;"	v
+s:BASH_Printheader	Labs/Lab9/plugin/bash-support.vim	/^let s:BASH_Printheader   					= "%<%f%h%m%<  %=%{strftime('%x %X')}     Page %N"$/;"	v
+s:BASH_RootMenu	Labs/Lab9/.vim/plugin/bash-support.vim	/^let s:BASH_RootMenu          	= '&Bash'           " name of the root menu$/;"	v
+s:BASH_RootMenu	Labs/Lab9/plugin/bash-support.vim	/^let s:BASH_RootMenu          	= '&Bash'           " name of the root menu$/;"	v
+s:BASH_SyntaxCheckOptionsGlob	Labs/Lab9/.vim/plugin/bash-support.vim	/^let s:BASH_SyntaxCheckOptionsGlob = ''$/;"	v
+s:BASH_SyntaxCheckOptionsGlob	Labs/Lab9/plugin/bash-support.vim	/^let s:BASH_SyntaxCheckOptionsGlob = ''$/;"	v
+s:BASH_TemplateJumpTarget	Labs/Lab9/.vim/plugin/bash-support.vim	/^let s:BASH_TemplateJumpTarget 		= ''$/;"	v
+s:BASH_TemplateJumpTarget	Labs/Lab9/plugin/bash-support.vim	/^let s:BASH_TemplateJumpTarget 		= ''$/;"	v
+s:BASH_Wrapper	Labs/Lab9/.vim/plugin/bash-support.vim	/^let s:BASH_Wrapper               	= s:BASH_PluginDir.'\/bash-support\/scripts\/wrapper.sh'$/;"	v
+s:BASH_Wrapper	Labs/Lab9/plugin/bash-support.vim	/^let s:BASH_Wrapper               	= s:BASH_PluginDir.'\/bash-support\/scripts\/wrapper.sh'$/;"	v
+s:BASH_XtermDefaults	Labs/Lab9/.vim/plugin/bash-support.vim	/^	let s:BASH_XtermDefaults	= s:BASH_XtermDefaults." -geometry 80x24"$/;"	v
+s:BASH_XtermDefaults	Labs/Lab9/.vim/plugin/bash-support.vim	/^let s:BASH_XtermDefaults      = '-fa courier -fs 12 -geometry 80x24'$/;"	v
+s:BASH_XtermDefaults	Labs/Lab9/plugin/bash-support.vim	/^	let s:BASH_XtermDefaults	= s:BASH_XtermDefaults." -geometry 80x24"$/;"	v
+s:BASH_XtermDefaults	Labs/Lab9/plugin/bash-support.vim	/^let s:BASH_XtermDefaults      = '-fa courier -fs 12 -geometry 80x24'$/;"	v
+s:BASH_bashdb	Labs/Lab9/.vim/plugin/bash-support.vim	/^let s:BASH_bashdb             = 'bashdb'$/;"	v
+s:BASH_bashdb	Labs/Lab9/plugin/bash-support.vim	/^let s:BASH_bashdb             = 'bashdb'$/;"	v
+s:BASH_saved_global_option	Labs/Lab9/.vim/plugin/bash-support.vim	/^let s:BASH_saved_global_option		= {}$/;"	v
+s:BASH_saved_global_option	Labs/Lab9/plugin/bash-support.vim	/^let s:BASH_saved_global_option		= {}$/;"	v
+s:BASH_saved_option	Labs/Lab9/.vim/plugin/bash-support.vim	/^let s:BASH_saved_option					= {}$/;"	v
+s:BASH_saved_option	Labs/Lab9/plugin/bash-support.vim	/^let s:BASH_saved_option					= {}$/;"	v
+s:DebugGlobalOverwrite	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^let s:DebugGlobalOverwrite = 0$/;"	v
+s:DebugGlobalOverwrite	Labs/Lab9/autoload/mmtemplates/core.vim	/^let s:DebugGlobalOverwrite = 0$/;"	v
+s:DebugLevel	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^let s:DebugLevel           = s:DebugGlobalOverwrite$/;"	v
+s:DebugLevel	Labs/Lab9/autoload/mmtemplates/core.vim	/^let s:DebugLevel           = s:DebugGlobalOverwrite$/;"	v
+s:DoneCheckTemplatePersonalization	Labs/Lab9/.vim/plugin/bash-support.vim	/^let s:DoneCheckTemplatePersonalization = 0$/;"	v
+s:DoneCheckTemplatePersonalization	Labs/Lab9/plugin/bash-support.vim	/^let s:DoneCheckTemplatePersonalization = 0$/;"	v
+s:FileReadNameSpace_0_9	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^let s:FileReadNameSpace_0_9 = {$/;"	v
+s:FileReadNameSpace_0_9	Labs/Lab9/autoload/mmtemplates/core.vim	/^let s:FileReadNameSpace_0_9 = {$/;"	v
+s:Flagactions	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^let s:Flagactions = {$/;"	v
+s:Flagactions	Labs/Lab9/autoload/mmtemplates/core.vim	/^let s:Flagactions = {$/;"	v
+s:MSWIN	Labs/Lab9/.vim/autoload/mmtemplates/config.vim	/^let s:MSWIN = has("win16") || has("win32")   || has("win64")     || has("win95")$/;"	v
+s:MSWIN	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^let s:MSWIN = has("win16") || has("win32")   || has("win64")     || has("win95")$/;"	v
+s:MSWIN	Labs/Lab9/.vim/autoload/mmtemplates/wizard.vim	/^let s:MSWIN = has("win16") || has("win32")   || has("win64")     || has("win95")$/;"	v
+s:MSWIN	Labs/Lab9/.vim/plugin/bash-support.vim	/^let s:MSWIN = has("win16") || has("win32")   || has("win64") || has("win95")$/;"	v
+s:MSWIN	Labs/Lab9/autoload/mmtemplates/config.vim	/^let s:MSWIN = has("win16") || has("win32")   || has("win64")     || has("win95")$/;"	v
+s:MSWIN	Labs/Lab9/autoload/mmtemplates/core.vim	/^let s:MSWIN = has("win16") || has("win32")   || has("win64")     || has("win95")$/;"	v
+s:MSWIN	Labs/Lab9/autoload/mmtemplates/wizard.vim	/^let s:MSWIN = has("win16") || has("win32")   || has("win64")     || has("win95")$/;"	v
+s:MSWIN	Labs/Lab9/plugin/bash-support.vim	/^let s:MSWIN = has("win16") || has("win32")   || has("win64") || has("win95")$/;"	v
+s:NamespaceHelp_0_9	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^let s:NamespaceHelp_0_9 = {$/;"	v
+s:NamespaceHelp_0_9	Labs/Lab9/autoload/mmtemplates/core.vim	/^let s:NamespaceHelp_0_9 = {$/;"	v
+s:NamespaceHelp_1_0	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^let s:NamespaceHelp_1_0 = copy ( s:NamespaceHelp_0_9 )$/;"	v
+s:NamespaceHelp_1_0	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^let s:NamespaceHelp_1_0.Browser = 'ss\\?'$/;"	v
+s:NamespaceHelp_1_0	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^let s:NamespaceHelp_1_0.System  = 'ss\\?'$/;"	v
+s:NamespaceHelp_1_0	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^let s:NamespaceHelp_1_0.Vim     = 'ss\\?'$/;"	v
+s:NamespaceHelp_1_0	Labs/Lab9/autoload/mmtemplates/core.vim	/^let s:NamespaceHelp_1_0 = copy ( s:NamespaceHelp_0_9 )$/;"	v
+s:NamespaceHelp_1_0	Labs/Lab9/autoload/mmtemplates/core.vim	/^let s:NamespaceHelp_1_0.Browser = 'ss\\?'$/;"	v
+s:NamespaceHelp_1_0	Labs/Lab9/autoload/mmtemplates/core.vim	/^let s:NamespaceHelp_1_0.System  = 'ss\\?'$/;"	v
+s:NamespaceHelp_1_0	Labs/Lab9/autoload/mmtemplates/core.vim	/^let s:NamespaceHelp_1_0.Vim     = 'ss\\?'$/;"	v
+s:NamespaceStdTemplInsert_0_9	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^let s:NamespaceStdTemplInsert_0_9 = {$/;"	v
+s:NamespaceStdTemplInsert_0_9	Labs/Lab9/autoload/mmtemplates/core.vim	/^let s:NamespaceStdTemplInsert_0_9 = {$/;"	v
+s:NamespaceStdTempl_0_9	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^let s:NamespaceStdTempl_0_9 = {$/;"	v
+s:NamespaceStdTempl_0_9	Labs/Lab9/autoload/mmtemplates/core.vim	/^let s:NamespaceStdTempl_0_9 = {$/;"	v
+s:RegexSettings	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^let s:RegexSettings = {$/;"	v
+s:RegexSettings	Labs/Lab9/autoload/mmtemplates/core.vim	/^let s:RegexSettings = {$/;"	v
+s:StandardMacros	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^let s:StandardMacros = {$/;"	v
+s:StandardMacros	Labs/Lab9/autoload/mmtemplates/core.vim	/^let s:StandardMacros = {$/;"	v
+s:StandardPriority	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^let s:StandardPriority = 500$/;"	v
+s:StandardPriority	Labs/Lab9/autoload/mmtemplates/core.vim	/^let s:StandardPriority = 500$/;"	v
+s:StandardProperties	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^let s:StandardProperties = {$/;"	v
+s:StandardProperties	Labs/Lab9/autoload/mmtemplates/core.vim	/^let s:StandardProperties = {$/;"	v
+s:TemplateTypeNames	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^let s:TemplateTypeNames = {$/;"	v
+s:TemplateTypeNames	Labs/Lab9/autoload/mmtemplates/core.vim	/^let s:TemplateTypeNames = {$/;"	v
+s:TemplatesConfig_Version	Labs/Lab9/.vim/autoload/mmtemplates/config.vim	/^let s:TemplatesConfig_Version = '1.0'     " version number of this script; do not change$/;"	v
+s:TemplatesConfig_Version	Labs/Lab9/autoload/mmtemplates/config.vim	/^let s:TemplatesConfig_Version = '1.0'     " version number of this script; do not change$/;"	v
+s:TemplatesWizard_Version	Labs/Lab9/.vim/autoload/mmtemplates/wizard.vim	/^let s:TemplatesWizard_Version = '1.0alpha'     " version number of this script; do not change$/;"	v
+s:TemplatesWizard_Version	Labs/Lab9/autoload/mmtemplates/wizard.vim	/^let s:TemplatesWizard_Version = '1.0alpha'     " version number of this script; do not change$/;"	v
+s:Templates_AllSettings	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^let s:Templates_AllSettings = {}$/;"	v
+s:Templates_AllSettings	Labs/Lab9/autoload/mmtemplates/core.vim	/^let s:Templates_AllSettings = {}$/;"	v
+s:Templates_InternetBrowserExec	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^	let s:Templates_InternetBrowserExec  = 'C:\\Program Files\\Mozilla Firefox\\firefox.exe'$/;"	v
+s:Templates_InternetBrowserExec	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^	let s:Templates_InternetBrowserExec  = 'firefox'$/;"	v
+s:Templates_InternetBrowserExec	Labs/Lab9/autoload/mmtemplates/core.vim	/^	let s:Templates_InternetBrowserExec  = 'C:\\Program Files\\Mozilla Firefox\\firefox.exe'$/;"	v
+s:Templates_InternetBrowserExec	Labs/Lab9/autoload/mmtemplates/core.vim	/^	let s:Templates_InternetBrowserExec  = 'firefox'$/;"	v
+s:Templates_InternetBrowserFlags	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^	let s:Templates_InternetBrowserFlags = ''$/;"	v
+s:Templates_InternetBrowserFlags	Labs/Lab9/autoload/mmtemplates/core.vim	/^	let s:Templates_InternetBrowserFlags = ''$/;"	v
+s:Templates_MapInUseWarn	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^let s:Templates_MapInUseWarn     = 'yes'$/;"	v
+s:Templates_MapInUseWarn	Labs/Lab9/autoload/mmtemplates/core.vim	/^let s:Templates_MapInUseWarn     = 'yes'$/;"	v
+s:Templates_OverwriteWarning	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^let s:Templates_OverwriteWarning = 'no'$/;"	v
+s:Templates_OverwriteWarning	Labs/Lab9/autoload/mmtemplates/core.vim	/^let s:Templates_OverwriteWarning = 'no'$/;"	v
+s:Templates_PersonalizationFile	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^let s:Templates_PersonalizationFile = 'templates\/personal.template*'$/;"	v
+s:Templates_PersonalizationFile	Labs/Lab9/autoload/mmtemplates/core.vim	/^let s:Templates_PersonalizationFile = 'templates\/personal.template*'$/;"	v
+s:Templates_TemplateBrowser	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^let s:Templates_TemplateBrowser  = 'explore'$/;"	v
+s:Templates_TemplateBrowser	Labs/Lab9/autoload/mmtemplates/core.vim	/^let s:Templates_TemplateBrowser  = 'explore'$/;"	v
+s:Templates_UsePersonalizationFile	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^let s:Templates_UsePersonalizationFile = 'yes'$/;"	v
+s:Templates_UsePersonalizationFile	Labs/Lab9/autoload/mmtemplates/core.vim	/^let s:Templates_UsePersonalizationFile = 'yes'$/;"	v
+s:Templates_Version	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^let s:Templates_Version = '1.0'     " version number of this script; do not change$/;"	v
+s:Templates_Version	Labs/Lab9/autoload/mmtemplates/core.vim	/^let s:Templates_Version = '1.0'     " version number of this script; do not change$/;"	v
+s:TypeNames	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^let s:TypeNames = [ ' ', ' ', ' ', ' ', ' ', ' ' ]$/;"	v
+s:TypeNames	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^let s:TypeNames[ type("")  ] = 's'  " string$/;"	v
+s:TypeNames	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^let s:TypeNames[ type(0)   ] = 'i'  " integer$/;"	v
+s:TypeNames	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^let s:TypeNames[ type([])  ] = 'l'  " list$/;"	v
+s:TypeNames	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^let s:TypeNames[ type({})  ] = 'd'  " dict$/;"	v
+s:TypeNames	Labs/Lab9/autoload/mmtemplates/core.vim	/^let s:TypeNames = [ ' ', ' ', ' ', ' ', ' ', ' ' ]$/;"	v
+s:TypeNames	Labs/Lab9/autoload/mmtemplates/core.vim	/^let s:TypeNames[ type("")  ] = 's'  " string$/;"	v
+s:TypeNames	Labs/Lab9/autoload/mmtemplates/core.vim	/^let s:TypeNames[ type(0)   ] = 'i'  " integer$/;"	v
+s:TypeNames	Labs/Lab9/autoload/mmtemplates/core.vim	/^let s:TypeNames[ type([])  ] = 'l'  " list$/;"	v
+s:TypeNames	Labs/Lab9/autoload/mmtemplates/core.vim	/^let s:TypeNames[ type({})  ] = 'd'  " dict$/;"	v
+s:UNIX	Labs/Lab9/.vim/autoload/mmtemplates/config.vim	/^let s:UNIX	= has("unix")  || has("macunix") || has("win32unix")$/;"	v
+s:UNIX	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^let s:UNIX	= has("unix")  || has("macunix") || has("win32unix")$/;"	v
+s:UNIX	Labs/Lab9/.vim/autoload/mmtemplates/wizard.vim	/^let s:UNIX	= has("unix")  || has("macunix") || has("win32unix")$/;"	v
+s:UNIX	Labs/Lab9/.vim/plugin/bash-support.vim	/^let s:UNIX	= has("unix")  || has("macunix") || has("win32unix")$/;"	v
+s:UNIX	Labs/Lab9/autoload/mmtemplates/config.vim	/^let s:UNIX	= has("unix")  || has("macunix") || has("win32unix")$/;"	v
+s:UNIX	Labs/Lab9/autoload/mmtemplates/core.vim	/^let s:UNIX	= has("unix")  || has("macunix") || has("win32unix")$/;"	v
+s:UNIX	Labs/Lab9/autoload/mmtemplates/wizard.vim	/^let s:UNIX	= has("unix")  || has("macunix") || has("win32unix")$/;"	v
+s:UNIX	Labs/Lab9/plugin/bash-support.vim	/^let s:UNIX	= has("unix")  || has("macunix") || has("win32unix")$/;"	v
+s:UserInputList	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^let s:UserInputList = []$/;"	v
+s:UserInputList	Labs/Lab9/autoload/mmtemplates/core.vim	/^let s:UserInputList = []$/;"	v
+s:cpo_save	Labs/Lab9/Session.vim	/^let s:cpo_save=&cpo$/;"	v
+s:filetype_list	Labs/Lab9/.vim/autoload/mmtemplates/config.vim	/^let s:filetype_list = {}$/;"	v
+s:filetype_list	Labs/Lab9/autoload/mmtemplates/config.vim	/^let s:filetype_list = {}$/;"	v
+s:installation	Labs/Lab9/.vim/plugin/bash-support.vim	/^		let s:installation            = 'local'$/;"	v
+s:installation	Labs/Lab9/.vim/plugin/bash-support.vim	/^		let s:installation            = 'system'$/;"	v
+s:installation	Labs/Lab9/.vim/plugin/bash-support.vim	/^let s:installation            = '*undefined*'$/;"	v
+s:installation	Labs/Lab9/plugin/bash-support.vim	/^		let s:installation            = 'local'$/;"	v
+s:installation	Labs/Lab9/plugin/bash-support.vim	/^		let s:installation            = 'system'$/;"	v
+s:installation	Labs/Lab9/plugin/bash-support.vim	/^let s:installation            = '*undefined*'$/;"	v
+s:l	Labs/Lab9/Session.vim	/^let s:l = 39 - ((0 * winheight(0) + 20) \/ 40)$/;"	v
+s:mapleader_stack	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^let s:mapleader_stack = []$/;"	v
+s:mapleader_stack	Labs/Lab9/autoload/mmtemplates/core.vim	/^let s:mapleader_stack = []$/;"	v
+s:plugin_dir	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^	let s:plugin_dir = expand('<sfile>:p:h:h')$/;"	v
+s:plugin_dir	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^	let s:plugin_dir = substitute( expand('<sfile>:p:h:h'), '\\\\', '\/', 'g' )$/;"	v
+s:plugin_dir	Labs/Lab9/autoload/mmtemplates/core.vim	/^	let s:plugin_dir = expand('<sfile>:p:h:h')$/;"	v
+s:plugin_dir	Labs/Lab9/autoload/mmtemplates/core.vim	/^	let s:plugin_dir = substitute( expand('<sfile>:p:h:h'), '\\\\', '\/', 'g' )$/;"	v
+s:so_save	Labs/Lab9/Session.vim	/^let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0$/;"	v
+s:sx	Labs/Lab9/Session.vim	/^let s:sx = expand("<sfile>:p:r")."x.vim"$/;"	v
+s:wipebuf	Labs/Lab9/Session.vim	/^  let s:wipebuf = bufnr('%')$/;"	v
+sd	Labs/Lab8/asd.c	/^sd$/;"	v
+sd	Labs/Lab8/asd.c	/^sd,$/;"	v
+sdc	Labs/Lab8/asd.c	/^sdc,$/;"	v
+show_all	Labs/Lab9/final_project/monitor.sh	/^show_all ()$/;"	f
+show_all	Labs/Lab9/monitor.sh	/^show_all()$/;"	f
+show_all	Labs/Lab9/skeleton.sh	/^show_all()$/;"	f
+show_all	scripts/final_project/monitor.sh	/^show_all()$/;"	f
+show_cpu	Labs/Lab9/monitor.sh	/^show_cpu()$/;"	f
+show_disk_info	Labs/Lab9/final_project/monitor.sh	/^show_disk_info ()$/;"	f
+show_disk_info	Labs/Lab9/skeleton.sh	/^show_disk_info()$/;"	f
+show_disk_info	scripts/final_project/monitor.sh	/^show_disk_info()$/;"	f
+show_error	Labs/Lab9/final_project/monitor.sh	/^show_error ()$/;"	f
+show_error	Labs/Lab9/monitor.sh	/^show_error()$/;"	f
+show_error	Labs/Lab9/skeleton.sh	/^show_error()$/;"	f
+show_error	scripts/final_project/monitor.sh	/^show_error()$/;"	f
+show_header	Labs/Lab7/hangman.sh	/^show_header()$/;"	f
+show_header	Labs/Lab9/final_project/monitor.sh	/^show_header ()$/;"	f
+show_header	Labs/Lab9/monitor.sh	/^show_header()$/;"	f
+show_header	Labs/Lab9/skeleton.sh	/^show_header()$/;"	f
+show_header	scripts/final_project/monitor.sh	/^show_header()$/;"	f
+show_info	Labs/Lab9/final_project/monitor.sh	/^show_info ()$/;"	f
+show_info	Labs/Lab9/monitor.sh	/^show_info()$/;"	f
+show_info	Labs/Lab9/skeleton.sh	/^show_info()$/;"	f
+show_info	scripts/final_project/monitor.sh	/^show_info()$/;"	f
+show_mem	Labs/Lab9/monitor.sh	/^show_mem()$/;"	f
+show_mem_info	Labs/Lab9/final_project/monitor.sh	/^show_mem_info ()$/;"	f
+show_mem_info	Labs/Lab9/skeleton.sh	/^show_mem_info()$/;"	f
+show_mem_info	scripts/final_project/monitor.sh	/^show_mem_info()$/;"	f
+show_menu	Labs/Lab5/menu.sh	/^function show_menu {$/;"	f
+show_menu	Labs/Lab9/final_project/monitor.sh	/^show_menu ()$/;"	f
+show_menu	Labs/Lab9/monitor.sh	/^show_menu()$/;"	f
+show_menu	Labs/Lab9/skeleton.sh	/^show_menu()$/;"	f
+show_menu	scripts/final_project/monitor.sh	/^show_menu()$/;"	f
+show_menus	Labs/Lab6/awkmenu.sh	/^show_menus()$/;"	f
+show_menus	Labs/Lab9/monitor/main.sh	/^show_menus()$/;"	f
+show_menus	scripts/monitor/main.sh	/^show_menus()$/;"	f
+show_process_info	Labs/Lab9/final_project/monitor.sh	/^show_process_info ()$/;"	f
+show_process_info	Labs/Lab9/monitor.sh	/^show_process_info()$/;"	f
+show_process_info	Labs/Lab9/skeleton.sh	/^show_process_info()$/;"	f
+show_process_info	scripts/final_project/monitor.sh	/^show_process_info()$/;"	f
+show_title	Labs/Lab9/monitor.sh	/^show_title()$/;"	f
+show_top	Labs/Lab9/monitor.sh	/^show_top()$/;"	f
+show_word	Labs/Lab7/hangman.sh	/^show_word()$/;"	f
+speed	Labs/Lab9/final_project/tput.sh	/^speed()$/;"	f
+speed	scripts/final_project/tput.sh	/^speed()$/;"	f
+sysstat	Labs/Lab9/linuxhealthcheck.sh	/^function sysstat {$/;"	f
+sysstat	scripts/linuxhealthcheck.sh	/^function sysstat {$/;"	f
+t	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> t :call nerdtree#ui_glue#invokeKeyMap("t")$/;"	m
+toggle_cpu	Labs/Lab9/monitor.sh	/^toggle_cpu()$/;"	f
+toggle_disk	Labs/Lab9/skeleton.sh	/^toggle_disk()$/;"	f
+toggle_disk	scripts/final_project/monitor.sh	/^toggle_disk()$/;"	f
+toggle_header	Labs/Lab9/monitor.sh	/^toggle_header()$/;"	f
+toggle_mem	Labs/Lab9/monitor.sh	/^toggle_mem()$/;"	f
+toggle_mem	Labs/Lab9/skeleton.sh	/^toggle_mem()$/;"	f
+toggle_mem	scripts/final_project/monitor.sh	/^toggle_mem()$/;"	f
+toggle_menu	Labs/Lab9/monitor.sh	/^toggle_menu()$/;"	f
+toggle_menu	Labs/Lab9/skeleton.sh	/^toggle_menu()$/;"	f
+toggle_menu	scripts/final_project/monitor.sh	/^toggle_menu()$/;"	f
+toggle_ps	Labs/Lab9/skeleton.sh	/^toggle_ps()$/;"	f
+toggle_ps	scripts/final_project/monitor.sh	/^toggle_ps()$/;"	f
+toggle_top	Labs/Lab9/monitor.sh	/^toggle_top()$/;"	f
+u	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> u :call nerdtree#ui_glue#invokeKeyMap("u")$/;"	m
+watchit	Labs/Lab9/watch2.sh	/^watchit()$/;"	f
+wipe	Labs/Lab9/final_project/ops.sh	/^function wipe()$/;"	f
+wipe	scripts/final_project/ops.sh	/^function wipe()$/;"	f
+x	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> x :call nerdtree#ui_glue#invokeKeyMap("x")$/;"	m
+zt	Labs/Lab9/Session.vim	/^normal! zt$/;"	m
