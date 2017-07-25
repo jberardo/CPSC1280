@@ -250,9 +250,11 @@ show_header()
   # header format:
   # Sun, July 23 @ 00:00:00    CPU: XX%   MEM: XX%     Rx: xx K/s Tx: xx K/s
   currDate="$(date '+%a, %b %Y @ %T')"
-  cpuUsage=$(top -b -n1 | grep "Cpu(s)" | awk '{print $2 + $4}')
+  #cpuUsage=$(top -b -n1 | grep "Cpu(s)" | awk '{print $2 + $4}')
+  data=$(ps aux --no-headers | awk -F" " '{CPU+=$3} {MEM+=$4} END {print MEM" " CPU}')
 
-  memUsage="32"
+  cpuUsage=$(echo "$data" | cut -d' ' -f1)
+  memUsage=$(echo "$data" | cut -d' ' -f2)
   netSpeed=$(awk '/enp|em|wlan/ {i++; rx[i]=$2; tx[i]=$10}; END{print rx[2]-rx[1] " " tx[2]-tx[1]}' \
     <(cat /proc/net/dev; cat /proc/net/dev))
   downSpeed="$(echo "$netSpeed" | cut -d' ' -f1)"
@@ -288,14 +290,15 @@ show_cpu()
 #-------------------------------------------------------------------------------
 show_mem()
 {
+  # title
   show_title "=> Memory Usage Information"
-#  free -kh
-TOTALMEM=$(free -mh | head -2 | tail -1| awk '{print $2}')
-USEDMEM=$(free -mh | head -2 | tail -1| awk '{print $3}')
-FREEMEM=$(free -mh | head -2 | tail -1| awk '{print $4}')
+  #  free -kh
+  TOTALMEM=$(free -mh | head -2 | tail -1| awk '{print $2}')
+  USEDMEM=$(free -mh | head -2 | tail -1| awk '{print $3}')
+  FREEMEM=$(free -mh | head -2 | tail -1| awk '{print $4}')
 
-echo -e "Memory\tTotal\tUsed\tFree\t%Free"
-echo -e "\t$TOTALMEM\t$USEDMEM\t$FREEMEM\t%"
+  echo -e "Memory\tTotal\tUsed\tFree\t%Free"
+  echo -e "\t$TOTALMEM\t$USEDMEM\t$FREEMEM\t%"
 }
 
 #---  FUNCTION  ----------------------------------------------------------------

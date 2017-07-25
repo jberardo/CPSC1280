@@ -701,6 +701,7 @@ show_disk_info	scripts/final_project/monitor.sh	/^show_disk_info()$/;"	f
 show_error	Labs/Lab9/final_project/monitor.sh	/^show_error ()$/;"	f
 show_error	Labs/Lab9/monitor.sh	/^show_error()$/;"	f
 show_error	Labs/Lab9/skeleton.sh	/^show_error()$/;"	f
+show_error	gitup.sh	/^show_error()$/;"	f
 show_error	scripts/final_project/monitor.sh	/^show_error()$/;"	f
 show_header	Labs/Lab7/hangman.sh	/^show_header()$/;"	f
 show_header	Labs/Lab9/final_project/monitor.sh	/^show_header ()$/;"	f
@@ -749,6 +750,7 @@ toggle_ps	Labs/Lab9/skeleton.sh	/^toggle_ps()$/;"	f
 toggle_ps	scripts/final_project/monitor.sh	/^toggle_ps()$/;"	f
 toggle_top	Labs/Lab9/monitor.sh	/^toggle_top()$/;"	f
 u	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> u :call nerdtree#ui_glue#invokeKeyMap("u")$/;"	m
+usage	gitup.sh	/^usage()$/;"	f
 watchit	Labs/Lab9/watch2.sh	/^watchit()$/;"	f
 wipe	Labs/Lab9/final_project/ops.sh	/^function wipe()$/;"	f
 wipe	scripts/final_project/ops.sh	/^function wipe()$/;"	f
