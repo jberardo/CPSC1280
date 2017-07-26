@@ -54,6 +54,7 @@
 <S-Up>	Labs/Lab9/Session.vim	/^nnoremap <S-Up> $/;"	m
 ?	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> ? :call nerdtree#ui_glue#invokeKeyMap("?")$/;"	m
 A	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> A :call nerdtree#ui_glue#invokeKeyMap("A")$/;"	m
+ARROW	Labs/Lab9/uau.sh	/^ARROW(){ stty -echo cbreak;Key=`GetKey`$/;"	f
 AddList	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:AddList ( type, name, settings, lines )$/;"	f
 AddList	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:AddList ( type, name, settings, lines )$/;"	f
 AddSeparator	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:AddSeparator ( type, name, settings )$/;"	f
@@ -179,6 +180,7 @@ GetGlobalSetting	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:GetG
 GetGlobalSetting	Labs/Lab9/.vim/plugin/bash-support.vim	/^function! s:GetGlobalSetting ( varname )$/;"	f
 GetGlobalSetting	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:GetGlobalSetting ( varname, ... )$/;"	f
 GetGlobalSetting	Labs/Lab9/plugin/bash-support.vim	/^function! s:GetGlobalSetting ( varname )$/;"	f
+GetKey	Labs/Lab9/uau.sh	/^GetKey(){                                                               # type dd, wait for input and...$/;"	f
 GetNormalizedPath	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:GetNormalizedPath ( filename )$/;"	f
 GetNormalizedPath	Labs/Lab9/autoload/mmtemplates/core.vim	/^function! s:GetNormalizedPath ( filename )$/;"	f
 GetPickList	Labs/Lab9/.vim/autoload/mmtemplates/core.vim	/^function! s:GetPickList ( name, ... )$/;"	f
@@ -394,6 +396,7 @@ gs	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> gs :call nerdtree#ui_glue#
 gx	Labs/Lab9/Session.vim	/^nmap gx <Plug>NetrwBrowseX$/;"	m
 gx	Labs/Lab9/Session.vim	/^vmap gx <Plug>NetrwBrowseXVis$/;"	m
 i	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> i :call nerdtree#ui_glue#invokeKeyMap("i")$/;"	m
+joca	Labs/Lab9/like_top.sh	/^joca()$/;"	f
 m	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> m :call nerdtree#ui_glue#invokeKeyMap("m")$/;"	m
 main	Labs/Lab5/menu.sh	/^function main {$/;"	f
 main	Labs/Lab6/awkmenu.sh	/^function main$/;"	f

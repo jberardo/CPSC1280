@@ -10,10 +10,12 @@ printf '%s%s' "$HOME" "$ED"
 
 while true
 do
+  tput reset
   CMD="$*"
   ${SHELL:=sh} -c "$CMD" | head -n $ROWS | while IFS= read LINE; do
     printf '%-*.*s%s\n' $COLS $COLS "$LINE" "$EL"
   done
+  sleep 1
 done
 
 printf '%s%s' "$ED" "$HOME"

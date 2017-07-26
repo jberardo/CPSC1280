@@ -33,7 +33,7 @@
 # 3 - SIGQUIT
 # 9 - SIGKILL (can't trap)
 # 15 - SIGTERM
-trap "cleanUp 1" SIGHUP SIGQUIT SIGTERM
+trap "tput cnorm; cleanUp 1" SIGHUP SIGQUIT SIGTERM
 trap "echo no no no" SIGINT
 
 #-------------------------------------------------------------------------------
@@ -88,7 +88,7 @@ move()
 {
   posX="$1"
   posY="$2"
-
+  echo "posX=$1 and posY=$2"
   tput cup "$posX $posY"
 }
 
@@ -98,10 +98,16 @@ move()
 #-------------------------------------------------------------------------------
 reset_screen()
 {
-  tput cup 0 0
-  tput reset
-  echo "$CLS_CUR"
-
+#HOME=$(tput cup 0 0)
+ED=$(tput ed)
+EL=$(tput el)
+ROWS=$(tput lines)
+COLS=$(tput cols)
+printf '%s%s' "$HOME" "$ED"
+#printf '%-*.*s%s\n' "$COLS $COLS $LINE $EL"
+printf '%s%s' "$ED" "$HOME"
+  tput home
+  tput clear
 }
 
 #-------------------------------------------------------------------------------
@@ -134,14 +140,56 @@ format_header()
   #tput sc
   #tput bold
   #tput smul
+  currDate="$(date '+%a, %b %Y @ %T')"
+  #cpuUsage=$(top -b -n1 | grep "Cpu(s)" | awk '{print $2 + $4}')
+  data=$(ps aux --no-headers | awk -F" " '{CPU+=$3} {MEM+=$4} END {print MEM" " CPU}')
+
+  cpuUsage=$(echo "$data" | cut -d' ' -f1)
+  memUsage=$(echo "$data" | cut -d' ' -f2)
+  memUsage=$(free -m | awk 'NR==2{printf "%.2f%%", $3*100/$2 }')
+  #netSpeed=$(awk '/eno|enp|em|wlan/ {i++; rx[i]=$2; tx[i]=$10}; END{print rx[2]-rx[1] " " tx[2]-tx[1]}' <(cat /proc/net/dev; cat /proc/net/dev))
+  NIC="$(ls -1 /sys/class/net/ | head -1)"
+  R1=$(cat "/sys/class/net/$NIC/statistics/rx_bytes")
+  T1=$(cat "/sys/class/net/$NIC/statistics/tx_bytes")
+  sleep 1
+  R2=$(cat "/sys/class/net/$NIC/statistics/rx_bytes")
+  T2=$(cat "/sys/class/net/$NIC/statistics/tx_bytes")
+
+  #if [[ "$R1" -eq "$R2" ]]
+  #then
+  #  R2=$(cat "/sys/class/net/$NIC/statistics/rx_packets")
+  #fi
+
+  #if [[ "$T1" -eq "$T2" ]]
+  #then
+  #  T2=$(cat "/sys/class/net/$NIC/statistics/tx_packets")
+  #fi
+
+  downSpeed=$((("$T2"-"$T1")/1024))
+  upSpeed=$((("$R2"-"$R1")/1024))
+
+  #downSpeed="$(echo "$netSpeed" | cut -d' ' -f1)"
+  #upSpeed="$(echo "$netSpeed" | cut -d' ' -f2)"
+#  RXPREV=-1
+#  TXPREV=-1
+#  RX="$(cat /sys/class/net/"${NIC}"/statistics/rx_bytes)"
+#  TX="$(cat /sys/class/net/"${NIC}"/statistics/tx_bytes)"
+#if [ $RXPREV -ne -1 ] ; then
+#    let downSpeed=$RX-$RXPREV/1024/1024
+#    let upSpeed=$TX-$TXPREV/1024/1024
+#fi
+#  RXPREV=$RX
+#  TXPREV=$TX
   tput cup 0 1
   printf "%s\n" "$BLUE_FG""Hostname: $STD  $GREEN_FG $(hostname)$STD"
   tput cup 1 1
-  printf "%s\n" "$BLUE_FG""CPU:$STD$GREEN_FG XX.XX%$BLUE_FG MEM:$STD$GREEN_FG XX.XX%$STD"
-  tput cup 0 30
   printf "%s\n" "$BLUE_FG$(date)$STD"
-  tput cup 1 30
-  echo "$BLUE_FG""Tx:$GREEN_FG xxxxx$BLUE_FG k/s Rx:$GREEN_FG xxxxx$BLUE_FG k/s$STD"
+  tput cup 0 40
+  TOTALMEM=$(free -mh | head -2 | tail -1| awk '{print $2}')
+  FREEMEM=$(free -mh | head -2 | tail -1| awk '{print $4}')
+  printf "%s\n" "$BLUE_FG""CPU:$STD$GREEN_FG $cpuUsage%$BLUE_FG MEM:$STD$GREEN_FG $TOTALMEM/$FREEMEM$STD"
+  tput cup 1 40
+  echo "$BLUE_FG Tx:$GREEN_FG $upSpeed$BLUE_FG k/s Rx:$GREEN_FG $downSpeed$BLUE_FG k/s $STD"
 #  echo -e "$WHITE_FG"
 #  echo -e "$BOLD"
 #  echo -e "$GREEN_FG"
@@ -189,7 +237,7 @@ tabs 4
 #-------------------------------------------------------------------------------
 main()
 {
-  reset_screen
+  #reset_screen
   show_all                                      # show options
   read_option                                   # read user input
 }
@@ -202,26 +250,31 @@ show_all()
 {
   if [[ $optsHeader -eq 1 ]]
   then
+#    reset_screen
     show_header
   fi
 
   if [[ $optsCPU -eq 1 ]]
   then
+#    reset_screen
     show_cpu
   fi
 
   if [[ $optsMem -eq 1 ]]
   then
+#    reset_screen
     show_mem
   fi
 
   if [[ $optsTop -eq 1 ]]
   then
+#    reset_screen
     show_top
   fi
 
   if [[ $optsMenu -eq 1 ]]
   then
+#    reset_screen
     show_menu
   fi
 }
@@ -292,17 +345,9 @@ show_header()
 show_cpu()
 {
   show_title "=> CPU Usage Information"
-#  free -kh
-#TOTALMEM=`free -mh | head -2 | tail -1| awk '{print $2}'`
-#USEDMEM=`free -mh | head -2 | tail -1| awk '{print $3}'`
-#FREEMEM=`free -mh | head -2 | tail -1| awk '{print $4}'`
-
-#echo -e "Memory\tTotal\tUsed\tFree\t%Free"
-#echo -e "\t$TOTALMEM\t$USEDMEM\tFREEMEM"
-#ps -eo pid,%mem,%cpu,fname --sort=-%mem | head -n6
-tput cup 3 1
-echo "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-tput cup 0 0
+  tput cup 3 1
+  echo ""
+  tput cup 0 0
 }
 
 #---  FUNCTION  ----------------------------------------------------------------
@@ -386,12 +431,12 @@ read_option()
   read -t "$REFRESH" -n 1 REPLY
 
   case $REPLY in
-    h) toggle_header ;;
-    c) toggle_cpu ;;
-    m) toggle_mem ;;
-    p) toggle_top ;;
-    o) toggle_menu ;;
-    q) cleanUp 0 ;;
+    h) toggle_header ; reset_screen ;;
+    c) toggle_cpu ;reset_screen ;;
+    m) toggle_mem ; reset_screen ;;
+    p) toggle_top ; reset_screen ;;
+    o) toggle_menu ; reset_screen ;;
+    q) cleanUp 0 ; reset_screen ;;
     *) show_all ;;
   esac
 
@@ -503,6 +548,7 @@ cleanUp()
   # restore colors
   echo -e "${STD}"
   tput cup 1 0
+  tput cnorm
   exit "$ERR_NO"
 }
 
@@ -527,10 +573,17 @@ getKey()
 #-------------------------------------------------------------------------------
 # RUN PROGRAM
 #-------------------------------------------------------------------------------
+
+tput civis
+#BLUE(){ echo -en "\033c\033[0;1m\033[37;44m\033[J";} 
+
+#BLUE
 while :
 do
   main
 done
+
+tput cnorm
 
 exit 0
 
@@ -573,3 +626,26 @@ exit 0
 #Disk: df -lh | awk '{if ($6 == "/") { print "Total\tFree\tPerc\n"$2"\t"$4"\t"$5 }}'
 #Memory: free -mh | grep "Mem" |  awk '{ print "Total\tUsed\n"$2"\t"$3}'
 
+# Check if connected to Internet or not
+ping -c 1 google.com &> /dev/null && echo "Connected" || echo "Disconnected"
+# Check OS Type
+echo -e "OS Type : $(uname -o)"
+# Check Architecture
+echo -e "Architecture : $(uname -m)"
+# Check Kernel Release
+echo -e "Kernel Release : $(uname -r)"
+# Check hostname
+echo -e "Hostname : $HOSTNAME"
+# Check Internal IP
+echo -e "Internal IP : $(hostname -I)"
+# Check External IP
+echo -e "External IP : $(curl -s ipecho.net/plain;echo)"
+# Check DNS
+echo -e "Name Servers : $(sed '1 d' /etc/resolv.conf | awk '{print $2}')"
+# Check Logged In Users
+echo -e "Logged users : $(who)"
+# Check Disk Usages
+echo -e "Disk Usages : $(df -h | grep '\/dev\/sda*')"
+# Check System Uptime
+#tecuptime=$(uptime | awk '{print $3,$4}' | cut -f1 -d,)
+echo -e "Uptime Days/(HH:MM): $(uptime | awk '{print $3,$4}' | cut -f1 -d,)"
