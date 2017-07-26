@@ -31,19 +31,24 @@
 # 1 - SIGHUP
 # 2 - SIGINT
 # 3 - SIGQUIT
-# 9 - SIGKILL
+# 9 - SIGKILL (can't trap)
 # 15 - SIGTERM
-trap "cleanUp 1" SIGHUP SIGINT SIGQUIT SIGTERM
+trap "cleanUp 1" SIGHUP SIGQUIT SIGTERM
+trap "echo no no no" SIGINT
 
 #-------------------------------------------------------------------------------
 # GLOBAL VARS
 #-------------------------------------------------------------------------------
 REFRESH=1                                        # time (in seconds) to refresh the screen
+ERR_NO=0                                         # exit error number
 optsMenu=1                                       # 1 - show menu / 0 - hide menu
 optsHeader=1                                     # 1 - show header / 0 - hide header
 optsCPU=0                                        # 1 - show CPU Usage / 0 - hide CPU usage
 optsMem=0                                        # 1 - show Mem Usage / 0 - hide Mem Usage
 optsTop=0                                        # 1 - top 5 processes / 0 - hide top 5 processes
+#--- current terminal dimensions ---#
+N_COLS="$(tput cols)"
+N_LINES="$(tput lines)"
 
 #-------------------------------------------------------------------------------
 # COLORS / FORMAT
@@ -110,8 +115,10 @@ reset_screen()
 #-------------------------------------------------------------------------------
 show_title()
 {
-  tput rev
-  echo -e "${WHITE_FG}$*${STD}"
+  #tput rev
+  tput bold
+  echo -e "$*${STD}"
+  tput sgr0
 }
 
 #---  FUNCTION  ----------------------------------------------------------------
@@ -121,14 +128,26 @@ show_title()
 #-------------------------------------------------------------------------------
 format_header()
 {
+  # header rows = 3
+  # header cols = 30
+  #printf "%40s\n" "${BLUE_FG}This text is blue${STD}"
   #tput sc
   #tput bold
   #tput smul
-  echo -e "$BOLD"
-  echo -e "$GREEN_FG"
-  tput cup 0 0
-  echo -e "$*"
-  echo -e "$STD"
+  tput cup 0 1
+  printf "%s\n" "$BLUE_FG""Hostname: $STD  $GREEN_FG $(hostname)$STD"
+  tput cup 1 1
+  printf "%s\n" "$BLUE_FG""CPU:$STD$GREEN_FG XX.XX%$BLUE_FG MEM:$STD$GREEN_FG XX.XX%$STD"
+  tput cup 0 30
+  printf "%s\n" "$BLUE_FG$(date)$STD"
+  tput cup 1 30
+  echo "$BLUE_FG""Tx:$GREEN_FG xxxxx$BLUE_FG k/s Rx:$GREEN_FG xxxxx$BLUE_FG k/s$STD"
+#  echo -e "$WHITE_FG"
+#  echo -e "$BOLD"
+#  echo -e "$GREEN_FG"
+#  tput cup 0 0
+#  echo -e "$*"
+#  echo -e "$STD"
   #tput rc
 }
 
@@ -255,12 +274,13 @@ show_header()
 
   cpuUsage=$(echo "$data" | cut -d' ' -f1)
   memUsage=$(echo "$data" | cut -d' ' -f2)
+  memUsage=$(free -m | awk 'NR==2{printf "%.2f%%", $3*100/$2 }')
   netSpeed=$(awk '/enp|em|wlan/ {i++; rx[i]=$2; tx[i]=$10}; END{print rx[2]-rx[1] " " tx[2]-tx[1]}' \
     <(cat /proc/net/dev; cat /proc/net/dev))
   downSpeed="$(echo "$netSpeed" | cut -d' ' -f1)"
   upSpeed="$(echo "$netSpeed" | cut -d' ' -f2)"
 
-  format_header "$currDate    CPU: $cpuUsage%  MEM: $memUsage%  Rx: $downSpeed kbps Tx: $upSpeed Kb/s"
+  format_header "$currDate    CPU: $cpuUsage%  MEM: $memUsage  Rx: $downSpeed kbps Tx: $upSpeed Kb/s"
 }
 
 #---  FUNCTION  ----------------------------------------------------------------
@@ -279,7 +299,10 @@ show_cpu()
 
 #echo -e "Memory\tTotal\tUsed\tFree\t%Free"
 #echo -e "\t$TOTALMEM\t$USEDMEM\tFREEMEM"
-    ps -eo pid,%mem,%cpu,fname --sort=-%mem | head -n6
+#ps -eo pid,%mem,%cpu,fname --sort=-%mem | head -n6
+tput cup 3 1
+echo "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+tput cup 0 0
 }
 
 #---  FUNCTION  ----------------------------------------------------------------
@@ -317,8 +340,24 @@ show_top()
 #  echo `top b -n1 | head -17 | tail -11`
   show_title "=> Most CPU-Intensive Processes"
   #ps k-%cpu -eo pid,user,state,%cpu,%mem,fname | head -n5
-  ps -eo pid,%mem,%cpu,fname --sort=-%mem | head -n6
+  #ps -eo pid,%mem,%cpu,fname --sort=-%mem | head -n6
   #ps k-%mem -eo pid,user,state,%cpu,%mem,fname | head -n5
+  tput setaf 5
+  tput bold
+  tput smul
+  echo "Top CPU"
+  tput sgr0
+  topCpu="$(ps -eo pid,pcpu -o comm= | sort -k2 -n -r | head -5)"
+  echo "$topCpu"
+  
+  tput setaf 5
+  tput bold
+  tput smul
+  echo "Top MEM"
+  tput sgr0
+  topMem="$(ps -eo pid,pmem -o comm= | sort -k2 -n -r | head -5)"
+  echo "$topMem"
+
 }
 
 #---  FUNCTION  ----------------------------------------------------------------
@@ -330,7 +369,6 @@ show_top()
 show_process_info()
 {
   show_title "Process Information"
-  ps -u
 }
 
 #---  FUNCTION  ----------------------------------------------------------------
@@ -455,9 +493,9 @@ cleanUp()
   echo "$STD_CUR"
 
   tput cup 0 0
-  if [[ $1 -lt 0 ]]
+  if [[ "$ERR_NO" -lt 0 ]]
   then
-    show_error "Error code: $1"
+    show_error "Error code: $ERR_NO"
   else
     show_info "Exited sucessfully"
   fi
@@ -465,7 +503,7 @@ cleanUp()
   # restore colors
   echo -e "${STD}"
   tput cup 1 0
-  exit "$1"
+  exit "$ERR_NO"
 }
 
 #---  FUNCTION  ----------------------------------------------------------------
@@ -476,43 +514,25 @@ cleanUp()
 #-------------------------------------------------------------------------------
 getKey()
 {
-  #stty="$(stty -g)"
-
-  #trap "stty $stty; trap SIGINT; return 128" SIGINT
-
   #stty cbreak -echo
-
   local key
-  #while true; do
-    #key=$(dd count=1 2>/dev/null) || return $?
-
-
-    #if [ -z "$1" ] || [[ "$key" == [$1] ]]; then
-      #break
-    #  echo "test"
-    #fi
-  #done
-
-  #stty $stty
-
   echo "$key"
-  #cleanUp 0
 }
+
+#-------------------------------------------------------------------------------
+# DEBUG
+#-------------------------------------------------------------------------------
+
 
 #-------------------------------------------------------------------------------
 # RUN PROGRAM
 #-------------------------------------------------------------------------------
-trap cleanUp SIGHUP SIGINT SIGTERM              # clean up and restore terminal cursor and colors if script is interrupted by Ctrl-C or error
-
 while :
 do
   main
 done
 
 exit 0
-#--- current terminal dimensions ---#
-#N_COLS=$(tput cols)
-#N_LINES=$(tput lines)
 
 #tput Color Capabilities:
 #tput setab [1-7] – Set a background color using ANSI escape

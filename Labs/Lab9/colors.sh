@@ -17,3 +17,9 @@ for ((i=0;i<6;i++)); do
 done
 
 color {232..255}
+
+echo "-------------------------"
+blue=$(tput setaf 4)
+normal=$(tput sgr0)
+
+printf "%40s\n" "${blue}This text is blue${normal}"
