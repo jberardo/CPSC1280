@@ -43,7 +43,7 @@ optsMem=0                                        # 1 - show Mem Usage / 0 - hide
 optsTop=0                                        # 1 - top 5 processes / 0 - hide top 5 processes
 
 #--- current terminal dimensions ---#
-N_COLS="$(tput col)"
+N_COLS="$(tput cols)"
 N_LINES="$(tput lines)"
 
 #-------------------------------------------------------------------------------
@@ -61,14 +61,6 @@ UL="$(tput smul)"                                # underline text
 STD="$(tput sgr0)"                               # normal font/colors
 CUR_SAVE="$(tput sc)"                            # save cursor position
 CUR_LOAD="$(tput rc)"                            # restore cursor position
-
-#-------------------------------------------------------------------------------
-# DEBUG / TERMINAL OPTIONS
-#-------------------------------------------------------------------------------
-set -o nounset                                   # Treat unset variables as an error
-stty -echo                                       # disable normal echoing in the terminal (avoid key press on screen)
-tput sgr0
-tput clear                                      # make the cursor invisible
 
 #---  FUNCTION  ----------------------------------------------------------------
 #          NAME:  reset_screen()
@@ -189,6 +181,15 @@ show_error()
 {
   echo -e "${RED_FG}$*${STD}"
 }
+
+
+#-------------------------------------------------------------------------------
+# DEBUG / TERMINAL OPTIONS
+#-------------------------------------------------------------------------------
+set -o nounset                                   # Treat unset variables as an error
+stty -echo                                       # disable normal echoing in the terminal (avoid key press on screen)
+echo "$STD"
+echo "$CLS"                                      # make the cursor invisible
 
 #---  FUNCTION  ----------------------------------------------------------------
 #          NAME:  main()
@@ -371,26 +372,24 @@ for i in $(seq 0 4)
 do
   memString[i]=""
 done
-currentMemCol=0
+
 show_mem_usage()
 {
   show_title "\n=> Memory Usage"
 
-  #totalCols=$(tput cols)
+  totalCols=$(tput cols)
   memUsage=$(free | awk 'NR==2{print $3/$2*100}' | cut -d'.' -f1)
   usageString="${RED_FG}*${STD}"
   freeString="."
-  # if number of characters in memUsage is greater then terminal cols,start replacing the output string
-  if (( "$currentMemCol" > $(tput cols)  ))
+
+  # if number of characters in memUsage is greater then terminal cols, reset current column
+  if (( $(wc -d | "$memUsage") > $(tput cols)))
   then
-   tput cup 0 0
-    #cut -c "$totalCols"
-    for index in $(seq 0 4)
+    currentMemCol=0
+    cut -c -"$totalCols"
+    for i in $(seq 0 4)
     do
-      #echo "${memString[i]}"
-      set -f
-      memString[index]=`sed 's/.$//' "${memString[index]}"` || echo "error..."
-      set +f
+      $memString[i]=$(cut -c -4)
     done
   fi
 
@@ -447,7 +446,7 @@ show_mem_usage()
   tput cup $((currentMemRow+4)) 0
   echo "${memString[4]}"
 
-  ((currentMemCol=currentMemCol+1))
+  ((currentMemCol++))
 }
 
 #---  FUNCTION  ----------------------------------------------------------------

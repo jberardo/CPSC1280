@@ -1,3 +1,8 @@
+
+
+2017-07-27 03:38                    monitor.sh                    Page 1
+
+
 #!/bin/bash
 
 #===============================================================================
@@ -43,7 +48,7 @@ optsMem=0                                        # 1 - show Mem Usage / 0 - hide
 optsTop=0                                        # 1 - top 5 processes / 0 - hide top 5 processes
 
 #--- current terminal dimensions ---#
-N_COLS="$(tput col)"
+N_COLS="$(tput cols)"
 N_LINES="$(tput lines)"
 
 #-------------------------------------------------------------------------------
@@ -54,6 +59,16 @@ GREEN_FG="$(tput setaf 2)"                       # foreground green
 BLUE_FG="$(tput setaf 4)"                        # foreground blue
 WHITE_FG="$(tput setaf 7)"                       # foreground white
 CLS="$(tput clear)"                              # clear sreen
+
+
+
+
+
+
+
+2017-07-27 03:38                    monitor.sh                    Page 2
+
+
 CLS_LINE="$(tput el)"                            # clear line
 CLS_EOF="$(tput ed)"                             # clear from current cursor to end of screen
 BOLD="$(tput bold)"                              # bold text
@@ -62,22 +77,13 @@ STD="$(tput sgr0)"                               # normal font/colors
 CUR_SAVE="$(tput sc)"                            # save cursor position
 CUR_LOAD="$(tput rc)"                            # restore cursor position
 
-#-------------------------------------------------------------------------------
-# DEBUG / TERMINAL OPTIONS
-#-------------------------------------------------------------------------------
-set -o nounset                                   # Treat unset variables as an error
-stty -echo                                       # disable normal echoing in the terminal (avoid key press on screen)
-tput sgr0
-tput clear                                      # make the cursor invisible
-
 #---  FUNCTION  ----------------------------------------------------------------
 #          NAME:  reset_screen()
 #   DESCRIPTION:  
 #-------------------------------------------------------------------------------
 reset_screen()
 {
-  #tput reset
-  tput clear
+  tput reset
   tput cup 0 0
   tput civis
 }
@@ -119,6 +125,16 @@ format_header()
   memUsage=$(echo "$data" | cut -d' ' -f2)
   memUsage=$(free -m | awk 'NR==2{printf "%.2f%%", $3*100/$2 }')
   #netSpeed=$(awk '/eno|enp|em|wlan/ {i++; rx[i]=$2; tx[i]=$10}; END{print rx[2]-rx[1] " " tx[2]-tx[1]}' <(cat /proc/net/dev; cat /proc/net/dev))
+
+
+
+
+
+
+
+2017-07-27 03:38                    monitor.sh                    Page 3
+
+
   NIC="$(ls -1 /sys/class/net/ | head -1)"
   R1=$(cat "/sys/class/net/$NIC/statistics/rx_bytes")
   T1=$(cat "/sys/class/net/$NIC/statistics/tx_bytes")
@@ -175,6 +191,16 @@ format_header()
 #   DESCRIPTION:  
 #    PARAMETERS:  ---
 #-------------------------------------------------------------------------------
+
+
+
+
+
+
+
+2017-07-27 03:38                    monitor.sh                    Page 4
+
+
 show_info()
 {
   echo -e "${GREEN_FG}$*${STD}"
@@ -189,6 +215,15 @@ show_error()
 {
   echo -e "${RED_FG}$*${STD}"
 }
+
+
+#-------------------------------------------------------------------------------
+# DEBUG / TERMINAL OPTIONS
+#-------------------------------------------------------------------------------
+set -o nounset                                   # Treat unset variables as an error
+stty -echo                                       # disable normal echoing in the terminal (avoid key press on screen)
+echo "$STD"
+echo "$CLS"                                      # make the cursor invisible
 
 #---  FUNCTION  ----------------------------------------------------------------
 #          NAME:  main()
@@ -221,6 +256,16 @@ show_all()
   then
     show_mem_usage
   fi
+
+
+
+
+
+
+
+
+2017-07-27 03:38                    monitor.sh                    Page 5
+
 
   if [[ $optsTop -eq 1 ]]
   then
@@ -278,6 +323,16 @@ show_header()
   # Sun, July 23 @ 00:00:00    CPU: XX%   MEM: XX%     Rx: xx K/s Tx: xx K/s
   #currDate="$(date '+%a, %b %Y @ %T')"
   ##cpuUsage=$(top -b -n1 | grep "Cpu(s)" | awk '{print $2 + $4}')
+
+
+
+
+
+
+
+2017-07-27 03:38                    monitor.sh                    Page 6
+
+
   #data=$(ps aux --no-headers | awk -F" " '{CPU+=$3} {MEM+=$4} END {print MEM" " CPU}')
 
   #cpuUsage=$(echo "$data" | cut -d' ' -f1)
@@ -299,155 +354,30 @@ show_header()
 
 #---  FUNCTION  ----------------------------------------------------------------
 #          NAME:  show_cpu()
-#   DESCRIPTION:  display CPU usage graph
+#   DESCRIPTION:  
+#    PARAMETERS:  ---
+#       RETURNS:  ---
 #-------------------------------------------------------------------------------
-currentRow=2
-currentCol=0
 show_cpu()
 {
+  echo ""
   show_title "=> CPU Usage"
-
-  cpuUsage=$(ps aux --no-headers | awk -F" " '{CPU+=$3} END {print CPU}' | cut -d. -f1)
-  totalCols=$(tput cols)
-
-  usageString="${RED_FG}*${STD}"
-  freeString="."
-
-  if (( "$currentCol" > totalCols ))
-  then
-    currentCol=0
-  fi
-
-  if ((cpuUsage > 80))
-  then
-    cpuString[0]+="$usageString"
-  else
-    cpuString[0]+="$freeString"
-  fi
-
-  if ((cpuUsage > 60))
-  then
-    cpuString[1]+="$usageString"
-  else
-    cpuString[1]+="$freeString"
-  fi
-
-  if ((cpuUsage > 40))
-  then
-    cpuString[2]+="$usageString"
-  else
-    cpuString[2]+="$freeString"
-
-  fi
-  if ((cpuUsage > 20))
-  then
-    cpuString[3]+="$usageString"
-  else
-    cpuString[3]+="$freeString"
-  fi
-
-  if ((cpuUsage > 0))
-  then
-    cpuString[4]+="$usageString"
-  else
-    cpuString[4]+="$freeString"
-  fi
-
-  tput cup $((currentRow)) 0
-  echo "${cpuString[0]}"
-  tput cup $((currentRow+1)) 0
-  echo "${cpuString[1]}"
-  tput cup $((currentRow+2)) 0
-  echo "${cpuString[2]}"
-  tput cup $((currentRow+3)) 0
-  echo "${cpuString[3]}"
-  tput cup $((currentRow+4)) 0
-  echo "${cpuString[4]}"
-
-  ((currentCol++))
+  echo "................................................"
+  echo "................................................"
+  echo "................................................"
+  echo "................................................"
+  echo "................................................"
 }
 
-for i in $(seq 0 4)
-do
-  memString[i]=""
-done
-currentMemCol=0
 show_mem_usage()
 {
-  show_title "\n=> Memory Usage"
-
-  #totalCols=$(tput cols)
-  memUsage=$(free | awk 'NR==2{print $3/$2*100}' | cut -d'.' -f1)
-  usageString="${RED_FG}*${STD}"
-  freeString="."
-  # if number of characters in memUsage is greater then terminal cols,start replacing the output string
-  if (( "$currentMemCol" > $(tput cols)  ))
-  then
-   tput cup 0 0
-    #cut -c "$totalCols"
-    for index in $(seq 0 4)
-    do
-      #echo "${memString[i]}"
-      set -f
-      memString[index]=`sed 's/.$//' "${memString[index]}"` || echo "error..."
-      set +f
-    done
-  fi
-
-  if (("$optsCPU" == 1))
-  then
-    currentMemRow=9
-  else
-    currentMemRow=3
-  fi
-
-  if ((memUsage > 80))
-  then
-    memString[0]="$usageString${memString[0]}"
-  else
-    memString[0]="$freeString${memString[0]}"
-  fi
-
-  if ((memUsage > 60))
-  then
-    memString[1]="$usageString${memString[1]}"
-  else
-    memString[1]="$freeString${memString[1]}"
-  fi
-
-  if ((memUsage > 40))
-  then
-    memString[2]="$usageString${memString[2]}"
-  else
-    memString[2]="$freeString${memString[2]}"
-  fi
-
-  if ((memUsage > 20))
-  then
-    memString[3]="$usageString${memString[3]}"
-  else
-    memString[3]="$freeString${memString[3]}"
-  fi
-
-  if ((memUsage > 0))
-  then
-    memString[4]="$usageString${memString[4]}"
-  else
-    memString[4]="$freeString${memString[4]}"
-  fi
-
-  tput cup $currentMemRow 0
-  echo "${memString[0]}"
-  tput cup $((currentMemRow+1)) 0
-  echo "${memString[1]}"
-  tput cup $((currentMemRow+2)) 0
-  echo "${memString[2]}"
-  tput cup $((currentMemRow+3)) 0
-  echo "${memString[3]}"
-  tput cup $((currentMemRow+4)) 0
-  echo "${memString[4]}"
-
-  ((currentMemCol=currentMemCol+1))
+  echo ""
+  show_title "=> Memory Usage"
+  echo "................................................"
+  echo "................................................"
+  echo "................................................"
+  echo "................................................"
+  echo "................................................"
 }
 
 #---  FUNCTION  ----------------------------------------------------------------
@@ -458,6 +388,19 @@ show_mem_usage()
 #-------------------------------------------------------------------------------
 show_mem()
 {
+  # title
+
+
+
+
+
+
+
+2017-07-27 03:38                    monitor.sh                    Page 7
+
+
+  #show_title "=> Memory Usage Information"
+  #  free -kh
   TOTALMEM=$(free -mh | head -2 | tail -1| awk '{print $2}')
   USEDMEM=$(free -mh | head -2 | tail -1| awk '{print $3}')
   FREEMEM=$(free -mh | head -2 | tail -1| awk '{print $4}')
@@ -512,6 +455,16 @@ show_top()
 #       RETURNS:  ---
 #-------------------------------------------------------------------------------
 read_option()
+
+
+
+
+
+
+
+2017-07-27 03:38                    monitor.sh                    Page 8
+
+
 {
   # -t N (wait for a maximum of N seconds for user input)
   # -n N (read n characters)
@@ -568,6 +521,16 @@ toggle_menu()
 #   DESCRIPTION:  
 #    PARAMETERS:  ---
 #       RETURNS:  ---
+
+
+
+
+
+
+
+2017-07-27 03:38                    monitor.sh                    Page 9
+
+
 #-------------------------------------------------------------------------------
 toggle_cpu()
 {
@@ -624,6 +587,16 @@ cleanUp()
   stty echo                                     # restore echoing
   reset_screen
   tput sgr0
+
+
+
+
+
+
+
+2017-07-27 03:38                   monitor.sh                    Page 10
+
+
   tput cup 0 0
   tput cnorm
 
@@ -680,6 +653,16 @@ echo -e "OS Type : $(uname -o)"
 echo -e "Architecture : $(uname -m)"
 # Check Kernel Release
 echo -e "Kernel Release : $(uname -r)"
+
+
+
+
+
+
+
+2017-07-27 03:38                   monitor.sh                    Page 11
+
+
 # Check hostname
 echo -e "Hostname : $HOSTNAME"
 # Check Internal IP
@@ -695,3 +678,49 @@ echo -e "Disk Usages : $(df -h | grep '\/dev\/sda*')"
 # Check System Uptime
 #tecuptime=$(uptime | awk '{print $3,$4}' | cut -f1 -d,)
 echo -e "Uptime Days/(HH:MM): $(uptime | awk '{print $3,$4}' | cut -f1 -d,)"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

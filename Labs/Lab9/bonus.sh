@@ -31,7 +31,7 @@
 # 9 - SIGKILL (can't trap)
 # 15 - SIGTERM
 trap "cleanUp 1" SIGHUP SIGINT SIGQUIT SIGTERM
-trap "echo trap; exit 1"
+
 #-------------------------------------------------------------------------------
 # GLOBAL VARS
 #-------------------------------------------------------------------------------
@@ -41,34 +41,51 @@ optsHeader=1                                     # 1 - show header / 0 - hide he
 optsCPU=0                                        # 1 - show CPU Usage / 0 - hide CPU usage
 optsMem=0                                        # 1 - show Mem Usage / 0 - hide Mem Usage
 optsTop=0                                        # 1 - top 5 processes / 0 - hide top 5 processes
-
 #--- current terminal dimensions ---#
-N_COLS="$(tput col)"
+N_COLS="$(tput cols)"
 N_LINES="$(tput lines)"
 
 #-------------------------------------------------------------------------------
 # COLORS / FORMAT
 #-------------------------------------------------------------------------------
+BLACK_FG="$(tput setaf 0)"                       # foreground black
 RED_FG="$(tput setaf 1)"                         # foreground red
 GREEN_FG="$(tput setaf 2)"                       # foreground green
+YELLOW_FG="$(tput setaf 3)"                      # foreground yellow
 BLUE_FG="$(tput setaf 4)"                        # foreground blue
+MAGENTA_FG="$(tput setaf 5)"                     # foreground magenta
+CYAN_FG="$(tput setaf 6)"                        # foreground cyan
 WHITE_FG="$(tput setaf 7)"                       # foreground white
+
+BLACK_BG="$(tput setaf 0)"                       # background black
+RED_BG="$(tput setaf 1)"                         # background red
+GREEN_BG="$(tput setaf 2)"                       # background green
+YELLOW_BG="$(tput setaf 3)"                      # background yellow
+BLUE_BG="$(tput setaf 4)"                        # background blue
+MAGENTA_BG="$(tput setaf 5)"                     # background magenta
+CYAN_BG="$(tput setaf 6)"                        # background cyan
+WHITE_BG="$(tput setaf 7)"                       # background white
+
 CLS="$(tput clear)"                              # clear sreen
 CLS_LINE="$(tput el)"                            # clear line
 CLS_EOF="$(tput ed)"                             # clear from current cursor to end of screen
+CLS_CUR="$(tput civis)"                          # hide cursor
+STD_CUR="$(tput cnorm)"                          # normal cursor
+
 BOLD="$(tput bold)"                              # bold text
 UL="$(tput smul)"                                # underline text
 STD="$(tput sgr0)"                               # normal font/colors
+
 CUR_SAVE="$(tput sc)"                            # save cursor position
 CUR_LOAD="$(tput rc)"                            # restore cursor position
 
-#-------------------------------------------------------------------------------
-# DEBUG / TERMINAL OPTIONS
-#-------------------------------------------------------------------------------
-set -o nounset                                   # Treat unset variables as an error
-stty -echo                                       # disable normal echoing in the terminal (avoid key press on screen)
-tput sgr0
-tput clear                                      # make the cursor invisible
+move()
+{
+  posX="$1"
+  posY="$2"
+  echo "posX=$1 and posY=$2"
+  tput cup "$posX $posY"
+}
 
 #---  FUNCTION  ----------------------------------------------------------------
 #          NAME:  reset_screen()
@@ -76,9 +93,16 @@ tput clear                                      # make the cursor invisible
 #-------------------------------------------------------------------------------
 reset_screen()
 {
-  #tput reset
-  tput clear
-  tput cup 0 0
+#HOME=$(tput cup 0 0)
+#ED=$(tput ed)
+#EL=$(tput el)
+#ROWS=$(tput lines)
+#COLS=$(tput cols)
+#printf '%s%s' "$HOME" "$ED"
+#printf '%-*.*s%s\n' "$COLS $COLS $LINE $EL"
+#printf '%s%s' "$ED" "$HOME"
+  tput reset
+  tput cup 0 1
   tput civis
 }
 
@@ -89,6 +113,7 @@ reset_screen()
 #          NAME:  show_title()
 #   DESCRIPTION:  
 #    PARAMETERS:  ---
+#       RETURNS:  ---
 #-------------------------------------------------------------------------------
 show_title()
 {
@@ -174,6 +199,7 @@ format_header()
 #          NAME:  show_info()
 #   DESCRIPTION:  
 #    PARAMETERS:  ---
+#       RETURNS:  ---
 #-------------------------------------------------------------------------------
 show_info()
 {
@@ -184,11 +210,22 @@ show_info()
 #          NAME:  show_error()
 #   DESCRIPTION:  
 #    PARAMETERS:  ---
+#       RETURNS:  ---
 #-------------------------------------------------------------------------------
 show_error()
 {
   echo -e "${RED_FG}$*${STD}"
 }
+
+
+#-------------------------------------------------------------------------------
+# DEBUG / TERMINAL OPTIONS
+#-------------------------------------------------------------------------------
+set -o nounset                                   # Treat unset variables as an error
+stty -echo                                       # disable normal echoing in the terminal (avoid key press on screen)
+echo "$STD"
+echo "$CLS"                                      # make the cursor invisible
+tabs 4
 
 #---  FUNCTION  ----------------------------------------------------------------
 #          NAME:  main()
@@ -196,7 +233,7 @@ show_error()
 #-------------------------------------------------------------------------------
 main()
 {
-  reset_screen
+  #reset_screen
   show_all                                      # show options
   read_option                                   # read user input
 }
@@ -209,26 +246,31 @@ show_all()
 {
   if [[ $optsHeader -eq 1 ]]
   then
+#    reset_screen
     show_header
   fi
 
   if [[ $optsCPU -eq 1 ]]
   then
+#    reset_screen
     show_cpu
   fi
 
   if [[ $optsMem -eq 1 ]]
   then
+#    reset_screen
     show_mem_usage
   fi
 
   if [[ $optsTop -eq 1 ]]
   then
+#    reset_screen
     show_top
   fi
 
   if [[ $optsMenu -eq 1 ]]
   then
+#    reset_screen
     show_menu
   fi
 }
@@ -276,178 +318,47 @@ show_header()
   # %t - tab
   # header format:
   # Sun, July 23 @ 00:00:00    CPU: XX%   MEM: XX%     Rx: xx K/s Tx: xx K/s
-  #currDate="$(date '+%a, %b %Y @ %T')"
-  ##cpuUsage=$(top -b -n1 | grep "Cpu(s)" | awk '{print $2 + $4}')
-  #data=$(ps aux --no-headers | awk -F" " '{CPU+=$3} {MEM+=$4} END {print MEM" " CPU}')
+  currDate="$(date '+%a, %b %Y @ %T')"
+  #cpuUsage=$(top -b -n1 | grep "Cpu(s)" | awk '{print $2 + $4}')
+  data=$(ps aux --no-headers | awk -F" " '{CPU+=$3} {MEM+=$4} END {print MEM" " CPU}')
 
-  #cpuUsage=$(echo "$data" | cut -d' ' -f1)
-  #memUsage=$(echo "$data" | cut -d' ' -f2)
-  #memUsage=$(free -m | awk 'NR==2{printf "%.2f%%", $3*100/$2 }')
-  #netSpeed=$(awk '/enp|em|wlan/ {i++; rx[i]=$2; tx[i]=$10}; END{print rx[2]-rx[1] " " tx[2]-tx[1]}' \
-  #  <(cat /proc/net/dev; cat /proc/net/dev))
-  #downSpeed="$(echo "$netSpeed" | cut -d' ' -f1)"
-  #upSpeed="$(echo "$netSpeed" | cut -d' ' -f2)"
+  cpuUsage=$(echo "$data" | cut -d' ' -f1)
+  memUsage=$(echo "$data" | cut -d' ' -f2)
+  memUsage=$(free -m | awk 'NR==2{printf "%.2f%%", $3*100/$2 }')
+  netSpeed=$(awk '/enp|em|wlan/ {i++; rx[i]=$2; tx[i]=$10}; END{print rx[2]-rx[1] " " tx[2]-tx[1]}' \
+    <(cat /proc/net/dev; cat /proc/net/dev))
+  downSpeed="$(echo "$netSpeed" | cut -d' ' -f1)"
+  upSpeed="$(echo "$netSpeed" | cut -d' ' -f2)"
 
-  #format_header "$currDate    CPU: $cpuUsage%  MEM: $memUsage  Rx: $downSpeed kbps Tx: $upSpeed Kb/s"
-  currTime=$(date "+%H:%M")
-  cpuUsage=$(ps aux --no-headers | awk -F" " '{CPU+=$3} END {print CPU}')
-  totalMem=$(free -k | awk 'NR==2{print $2}')
-  freeMem=$(free -k | awk 'NR==2{print $3}')
-  
-  echo "$currTime CPU: $cpuUsage% MEM: $totalMem K total, $freeMem K free"
+  format_header "$currDate    CPU: $cpuUsage%  MEM: $memUsage  Rx: $downSpeed kbps Tx: $upSpeed Kb/s"
 }
 
 #---  FUNCTION  ----------------------------------------------------------------
 #          NAME:  show_cpu()
-#   DESCRIPTION:  display CPU usage graph
+#   DESCRIPTION:  
+#    PARAMETERS:  ---
+#       RETURNS:  ---
 #-------------------------------------------------------------------------------
-currentRow=2
-currentCol=0
 show_cpu()
 {
+  echo ""
   show_title "=> CPU Usage"
-
-  cpuUsage=$(ps aux --no-headers | awk -F" " '{CPU+=$3} END {print CPU}' | cut -d. -f1)
-  totalCols=$(tput cols)
-
-  usageString="${RED_FG}*${STD}"
-  freeString="."
-
-  if (( "$currentCol" > totalCols ))
-  then
-    currentCol=0
-  fi
-
-  if ((cpuUsage > 80))
-  then
-    cpuString[0]+="$usageString"
-  else
-    cpuString[0]+="$freeString"
-  fi
-
-  if ((cpuUsage > 60))
-  then
-    cpuString[1]+="$usageString"
-  else
-    cpuString[1]+="$freeString"
-  fi
-
-  if ((cpuUsage > 40))
-  then
-    cpuString[2]+="$usageString"
-  else
-    cpuString[2]+="$freeString"
-
-  fi
-  if ((cpuUsage > 20))
-  then
-    cpuString[3]+="$usageString"
-  else
-    cpuString[3]+="$freeString"
-  fi
-
-  if ((cpuUsage > 0))
-  then
-    cpuString[4]+="$usageString"
-  else
-    cpuString[4]+="$freeString"
-  fi
-
-  tput cup $((currentRow)) 0
-  echo "${cpuString[0]}"
-  tput cup $((currentRow+1)) 0
-  echo "${cpuString[1]}"
-  tput cup $((currentRow+2)) 0
-  echo "${cpuString[2]}"
-  tput cup $((currentRow+3)) 0
-  echo "${cpuString[3]}"
-  tput cup $((currentRow+4)) 0
-  echo "${cpuString[4]}"
-
-  ((currentCol++))
+  echo "................................................"
+  echo "................................................"
+  echo "................................................"
+  echo "................................................"
+  echo "................................................"
 }
 
-for i in $(seq 0 4)
-do
-  memString[i]=""
-done
-currentMemCol=0
 show_mem_usage()
 {
-  show_title "\n=> Memory Usage"
-
-  #totalCols=$(tput cols)
-  memUsage=$(free | awk 'NR==2{print $3/$2*100}' | cut -d'.' -f1)
-  usageString="${RED_FG}*${STD}"
-  freeString="."
-  # if number of characters in memUsage is greater then terminal cols,start replacing the output string
-  if (( "$currentMemCol" > $(tput cols)  ))
-  then
-   tput cup 0 0
-    #cut -c "$totalCols"
-    for index in $(seq 0 4)
-    do
-      #echo "${memString[i]}"
-      set -f
-      memString[index]=`sed 's/.$//' "${memString[index]}"` || echo "error..."
-      set +f
-    done
-  fi
-
-  if (("$optsCPU" == 1))
-  then
-    currentMemRow=9
-  else
-    currentMemRow=3
-  fi
-
-  if ((memUsage > 80))
-  then
-    memString[0]="$usageString${memString[0]}"
-  else
-    memString[0]="$freeString${memString[0]}"
-  fi
-
-  if ((memUsage > 60))
-  then
-    memString[1]="$usageString${memString[1]}"
-  else
-    memString[1]="$freeString${memString[1]}"
-  fi
-
-  if ((memUsage > 40))
-  then
-    memString[2]="$usageString${memString[2]}"
-  else
-    memString[2]="$freeString${memString[2]}"
-  fi
-
-  if ((memUsage > 20))
-  then
-    memString[3]="$usageString${memString[3]}"
-  else
-    memString[3]="$freeString${memString[3]}"
-  fi
-
-  if ((memUsage > 0))
-  then
-    memString[4]="$usageString${memString[4]}"
-  else
-    memString[4]="$freeString${memString[4]}"
-  fi
-
-  tput cup $currentMemRow 0
-  echo "${memString[0]}"
-  tput cup $((currentMemRow+1)) 0
-  echo "${memString[1]}"
-  tput cup $((currentMemRow+2)) 0
-  echo "${memString[2]}"
-  tput cup $((currentMemRow+3)) 0
-  echo "${memString[3]}"
-  tput cup $((currentMemRow+4)) 0
-  echo "${memString[4]}"
-
-  ((currentMemCol=currentMemCol+1))
+  echo ""
+  show_title "=> Memory Usage"
+  echo "................................................"
+  echo "................................................"
+  echo "................................................"
+  echo "................................................"
+  echo "................................................"
 }
 
 #---  FUNCTION  ----------------------------------------------------------------
@@ -458,6 +369,9 @@ show_mem_usage()
 #-------------------------------------------------------------------------------
 show_mem()
 {
+  # title
+  #show_title "=> Memory Usage Information"
+  #  free -kh
   TOTALMEM=$(free -mh | head -2 | tail -1| awk '{print $2}')
   USEDMEM=$(free -mh | head -2 | tail -1| awk '{print $3}')
   FREEMEM=$(free -mh | head -2 | tail -1| awk '{print $4}')
@@ -492,7 +406,7 @@ show_top()
   #tput smul
   #echo "Top CPU"
   #tput sgr0
-  topCpu="$(ps -eo pid,user,state,pcpu,pmem,comm | sort -k4 -n -r | head -n6)"
+  topCpu="$(ps -eo pid,user,state,pcpu,pmem,comm | sort -k2 -n -r | head -5)"
   echo "$topCpu"
   
   #tput setaf 5
@@ -623,10 +537,10 @@ cleanUp()
   # and exit with appropriate status
   stty echo                                     # restore echoing
   reset_screen
-  tput sgr0
-  tput cup 0 0
-  tput cnorm
+  echo "$STD"
+  echo "$STD_CUR"
 
+  tput cup 0 0
   if [[ "$1" -lt 0 ]]
   then
     show_error "Error code: $1"
@@ -634,6 +548,10 @@ cleanUp()
     show_info "Exited sucessfully"
   fi
 
+  # restore colors
+  echo -e "${STD}"
+  tput cup 1 0
+  tput cnorm
   exit "$1"
 }
 
