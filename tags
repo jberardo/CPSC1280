@@ -368,7 +368,9 @@ check_answer	Labs/Lab7/hangman.sh	/^check_answer()$/;"	f
 choice	Labs/Lab9/final_project/monitor.sh	/^choice () {$/;"	f
 choice	Labs/Lab9/final_project/testchoice.sh	/^choice () {$/;"	f
 choice	scripts/final_project/testchoice.sh	/^choice () {$/;"	f
+cleanUp	Labs/Lab9/^M:!monitor.sh^M	/^cleanUp()$/;"	f
 cleanUp	Labs/Lab9/^M:!skeleton.sh	/^cleanUp()$/;"	f
+cleanUp	Labs/Lab9/^M:!skeleton.sh^M	/^cleanUp()$/;"	f
 cleanUp	Labs/Lab9/bonus.sh	/^cleanUp()$/;"	f
 cleanUp	Labs/Lab9/final_project/monitor.sh	/^cleanUp()$/;"	f
 cleanUp	Labs/Lab9/monitor.sh	/^cleanUp()$/;"	f
@@ -379,12 +381,14 @@ color	Labs/Lab9/colors.sh	/^color()$/;"	f
 contains	Labs/Lab7/hangman.sh	/^contains()$/;"	f
 d	Labs/Lab8/asd.c	/^d,$/;"	v
 display_screen	Labs/Lab9/^M:!skeleton.sh	/^display_screen()$/;"	f
+display_screen	Labs/Lab9/^M:!skeleton.sh^M	/^display_screen()$/;"	f
 display_screen	Labs/Lab9/skeleton.sh	/^display_screen()$/;"	f
 draw	Labs/Lab9/final_project/ops.sh	/^function draw()$/;"	f
 draw	scripts/final_project/ops.sh	/^function draw()$/;"	f
 dslc	Labs/Lab8/asd.c	/^,dslc,$/;"	v
 e	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> e :call nerdtree#ui_glue#invokeKeyMap("e")$/;"	m
 f	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> f :call nerdtree#ui_glue#invokeKeyMap("f")$/;"	m
+format_header	Labs/Lab9/^M:!monitor.sh^M	/^format_header()$/;"	f
 format_header	Labs/Lab9/bonus.sh	/^format_header()$/;"	f
 format_header	Labs/Lab9/monitor.sh	/^format_header()$/;"	f
 format_header	Labs/Lab9/monitor2.sh	/^format_header()$/;"	f
@@ -430,11 +434,13 @@ gx	Labs/Lab9/Session.vim	/^vmap gx <Plug>NetrwBrowseXVis$/;"	m
 i	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> i :call nerdtree#ui_glue#invokeKeyMap("i")$/;"	m
 joca	Labs/Lab9/like_top.sh	/^joca()$/;"	f
 m	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> m :call nerdtree#ui_glue#invokeKeyMap("m")$/;"	m
-main	Labs/Lab5/menu.sh	/^function main {$/;"	f
+main	Labs/Lab5/menu.sh	/^main()$/;"	f
 main	Labs/Lab6/awkmenu.sh	/^function main$/;"	f
 main	Labs/Lab7/hangman.sh	/^main()$/;"	f
 main	Labs/Lab8/minips.sh	/^function main$/;"	f
+main	Labs/Lab9/^M:!monitor.sh^M	/^main()$/;"	f
 main	Labs/Lab9/^M:!skeleton.sh	/^main()$/;"	f
+main	Labs/Lab9/^M:!skeleton.sh^M	/^main()$/;"	f
 main	Labs/Lab9/bonus.sh	/^main()$/;"	f
 main	Labs/Lab9/final_project/monitor.sh	/^main ()$/;"	f
 main	Labs/Lab9/monitor.sh	/^main()$/;"	f
@@ -506,21 +512,25 @@ question03	scripts/monitor/main.sh	/^question03()$/;"	f
 question04	Labs/Lab6/awkmenu.sh	/^question04()$/;"	f
 question04	Labs/Lab9/monitor/main.sh	/^question04()$/;"	f
 question04	scripts/monitor/main.sh	/^question04()$/;"	f
-quit	Labs/Lab5/menu.sh	/^function quit {$/;"	f
+quit	Labs/Lab5/menu.sh	/^quit()$/;"	f
 r	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> r :call nerdtree#ui_glue#invokeKeyMap("r")$/;"	m
 read_letter	Labs/Lab7/hangman.sh	/^read_letter()$/;"	f
+read_option	Labs/Lab9/^M:!monitor.sh^M	/^read_option()$/;"	f
 read_option	Labs/Lab9/^M:!skeleton.sh	/^read_option()$/;"	f
+read_option	Labs/Lab9/^M:!skeleton.sh^M	/^read_option()$/;"	f
 read_option	Labs/Lab9/bonus.sh	/^read_option()$/;"	f
 read_option	Labs/Lab9/final_project/monitor.sh	/^read_option ()$/;"	f
 read_option	Labs/Lab9/monitor.sh	/^read_option()$/;"	f
 read_option	Labs/Lab9/monitor2.sh	/^read_option()$/;"	f
 read_option	Labs/Lab9/skeleton.sh	/^read_option()$/;"	f
 read_option	scripts/final_project/monitor.sh	/^read_option()$/;"	f
-read_options	Labs/Lab5/menu.sh	/^	function read_options() {$/;"	f
+read_options	Labs/Lab5/menu.sh	/^read_options() {$/;"	f
 read_options	Labs/Lab6/awkmenu.sh	/^read_options()$/;"	f
 read_options	Labs/Lab9/monitor/main.sh	/^read_options()$/;"	f
 read_options	scripts/monitor/main.sh	/^read_options()$/;"	f
+reset_screen	Labs/Lab9/^M:!monitor.sh^M	/^reset_screen()$/;"	f
 reset_screen	Labs/Lab9/^M:!skeleton.sh	/^reset_screen()$/;"	f
+reset_screen	Labs/Lab9/^M:!skeleton.sh^M	/^reset_screen()$/;"	f
 reset_screen	Labs/Lab9/bonus.sh	/^reset_screen()$/;"	f
 reset_screen	Labs/Lab9/final_project/monitor.sh	/^reset_screen()$/;"	f
 reset_screen	Labs/Lab9/monitor.sh	/^reset_screen()$/;"	f
@@ -734,19 +744,24 @@ s:wipebuf	Labs/Lab9/Session.vim	/^  let s:wipebuf = bufnr('%')$/;"	v
 sd	Labs/Lab8/asd.c	/^sd$/;"	v
 sd	Labs/Lab8/asd.c	/^sd,$/;"	v
 sdc	Labs/Lab8/asd.c	/^sdc,$/;"	v
+show_all	Labs/Lab9/^M:!monitor.sh^M	/^show_all()$/;"	f
 show_all	Labs/Lab9/bonus.sh	/^show_all()$/;"	f
 show_all	Labs/Lab9/final_project/monitor.sh	/^show_all ()$/;"	f
 show_all	Labs/Lab9/monitor.sh	/^show_all()$/;"	f
 show_all	Labs/Lab9/monitor2.sh	/^show_all()$/;"	f
 show_all	scripts/final_project/monitor.sh	/^show_all()$/;"	f
+show_cpu	Labs/Lab9/^M:!monitor.sh^M	/^show_cpu()$/;"	f
 show_cpu	Labs/Lab9/bonus.sh	/^show_cpu()$/;"	f
 show_cpu	Labs/Lab9/monitor.sh	/^show_cpu()$/;"	f
 show_cpu	Labs/Lab9/monitor2.sh	/^show_cpu()$/;"	f
 show_disk_info	Labs/Lab9/^M:!skeleton.sh	/^show_disk_info()$/;"	f
+show_disk_info	Labs/Lab9/^M:!skeleton.sh^M	/^show_disk_info()$/;"	f
 show_disk_info	Labs/Lab9/final_project/monitor.sh	/^show_disk_info ()$/;"	f
 show_disk_info	Labs/Lab9/skeleton.sh	/^show_disk_info()$/;"	f
 show_disk_info	scripts/final_project/monitor.sh	/^show_disk_info()$/;"	f
+show_error	Labs/Lab9/^M:!monitor.sh^M	/^show_error()$/;"	f
 show_error	Labs/Lab9/^M:!skeleton.sh	/^show_error()$/;"	f
+show_error	Labs/Lab9/^M:!skeleton.sh^M	/^show_error()$/;"	f
 show_error	Labs/Lab9/bonus.sh	/^show_error()$/;"	f
 show_error	Labs/Lab9/final_project/monitor.sh	/^show_error ()$/;"	f
 show_error	Labs/Lab9/monitor.sh	/^show_error()$/;"	f
@@ -755,30 +770,38 @@ show_error	Labs/Lab9/skeleton.sh	/^show_error()$/;"	f
 show_error	gitup.sh	/^show_error()$/;"	f
 show_error	scripts/final_project/monitor.sh	/^show_error()$/;"	f
 show_header	Labs/Lab7/hangman.sh	/^show_header()$/;"	f
+show_header	Labs/Lab9/^M:!monitor.sh^M	/^show_header()$/;"	f
 show_header	Labs/Lab9/bonus.sh	/^show_header()$/;"	f
 show_header	Labs/Lab9/final_project/monitor.sh	/^show_header ()$/;"	f
 show_header	Labs/Lab9/monitor.sh	/^show_header()$/;"	f
 show_header	Labs/Lab9/monitor2.sh	/^show_header()$/;"	f
 show_header	scripts/final_project/monitor.sh	/^show_header()$/;"	f
+show_info	Labs/Lab9/^M:!monitor.sh^M	/^show_info()$/;"	f
 show_info	Labs/Lab9/^M:!skeleton.sh	/^show_info()$/;"	f
+show_info	Labs/Lab9/^M:!skeleton.sh^M	/^show_info()$/;"	f
 show_info	Labs/Lab9/bonus.sh	/^show_info()$/;"	f
 show_info	Labs/Lab9/final_project/monitor.sh	/^show_info ()$/;"	f
 show_info	Labs/Lab9/monitor.sh	/^show_info()$/;"	f
 show_info	Labs/Lab9/monitor2.sh	/^show_info()$/;"	f
 show_info	Labs/Lab9/skeleton.sh	/^show_info()$/;"	f
 show_info	scripts/final_project/monitor.sh	/^show_info()$/;"	f
+show_mem	Labs/Lab9/^M:!monitor.sh^M	/^show_mem()$/;"	f
 show_mem	Labs/Lab9/bonus.sh	/^show_mem()$/;"	f
 show_mem	Labs/Lab9/monitor.sh	/^show_mem()$/;"	f
 show_mem	Labs/Lab9/monitor2.sh	/^show_mem()$/;"	f
 show_mem_info	Labs/Lab9/^M:!skeleton.sh	/^show_mem_info()$/;"	f
+show_mem_info	Labs/Lab9/^M:!skeleton.sh^M	/^show_mem_info()$/;"	f
 show_mem_info	Labs/Lab9/final_project/monitor.sh	/^show_mem_info ()$/;"	f
 show_mem_info	Labs/Lab9/skeleton.sh	/^show_mem_info()$/;"	f
 show_mem_info	scripts/final_project/monitor.sh	/^show_mem_info()$/;"	f
+show_mem_usage	Labs/Lab9/^M:!monitor.sh^M	/^show_mem_usage()$/;"	f
 show_mem_usage	Labs/Lab9/bonus.sh	/^show_mem_usage()$/;"	f
 show_mem_usage	Labs/Lab9/monitor.sh	/^show_mem_usage()$/;"	f
 show_mem_usage	Labs/Lab9/monitor2.sh	/^show_mem_usage()$/;"	f
-show_menu	Labs/Lab5/menu.sh	/^function show_menu {$/;"	f
+show_menu	Labs/Lab5/menu.sh	/^show_menu()$/;"	f
+show_menu	Labs/Lab9/^M:!monitor.sh^M	/^show_menu()$/;"	f
 show_menu	Labs/Lab9/^M:!skeleton.sh	/^show_menu()$/;"	f
+show_menu	Labs/Lab9/^M:!skeleton.sh^M	/^show_menu()$/;"	f
 show_menu	Labs/Lab9/bonus.sh	/^show_menu()$/;"	f
 show_menu	Labs/Lab9/final_project/monitor.sh	/^show_menu ()$/;"	f
 show_menu	Labs/Lab9/monitor.sh	/^show_menu()$/;"	f
@@ -789,14 +812,18 @@ show_menus	Labs/Lab6/awkmenu.sh	/^show_menus()$/;"	f
 show_menus	Labs/Lab9/monitor/main.sh	/^show_menus()$/;"	f
 show_menus	scripts/monitor/main.sh	/^show_menus()$/;"	f
 show_process_info	Labs/Lab9/^M:!skeleton.sh	/^show_process_info()$/;"	f
+show_process_info	Labs/Lab9/^M:!skeleton.sh^M	/^show_process_info()$/;"	f
 show_process_info	Labs/Lab9/final_project/monitor.sh	/^show_process_info ()$/;"	f
 show_process_info	Labs/Lab9/skeleton.sh	/^show_process_info()$/;"	f
 show_process_info	scripts/final_project/monitor.sh	/^show_process_info()$/;"	f
+show_title	Labs/Lab9/^M:!monitor.sh^M	/^show_title()$/;"	f
 show_title	Labs/Lab9/^M:!skeleton.sh	/^show_title()$/;"	f
+show_title	Labs/Lab9/^M:!skeleton.sh^M	/^show_title()$/;"	f
 show_title	Labs/Lab9/bonus.sh	/^show_title()$/;"	f
 show_title	Labs/Lab9/monitor.sh	/^show_title()$/;"	f
 show_title	Labs/Lab9/monitor2.sh	/^show_title()$/;"	f
 show_title	Labs/Lab9/skeleton.sh	/^show_title()$/;"	f
+show_top	Labs/Lab9/^M:!monitor.sh^M	/^show_top()$/;"	f
 show_top	Labs/Lab9/bonus.sh	/^show_top()$/;"	f
 show_top	Labs/Lab9/monitor.sh	/^show_top()$/;"	f
 show_top	Labs/Lab9/monitor2.sh	/^show_top()$/;"	f
@@ -806,30 +833,39 @@ speed	scripts/final_project/tput.sh	/^speed()$/;"	f
 sysstat	Labs/Lab9/linuxhealthcheck.sh	/^function sysstat {$/;"	f
 sysstat	scripts/linuxhealthcheck.sh	/^function sysstat {$/;"	f
 t	Labs/Lab9/Session.vim	/^nnoremap <buffer> <silent> t :call nerdtree#ui_glue#invokeKeyMap("t")$/;"	m
+toggle_cpu	Labs/Lab9/^M:!monitor.sh^M	/^toggle_cpu()$/;"	f
 toggle_cpu	Labs/Lab9/bonus.sh	/^toggle_cpu()$/;"	f
 toggle_cpu	Labs/Lab9/monitor.sh	/^toggle_cpu()$/;"	f
 toggle_cpu	Labs/Lab9/monitor2.sh	/^toggle_cpu()$/;"	f
 toggle_disk	Labs/Lab9/^M:!skeleton.sh	/^toggle_disk()$/;"	f
+toggle_disk	Labs/Lab9/^M:!skeleton.sh^M	/^toggle_disk()$/;"	f
 toggle_disk	Labs/Lab9/skeleton.sh	/^toggle_disk()$/;"	f
 toggle_disk	scripts/final_project/monitor.sh	/^toggle_disk()$/;"	f
+toggle_header	Labs/Lab9/^M:!monitor.sh^M	/^toggle_header()$/;"	f
 toggle_header	Labs/Lab9/bonus.sh	/^toggle_header()$/;"	f
 toggle_header	Labs/Lab9/monitor.sh	/^toggle_header()$/;"	f
 toggle_header	Labs/Lab9/monitor2.sh	/^toggle_header()$/;"	f
+toggle_mem	Labs/Lab9/^M:!monitor.sh^M	/^toggle_mem()$/;"	f
 toggle_mem	Labs/Lab9/^M:!skeleton.sh	/^toggle_mem()$/;"	f
+toggle_mem	Labs/Lab9/^M:!skeleton.sh^M	/^toggle_mem()$/;"	f
 toggle_mem	Labs/Lab9/bonus.sh	/^toggle_mem()$/;"	f
 toggle_mem	Labs/Lab9/monitor.sh	/^toggle_mem()$/;"	f
 toggle_mem	Labs/Lab9/monitor2.sh	/^toggle_mem()$/;"	f
 toggle_mem	Labs/Lab9/skeleton.sh	/^toggle_mem()$/;"	f
 toggle_mem	scripts/final_project/monitor.sh	/^toggle_mem()$/;"	f
+toggle_menu	Labs/Lab9/^M:!monitor.sh^M	/^toggle_menu()$/;"	f
 toggle_menu	Labs/Lab9/^M:!skeleton.sh	/^toggle_menu()$/;"	f
+toggle_menu	Labs/Lab9/^M:!skeleton.sh^M	/^toggle_menu()$/;"	f
 toggle_menu	Labs/Lab9/bonus.sh	/^toggle_menu()$/;"	f
 toggle_menu	Labs/Lab9/monitor.sh	/^toggle_menu()$/;"	f
 toggle_menu	Labs/Lab9/monitor2.sh	/^toggle_menu()$/;"	f
 toggle_menu	Labs/Lab9/skeleton.sh	/^toggle_menu()$/;"	f
 toggle_menu	scripts/final_project/monitor.sh	/^toggle_menu()$/;"	f
 toggle_ps	Labs/Lab9/^M:!skeleton.sh	/^toggle_ps()$/;"	f
+toggle_ps	Labs/Lab9/^M:!skeleton.sh^M	/^toggle_ps()$/;"	f
 toggle_ps	Labs/Lab9/skeleton.sh	/^toggle_ps()$/;"	f
 toggle_ps	scripts/final_project/monitor.sh	/^toggle_ps()$/;"	f
+toggle_top	Labs/Lab9/^M:!monitor.sh^M	/^toggle_top()$/;"	f
 toggle_top	Labs/Lab9/bonus.sh	/^toggle_top()$/;"	f
 toggle_top	Labs/Lab9/monitor.sh	/^toggle_top()$/;"	f
 toggle_top	Labs/Lab9/monitor2.sh	/^toggle_top()$/;"	f

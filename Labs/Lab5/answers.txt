@@ -1,0 +1,35 @@
+1. :s/\./\:/g
+
+2. sed 's/.$//'
+
+3.  grep "?((\<[hH]1\>|\<[hH]2\>)(!\<h3\>))?" file.html
+
+4. sed 's/\"class=\"/\"id=\"/g' file.html
+
+5.
+
+6. cat smallFile | cut -d' ' -f2,1,5
+
+7. ls -la /bin | sort -nk5
+
+8. ls -la /dev | sort -k4r
+
+9. 
+
+10. cat -n filename
+
+11. more -s mediumFile +15 smallFile 
+
+12. 
+
+13. wc -c smallFile mediumFile largeFile
+    wc -w smallFile mediumFile largeFile
+    wc -l smallFile mediumFile largeFile
+
+14. :s/Davis/David/
+    :s/ /    /
+
+15. a. grep -E "*.CS$*" smallFile 
+    b. grep smallFile "^John*"
+    c.  cat smallFile | grep ".org"
+    d.  awk '$4>3.69 && $4 < 4{print}' smallFile 
